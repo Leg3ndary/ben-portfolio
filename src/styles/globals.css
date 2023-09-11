@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-    --background: #FFFFFF;
+    --background: #ffffff;
 }
 /* 
 @media (prefers-color-scheme: dark) {
@@ -12,7 +12,9 @@
     }
 } */
 
-html, body, #__next {
+html,
+body,
+#__next {
     background-color: var(--background);
     color: #000000;
     height: 100%;

@@ -1,3 +1,1 @@
-export type GithubData = {
-    
-}
+export type GithubData = {};

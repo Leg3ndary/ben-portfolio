@@ -42,7 +42,6 @@ module.exports = {
             colors: {
                 transparent: "transparent",
             },
-            
         },
     },
     plugins: [],

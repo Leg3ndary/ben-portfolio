@@ -2,9 +2,7 @@ import Image from "next/image";
 import Mocha from "@/assets/mocha.png";
 import Hockey from "@/assets/hockey.jpg";
 
-
 export default function Home() {
-    
     return (
         <>
             <div className="relative top-0 flex justify-center w-full h-[700px] bg-rainbow-gradient animate-breathing-gradient">
@@ -67,12 +65,18 @@ export default function Home() {
                     </div>
                     <div className="flex flex-col justify-center w-1/2 h-full p-12">
                         <h3 className="p-2 text-lg">ABOUT ME</h3>
-                        <h1 className="p-2 text-5xl font-black">I LIKE HOCKEY</h1>
+                        <h1 className="p-2 text-5xl font-black">
+                            I LIKE HOCKEY
+                        </h1>
                         <h2 className="p-2 font-medium text-md">
                             TIER 2 PLAYER / ASSISTANT COACH
                         </h2>
                         <p className="p-2 pt-4 pb-4 font-light">
-                            I've been skating since before I can remember, and started playing hockey when I was around 10. I stopped playing competitively in my junior year to help coach other teams and focus more on programming.
+                            I've been skating since before I can remember, and
+                            started playing hockey when I was around 10. I
+                            stopped playing competitively in my junior year to
+                            help coach other teams and focus more on
+                            programming.
                         </p>
                     </div>
                 </div>
