@@ -6,15 +6,15 @@ export default function Home() {
     return (
         <>
             <div className="relative top-0 flex justify-center w-full h-[700px] bg-rainbow-gradient animate-breathing-gradient">
-                <div className="relative flex h-[600px] bg-white border-black w-[1170px] drop-shadow-2xl mt-44 rounded-3xl">
-                    <div className="flex content-center justify-center w-1/2 h-full">
+                <div className="relative flex h-[900px] lg:h-[600px] bg-white border-black w-11/12 lg:w-[1170px] drop-shadow-2xl mt-44 rounded-3xl flex-col lg:flex-row">
+                    <div className="flex flex-wrap justify-center h-full w-12/12 lg:w-1/2">
                         <Image
                             className="object-contain animate-fade-in"
                             src={Mocha}
                             alt="Mocha"
                         />
                     </div>
-                    <div className="flex flex-col justify-center w-1/2 h-full p-12">
+                    <div className="flex flex-col justify-center w-full h-full p-12 -mt-10 lg:w-1/2 lg:mt-0">
                         <h3 className="p-2 text-lg">HELLO THERE!</h3>
                         <h1 className="p-2 text-6xl font-black">I'M BEN</h1>
                         <h2 className="p-2 font-bold text-md">
@@ -71,9 +71,9 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center w-full pt-32">
-                <div className="flex w-[1170px]">
-                    <div className="flex flex-col justify-center w-1/2 h-full p-12">
+            <div className="flex justify-center w-full pt-[360px] lg:pt-32">
+                <div className="flex w-11/12 lg:w-[1170px] lg:flex-row flex-col">
+                    <div className="flex flex-col justify-center w-full h-full p-12 -mb-[100px] lg:w-1/2 lg:mb-0">
                         <Image
                             className="object-contain animate-fade-in"
                             src={Hockey}
@@ -84,7 +84,7 @@ export default function Home() {
                             My U16 Team at a tournament in Niagara, Ontario
                         </p>
                     </div>
-                    <div className="flex flex-col justify-center w-1/2 h-full p-12">
+                    <div className="flex flex-col justify-center w-full h-full p-12 lg:w-1/2">
                         <h3 className="p-2 text-lg">ABOUT ME</h3>
                         <h1 className="p-2 text-5xl font-black">
                             I LIKE HOCKEY
@@ -103,7 +103,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="flex justify-center w-full pb-32">
-                <div className="w-[1170px] h-[1px] bg-[#dddddd]" />
+                <div className="w-10/12 lg:w-[1170px] h-[1px] bg-[#dddddd]" />
             </div>
             {/*  */}
         </>
