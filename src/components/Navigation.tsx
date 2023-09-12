@@ -86,9 +86,7 @@ export default function Navigation() {
             </div>
             <div
                 className={`${
-                    isOpen
-                        ? "flex h-auto"
-                        : "h-0 hidden"
+                    isOpen ? "flex h-auto" : "h-0 hidden"
                 } w-full relative lg:hidden flex-col bg-black`}
             >
                 <a

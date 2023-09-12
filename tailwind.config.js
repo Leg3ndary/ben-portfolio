@@ -29,24 +29,15 @@ module.exports = {
                     },
                 },
                 "fade-in": {
-                    "0%": { "opacity": 0 },
-                    "100%": { "opacity": 1 },
+                    "0%": { opacity: 0 },
+                    "100%": { opacity: 1 },
                 },
-                "height": {
-                    "0%": { "height": 0 },
-                    "100%": { "height": "auto" },
-                }
             },
             animation: {
                 "breathing-gradient": "breathing-gradient 30s ease infinite",
                 "fade-in": "fade-in 1s ease-in-out",
-                "height": "height 1s ease-in-out",
             },
             height: {
-                // 128: "32rem",
-                // 144: "36rem",
-                // 160: "40rem",
-                // 176: "44rem",
                 192: "48rem",
             },
             colors: {
