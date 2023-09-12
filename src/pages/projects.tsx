@@ -6,12 +6,14 @@ export default function Projects() {
     return (
         <>
             <div className="relative top-0 flex justify-center w-full h-[400px] bg-rainbow-gradient animate-breathing-gradient">
-                <div className="relative flex h-[400px] lg:h-[300px] bg-white border-black w-11/12 lg:w-[1300px] drop-shadow-2xl mt-44 rounded-3xl">
+                <div className="relative flex h-[350px] lg:h-[300px] bg-white border-black w-11/12 lg:w-[1300px] drop-shadow-2xl mt-44 rounded-3xl">
                     <div className="flex flex-col justify-center w-full h-full p-12">
-                        <h3 className="p-2 text-lg">
+                        <h3 className="p-2 text-lg text-center">
                             HERE ARE SOME OF MY PROJECTS!
                         </h3>
-                        <h1 className="p-2 text-6xl font-black">PROJECTS</h1>
+                        <h1 className="p-2 text-4xl font-black text-center lg:text-6xl">
+                            PROJECTS
+                        </h1>
                         <p className="p-2 py-4 font-light">
                             I work with many languages and technologies, you can
                             see some of them below! I'm always learning new
@@ -21,7 +23,7 @@ export default function Projects() {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center w-full pt-48 pb-16 lg:pb-20 lg:pt-32">
+            <div className="flex justify-center w-full pb-16 pt-44 lg:pb-20 lg:pt-32">
                 <div className="flex w-11/12 lg:w-[1300px] flex-row flex-wrap place-content-evenly">
                     <div className="group flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition-shadow hover:shadow-cyan-300">
                         <Image
