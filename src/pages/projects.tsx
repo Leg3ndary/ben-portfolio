@@ -6,7 +6,7 @@ export default function Projects() {
     return (
         <>
             <div className="relative top-0 flex justify-center w-full h-[400px] bg-rainbow-gradient animate-breathing-gradient">
-                <div className="relative flex h-[300px] bg-white border-black w-[1300px] drop-shadow-2xl mt-44 rounded-3xl">
+                <div className="relative flex h-[400px] lg:h-[300px] bg-white border-black w-11/12 lg:w-[1300px] drop-shadow-2xl mt-44 rounded-3xl">
                     <div className="flex flex-col justify-center w-full h-full p-12">
                         <h3 className="p-2 text-lg">
                             HERE ARE SOME OF MY PROJECTS!
@@ -21,9 +21,9 @@ export default function Projects() {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center w-full py-32">
-                <div className="flex w-[1300px] flex-row flex-wrap place-content-evenly">
-                <div className="group flex flex-col justify-center w-[570px] p-10 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition-shadow hover:shadow-cyan-300">
+            <div className="flex justify-center w-full pt-48 pb-16 lg:pb-20 lg:pt-32">
+                <div className="flex w-11/12 lg:w-[1300px] flex-row flex-wrap place-content-evenly">
+                    <div className="group flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition-shadow hover:shadow-cyan-300">
                         <Image
                             className="object-contain animate-fade-in"
                             src={PortfolioImage}
@@ -41,10 +41,10 @@ export default function Projects() {
                         <p className="p-2 pt-4 pb-4 font-light">
                             This website is made using NextJS, TypeScript, and
                             TailwindCSS. I wanted to make a website that was
-                            simple, yet elegant, and I think I did pretty
-                            good. Here is where I'll showcase my projects, and
-                            the technologies I used to create them. I may also
-                            post some blogs or something later!
+                            simple, yet elegant, and I think I did pretty good.
+                            Here is where I'll showcase my projects, and the
+                            technologies I used to create them. I may also post
+                            some blogs or something later!
                         </p>
                         <div className="flex justify-center w-full">
                             <div className="w-[1170px] h-[1px] bg-[#dddddd] group-hover:bg-cyan-300 transition-colors" />
@@ -80,7 +80,7 @@ export default function Projects() {
                             />
                         </div>
                     </div>
-                    <div className="group flex flex-col justify-center w-[570px] p-10 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition-shadow hover:shadow-red-500">
+                    <div className="group mt-10 lg:mt-0 flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition-shadow hover:shadow-red-500">
                         <Image
                             className="object-contain animate-fade-in"
                             src={bTagScript}
