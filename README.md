@@ -1,3 +1,10 @@
-# next-template
+# Leg3ndary's Portfolio
 
-This is my next.js template with typescript, eslint, and prettier.
+This is my official website and portfolio, it's built with TypeScript, Next.JS and TailwindCSS.
+
+You can run this project as you would with every other Nextjs project.
+
+```bash
+$ npm install
+$ npm run dev
+```
