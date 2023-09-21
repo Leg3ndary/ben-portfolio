@@ -18,12 +18,17 @@ export default function Projects() {
                             things, and I'm always looking for new projects to
                             work on.
                         </p>
+                        <h3 className="p-2 text-lg">
+                            Please note that I'm still working on this site and
+                            adding my newest projects is on my TDL... If you do
+                            want to see all my projects, check out my GitHub!
+                        </h3>
                     </div>
                 </div>
             </div>
             <div className="flex justify-center w-full py-32">
                 <div className="flex w-[1300px] flex-row flex-wrap place-content-evenly">
-                <div className="group flex flex-col justify-center w-[570px] p-10 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition-shadow hover:shadow-cyan-300">
+                    <div className="group flex flex-col justify-center w-[570px] p-10 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition-shadow hover:shadow-cyan-300">
                         <Image
                             className="object-contain animate-fade-in"
                             src={PortfolioImage}
@@ -41,10 +46,10 @@ export default function Projects() {
                         <p className="p-2 pt-4 pb-4 font-light">
                             This website is made using NextJS, TypeScript, and
                             TailwindCSS. I wanted to make a website that was
-                            simple, yet elegant, and I think I did pretty
-                            good. Here is where I'll showcase my projects, and
-                            the technologies I used to create them. I may also
-                            post some blogs or something later!
+                            simple, yet elegant, and I think I did pretty good.
+                            Here is where I'll showcase my projects, and the
+                            technologies I used to create them. I may also post
+                            some blogs or something later!
                         </p>
                         <div className="flex justify-center w-full">
                             <div className="w-[1170px] h-[1px] bg-[#dddddd] group-hover:bg-cyan-300 transition-colors" />
