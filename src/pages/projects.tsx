@@ -5,8 +5,8 @@ import PortfolioImage from "@/assets/projects/Leg3ndaryPortfolio.png";
 export default function Projects() {
     return (
         <>
-            <div className="relative top-0 flex justify-center w-full h-[400px] bg-rainbow-gradient animate-breathing-gradient">
-                <div className="relative flex h-[350px] lg:h-[300px] bg-white border-black w-11/12 lg:w-[1300px] drop-shadow-2xl mt-44 rounded-3xl">
+            <div className="relative top-0 flex justify-center w-full h-[550px] bg-rainbow-gradient animate-breathing-gradient">
+                <div className="relative flex h-[500px] lg:h-[300px] bg-white border-black w-11/12 lg:w-[1300px] drop-shadow-2xl mt-44 rounded-3xl">
                     <div className="flex flex-col justify-center w-full h-full p-12">
                         <h3 className="p-2 text-lg text-center">
                             HERE ARE SOME OF MY PROJECTS!

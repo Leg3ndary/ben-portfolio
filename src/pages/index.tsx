@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Mocha from "@/assets/home/mocha.png";
 import Hockey from "@/assets/home/hockey.jpg";
+import HackTheNorth from "@/assets/home/hackthenorth0.jpg";
 
 export default function Home() {
     return (
@@ -46,27 +47,36 @@ export default function Home() {
                             !
                         </p>
                         <div className="flex mt-12 place-content-evenly">
-                            <Image
-                                className="animate-fade-in"
-                                width={75}
-                                height={75}
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-                                alt="NextJS"
-                            />
-                            <Image
-                                className="animate-fade-in"
-                                width={75}
-                                height={75}
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                                alt="TypeScript"
-                            />
-                            <Image
-                                className="animate-fade-in"
-                                width={75}
-                                height={75}
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
-                                alt="TailwindCSS"
-                            />
+                            <a href="https://nextjs.org/" target="_blank">
+                                <Image
+                                    className="transition-transform ease-in-out animate-fade-in hover:scale-125"
+                                    width={75}
+                                    height={75}
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                                    alt="NextJS"
+                                />
+                            </a>
+                            <a
+                                href="https://www.typescriptlang.org/"
+                                target="_blank"
+                            >
+                                <Image
+                                    className="transition-transform ease-in-out animate-fade-in hover:scale-125"
+                                    width={75}
+                                    height={75}
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                                    alt="TypeScript"
+                                />
+                            </a>
+                            <a href="https://tailwindcss.com/" target="_blank">
+                                <Image
+                                    className="transition-transform ease-in-out animate-fade-in hover:scale-125"
+                                    width={75}
+                                    height={75}
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                                    alt="TailwindCSS"
+                                />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -80,7 +90,7 @@ export default function Home() {
                             alt="Hockey"
                             loading="lazy"
                         />
-                        <p className="p-2 font-normal text-center">
+                        <p className="p-2 font-light text-center">
                             My U16 Team at a tournament in Niagara, Ontario
                         </p>
                     </div>
@@ -102,10 +112,36 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center w-full pb-32">
+            <div className="flex justify-center w-full">
                 <div className="w-10/12 lg:w-[1170px] h-[1px] bg-[#dddddd]" />
             </div>
-            {/*  */}
+            <div className="flex justify-center w-full">
+                <div className="flex w-11/12 lg:w-[1170px] lg:flex-row flex-col">
+                    <div className="flex flex-col justify-center w-full h-full p-12 pb-0 lg:w-1/2">
+                        <h3 className="p-2 text-lg">I ALSO ATTEND...</h3>
+                        <h1 className="p-2 text-3xl font-black lg:text-5xl">HACKATHONS!</h1>
+                        <h2 className="p-2 font-medium text-md">
+                            WHEN I HAVE TIME :(
+                        </h2>
+                        <p className="p-2 pt-4 pb-4 font-light">
+                            Hackathons are fun competitions where "Hackers"
+                            build a working development version of some project
+                            or idea in a short amount of time.
+                        </p>
+                    </div>
+                    <div className="flex flex-col justify-center w-full h-full p-12 lg:p-12 lg:w-1/2 lg:mb-0">
+                        <Image
+                            className="object-contain animate-fade-in"
+                            src={HackTheNorth}
+                            alt="HTN"
+                            loading="lazy"
+                        />
+                        <p className="p-2 font-light text-center">
+                            Hack The North Opening Ceremonies!
+                        </p>
+                    </div>
+                </div>
+            </div>
         </>
     );
 }
