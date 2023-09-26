@@ -56,28 +56,28 @@ export default function Navigation() {
                     </div>
                     <div className="flex items-center justify-end gap-10 ml-auto lg:hidden">
                         <button
-                            className="flex flex-col items-center justify-center w-12 h-12 mr-4 rounded group"
+                            className="flex flex-col items-center justify-center w-12 h-12 mr-4 rounded"
                             onClick={() => setIsOpen(!isOpen)}
                         >
                             <div
                                 className={`${hamburger} ${
                                     isOpen
-                                        ? "rotate-45 translate-y-3 opacity-50 group-hover:opacity-100"
-                                        : "opacity-50 group-hover:opacity-100"
+                                        ? "rotate-45 translate-y-3"
+                                        : ""
                                 }`}
                             />
                             <div
                                 className={`${hamburger} ${
                                     isOpen
                                         ? "opacity-0"
-                                        : "opacity-50 group-hover:opacity-100"
+                                        : ""
                                 }`}
                             />
                             <div
                                 className={`${hamburger} ${
                                     isOpen
-                                        ? "-rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100"
-                                        : "opacity-50 group-hover:opacity-100"
+                                        ? "-rotate-45 -translate-y-3"
+                                        : ""
                                 }`}
                             />
                         </button>

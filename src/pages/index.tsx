@@ -8,9 +8,9 @@ export default function Home() {
         <>
             <div className="relative top-0 flex justify-center w-full h-[700px] bg-rainbow-gradient animate-breathing-gradient">
                 <div className="relative flex h-[900px] lg:h-[600px] bg-white border-black w-11/12 lg:w-[1170px] drop-shadow-2xl mt-44 rounded-3xl flex-col lg:flex-row">
-                    <div className="flex flex-wrap justify-center h-full w-12/12 lg:w-1/2">
+                    <div className="flex flex-wrap justify-center w-full h-full lg:w-1/2">
                         <Image
-                            className="object-contain animate-fade-in"
+                            className="object-contain max-w-xs lg:max-w-none animate-fade-in"
                             src={Mocha}
                             alt="Mocha"
                         />
