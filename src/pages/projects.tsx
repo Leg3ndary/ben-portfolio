@@ -57,34 +57,45 @@ export default function Projects() {
                             <div className="w-[1170px] h-[1px] bg-[#dddddd] group-hover:bg-cyan-300 transition-colors" />
                         </div>
                         <div className="flex pt-8 place-content-evenly">
-                            <Image
-                                className="animate-fade-in"
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
-                                width={45}
-                                height={45}
-                                alt="NextJS"
-                            />
-                            <Image
-                                className="animate-fade-in"
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                                width={45}
-                                height={45}
-                                alt="TypeScript"
-                            />
-                            <Image
-                                className="animate-fade-in"
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
-                                width={45}
-                                height={45}
-                                alt="TailwindCSS"
-                            />
-                            <Image
-                                className="animate-fade-in"
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                                width={45}
-                                height={45}
-                                alt="React"
-                            />
+                            <a href="https://nextjs.org" target="_blank">
+                                <Image
+                                    className="transition-transform ease-in-out animate-fade-in hover:scale-125"
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
+                                    width={45}
+                                    height={45}
+                                    alt="NextJS"
+                                />
+                            </a>
+                            <a
+                                href="https://typescriptlang.org"
+                                target="_blank"
+                            >
+                                <Image
+                                    className="transition-transform ease-in-out animate-fade-in hover:scale-125"
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                                    width={45}
+                                    height={45}
+                                    alt="TypeScript"
+                                />
+                            </a>
+                            <a href="https://tailwindcss.com" target="_blank">
+                                <Image
+                                    className="transition-transform ease-in-out animate-fade-in hover:scale-125"
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                                    width={45}
+                                    height={45}
+                                    alt="TailwindCSS"
+                                />
+                            </a>
+                            <a href="https://react.dev" target="_blank">
+                                <Image
+                                    className="transition-transform ease-in-out animate-fade-in hover:scale-125"
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                    width={45}
+                                    height={45}
+                                    alt="React"
+                                />
+                            </a>
                         </div>
                     </div>
                     <div className="group mt-10 lg:mt-0 flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition-shadow hover:shadow-red-500">
@@ -126,34 +137,48 @@ export default function Projects() {
                                 <div className="w-[1170px] h-[1px] bg-[#dddddd] group-hover:bg-red-500 transition-colors" />
                             </div>
                             <div className="flex pt-8 place-content-evenly">
-                                <Image
-                                    className="animate-fade-in"
-                                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-                                    width={45}
-                                    height={45}
-                                    alt="Python"
-                                />
-                                <Image
-                                    className="animate-fade-in"
-                                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-                                    width={45}
-                                    height={45}
-                                    alt="JavaScript"
-                                />
-                                <Image
-                                    className="animate-fade-in"
-                                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
-                                    width={45}
-                                    height={45}
-                                    alt="HTML5"
-                                />
-                                <Image
-                                    className="animate-fade-in"
-                                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
-                                    width={45}
-                                    height={45}
-                                    alt="CSS"
-                                />
+                                <a href="https://python.org" target="_blank">
+                                    <Image
+                                        className="transition-transform ease-in-out animate-fade-in hover:scale-125"
+                                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                                        width={45}
+                                        height={45}
+                                        alt="Python"
+                                    />
+                                </a>
+                                <a
+                                    href="https://javascript.com"
+                                    target="_blank"
+                                >
+                                    <Image
+                                        className="transition-transform ease-in-out animate-fade-in hover:scale-125 "
+                                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                                        width={45}
+                                        height={45}
+                                        alt="JavaScript"
+                                    />
+                                </a>
+                                <a href="https://html.com" target="_blank">
+                                    <Image
+                                        className="transition-transform ease-in-out animate-fade-in hover:scale-125"
+                                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+                                        width={45}
+                                        height={45}
+                                        alt="HTML5"
+                                    />
+                                </a>
+                                <a
+                                    href="https://www.w3schools.com/css/"
+                                    target="_blank"
+                                >
+                                    <Image
+                                        className="transition-transform ease-in-out animate-fade-in hover:scale-125"
+                                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                                        width={45}
+                                        height={45}
+                                        alt="CSS"
+                                    />
+                                </a>
                             </div>
                         </div>
                     </div>

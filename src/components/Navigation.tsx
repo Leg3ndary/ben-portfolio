@@ -61,23 +61,17 @@ export default function Navigation() {
                         >
                             <div
                                 className={`${hamburger} ${
-                                    isOpen
-                                        ? "rotate-45 translate-y-3"
-                                        : ""
+                                    isOpen ? "rotate-45 translate-y-3" : ""
                                 }`}
                             />
                             <div
                                 className={`${hamburger} ${
-                                    isOpen
-                                        ? "opacity-0"
-                                        : ""
+                                    isOpen ? "opacity-0" : ""
                                 }`}
                             />
                             <div
                                 className={`${hamburger} ${
-                                    isOpen
-                                        ? "-rotate-45 -translate-y-3"
-                                        : ""
+                                    isOpen ? "-rotate-45 -translate-y-3" : ""
                                 }`}
                             />
                         </button>
