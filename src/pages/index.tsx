@@ -11,6 +11,8 @@ export default function Home() {
                     <div className="flex flex-wrap justify-center w-full h-full lg:w-1/2">
                         <Image
                             className="object-contain max-w-xs lg:max-w-none animate-fade-in"
+                            width={512}
+                            height={600}
                             src={Mocha}
                             alt="Mocha"
                         />
@@ -19,7 +21,7 @@ export default function Home() {
                         <h3 className="p-2 text-lg">HELLO THERE!</h3>
                         <h1 className="p-2 text-6xl font-black">I'M BEN</h1>
                         <h2 className="p-2 font-bold text-md">
-                            PROGRAMMER, HOCKEY PLAYER, TERRIBLE GAMER
+                            PROGRAMMER, HOCKEY PLAYER
                         </h2>
                         <p className="p-2 py-4 font-light">
                             This is my website! I made it using NextJS,
@@ -86,6 +88,8 @@ export default function Home() {
                     <div className="flex flex-col justify-center w-full h-full p-12 -mb-[100px] lg:w-1/2 lg:mb-0">
                         <Image
                             className="object-contain animate-fade-in"
+                            width={489}
+                            height={626}
                             src={Hockey}
                             alt="Hockey"
                             loading="lazy"
@@ -134,6 +138,8 @@ export default function Home() {
                     <div className="flex flex-col justify-center w-full h-full p-12 lg:p-12 lg:w-1/2 lg:mb-0">
                         <Image
                             className="object-contain animate-fade-in"
+                            width={489}
+                            height={367}
                             src={HackTheNorth}
                             alt="HTN"
                             loading="lazy"
