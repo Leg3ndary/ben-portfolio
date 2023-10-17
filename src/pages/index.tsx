@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Mocha from "@/assets/home/mocha.png";
 import Hockey from "@/assets/home/hockey.jpg";
-import HackTheNorth from "@/assets/home/hackthenorth0.jpg";
+import HackTheNorth from "@/assets/home/hackthenorth.jpg";
+
 
 export default function Home() {
     return (
