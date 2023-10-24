@@ -51,7 +51,7 @@ export default function Home() {
                         <div className="flex mt-12 place-content-evenly">
                             <a href="https://nextjs.org/" target="_blank">
                                 <Image
-                                    className="transition-transform ease-in-out animate-fade-in hover:scale-125"
+                                    className="transition-transform ease-in-out animate-fade-in hover:scale-125 duration-200"
                                     width={75}
                                     height={75}
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
@@ -63,7 +63,7 @@ export default function Home() {
                                 target="_blank"
                             >
                                 <Image
-                                    className="transition-transform ease-in-out animate-fade-in hover:scale-125"
+                                    className="transition-transform ease-in-out animate-fade-in hover:scale-125 duration-200"
                                     width={75}
                                     height={75}
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
@@ -72,7 +72,7 @@ export default function Home() {
                             </a>
                             <a href="https://tailwindcss.com/" target="_blank">
                                 <Image
-                                    className="transition-transform ease-in-out animate-fade-in hover:scale-125"
+                                    className="transition-transform ease-in-out animate-fade-in hover:scale-125 duration-200"
                                     width={75}
                                     height={75}
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
