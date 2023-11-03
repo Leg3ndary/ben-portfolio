@@ -1,5 +1,6 @@
 import Logo from "@/assets/home/logo.png";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Navigation() {
@@ -31,28 +32,28 @@ export default function Navigation() {
             >
                 <div className="flex flex-row flex-wrap w-[1170px] h-full">
                     <div className="flex items-center justify-center">
-                        <a href="/">
+                        <Link href="/">
                             <Image
                                 className="w-16 ml-8 lg:ml-0 lg:auto lg:w-12"
                                 src={Logo}
                                 alt="Logo"
                                 loading="lazy"
                             />
-                        </a>
+                        </Link>
                     </div>
                     <div className="items-center justify-end hidden gap-10 ml-auto lg:flex lg:w-11/12">
-                        <a
+                        <Link
                             className="text-xs font-bold text-center text-white"
                             href="/"
                         >
                             HOME
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                             className="text-xs font-bold text-center text-white"
                             href="/projects"
                         >
                             PROJECTS
-                        </a>
+                        </Link>
                     </div>
                     <div className="flex items-center justify-end gap-10 ml-auto lg:hidden">
                         <button
@@ -83,18 +84,18 @@ export default function Navigation() {
                     isOpen ? "flex h-auto" : "h-0 hidden"
                 } w-full relative lg:hidden flex-col bg-black`}
             >
-                <a
+                <Link
                     className="text-base font-bold text-center text-white"
                     href="/"
                 >
                     HOME
-                </a>
-                <a
+                </Link>
+                <Link
                     className="text-base font-bold text-center text-white"
                     href="/projects"
                 >
                     PROJECTS
-                </a>
+                </Link>
             </div>
         </div>
     );
