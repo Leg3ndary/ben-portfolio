@@ -82,16 +82,16 @@ export default function Navigation() {
             <div
                 className={`${
                     isOpen ? "flex h-auto" : "h-0 hidden"
-                } w-full relative lg:hidden flex-col bg-black`}
+                } w-full relative lg:hidden flex-col bg-black p-4`}
             >
                 <Link
-                    className="text-base font-bold text-center text-white"
+                    className="p-2 text-xl font-bold text-center text-white"
                     href="/"
                 >
                     HOME
                 </Link>
                 <Link
-                    className="text-base font-bold text-center text-white"
+                    className="p-2 text-xl font-bold text-center text-white"
                     href="/projects"
                 >
                     PROJECTS

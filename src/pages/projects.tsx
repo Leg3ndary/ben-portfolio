@@ -4,6 +4,7 @@ import ProjectHoverable from "@/components/ProjectHoverable";
 import bTagScript from "@/assets/projects/bTagScript.png";
 import PortfolioImage from "@/assets/projects/Leg3ndaryPortfolio.png";
 import APMC from "@/assets/projects/APMC.png";
+import Announcements from "@/assets/projects/Announcements.png";
 
 export default function Projects() {
     return (
@@ -36,7 +37,7 @@ export default function Projects() {
                 <div className="flex w-11/12 lg:w-[1300px] flex-row flex-wrap place-content-evenly py-5">
                     <div className="group flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition hover:scale-105 hover:shadow-purple-400 duration-1000">
                         <Image
-                            className="object-contain animate-fade-in"
+                            className="object-contain mx-auto animate-fade-in"
                             src={APMC}
                             width={900}
                             height={100}
@@ -46,7 +47,7 @@ export default function Projects() {
                         <h1 className="p-2 mt-4 text-3xl font-black">
                             APHS MAKERS COMPETITION
                         </h1>
-                        <h2 className="p-2 font-medium text-md">
+                        <h2 className="p-2 font-medium transition-colors duration-1000 text-md group-hover:text-purple-400">
                             CLUB WEBSITE USING NEXT.JS & TAILWIND
                         </h2>
                         <p className="p-2 pt-4 pb-4 font-light">
@@ -54,19 +55,21 @@ export default function Projects() {
                             made a static website containing lots of information
                             about an upcoming competition we hosted. Though
                             there are obviously better choices in terms of
-                            frameworks I wanted to continue using Next.JS to
-                            continue getting better and more proficient with the
-                            framework. You can view the site{" "}
+                            frameworks hosting static content I wanted to
+                            continue using Next.JS to continue getting better
+                            and more proficient with the framework. I will also
+                            likely add more features and submission functions to
+                            the website later on. You can view the site{" "}
                             <a
                                 href="https://apmc.vercel.app/"
                                 target="_blank"
-                                className="font-bold text-blue-500 transition-colors hover:text-red-500"
+                                className="font-bold text-blue-500 transition-colors duration-1000 hover:text-purple-400"
                             >
                                 here
                             </a>
                             .
                         </p>
-                        <div className="flex justify-center w-full">
+                        <div className="flex justify-center w-full mt-auto">
                             <div className="w-[1170px] h-[1px] bg-[#dddddd] group-hover:bg-purple-400 transition-colors duration-1000" />
                         </div>
                         <div className="flex pt-8 place-content-evenly">
@@ -94,7 +97,7 @@ export default function Projects() {
                     </div>
                     <div className="group mt-10 lg:mt-0 flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition duration-1000 hover:shadow-red-500 hover:scale-105">
                         <Image
-                            className="object-contain animate-fade-in"
+                            className="object-contain mx-auto animate-fade-in"
                             src={bTagScript}
                             width={900}
                             height={100}
@@ -104,14 +107,15 @@ export default function Projects() {
                         <h1 className="p-2 mt-4 text-3xl font-black">
                             BTAGSCRIPT PLAYGROUND
                         </h1>
-                        <h2 className="p-2 font-medium text-md">
+                        <h2 className="p-2 font-medium transition-colors duration-1000 text-md group-hover:text-red-500">
                             DYNAMICALLY TYPED INTERPRETER AND DEBUGGER
                         </h2>
                         <p className="p-2 pt-4 pb-4 font-light">
-                            This website allows you to run and debug a small
-                            string templating language also known as TagScript,
-                            I was intrigued by the static language primarily
-                            made popular in the discord bot{" "}
+                            I made an interpreter and website that allows you to
+                            run and debug a small improved string templating
+                            language that I made called bTagScript, I was
+                            intrigued by the static language primarily made
+                            popular in the discord bot{" "}
                             <a
                                 className="font-bold text-blue-500 transition-colors hover:text-red-500"
                                 href="https://carl.gg"
@@ -127,7 +131,7 @@ export default function Projects() {
                             in practice.
                         </p>
                         <div className="mt-auto">
-                            <div className="flex justify-center w-full">
+                            <div className="flex justify-center w-full mt-auto">
                                 <div className="w-[1170px] h-[1px] bg-[#dddddd] group-hover:bg-red-500 transition-colors duration-1000" />
                             </div>
                             <div className="flex pt-8 place-content-evenly">
@@ -155,10 +159,59 @@ export default function Projects() {
                         </div>
                     </div>
                 </div>
-                <div className="flex w-11/12 lg:w-[1300px] flex-row flex-wrap place-content-evenly py-5">
-                    <div className="group flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition hover:scale-105 hover:shadow-cyan-300 duration-1000">
+                <div className="flex w-11/12 lg:w-[1300px] flex-row flex-wrap place-content-evenly">
+                    <div className="group flex mt-10 flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition hover:scale-105 hover:shadow-green-400 duration-1000">
                         <Image
-                            className="object-contain animate-fade-in"
+                            className="object-contain mx-auto animate-fade-in"
+                            src={Announcements}
+                            width={400}
+                            height={100}
+                            alt="APHS Announcements"
+                            loading="lazy"
+                        />
+                        <h1 className="p-2 text-3xl font-black">
+                            SCHOOL ANNOUNCEMENTS
+                        </h1>
+                        <h2 className="p-2 font-medium transition-colors duration-1000 text-md group-hover:text-green-400">
+                            Automated School Announcement Forwarder
+                        </h2>
+                        <p className="p-2 pt-4 pb-4 font-light">
+                            This website is made using NextJS, TypeScript, and
+                            TailwindCSS. I wanted to make a website that was
+                            simple, yet elegant, and I think I did pretty good.
+                            Here is where I'll showcase my projects, and the
+                            technologies I used to create them. I may also post
+                            some blogs or something later!
+                        </p>
+                        <div className="flex justify-center w-full mt-auto">
+                            <div className="w-[1170px] h-[1px] bg-[#dddddd] group-hover:bg-green-400 transition-colors duration-1000" />
+                        </div>
+                        <div className="flex pt-8 place-content-evenly">
+                            <ProjectHoverable
+                                link="https://cloud.google.com"
+                                image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                                alt="Google"
+                            />
+                            <ProjectHoverable
+                                link="https://python.org"
+                                image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                alt="Python"
+                            />
+                            <ProjectHoverable
+                                link="https://discord.com"
+                                image="https://cdnlogo.com/logos/d/43/discord.svg"
+                                alt="Discord"
+                            />
+                            <ProjectHoverable
+                                link="https://sheets.google.com"
+                                image="https://www.cdnlogo.com/logos/g/71/google-sheets.svg"
+                                alt="Sheets"
+                            />
+                        </div>
+                    </div>
+                    <div className="group flex flex-col justify-center mt-10 w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition hover:scale-105 hover:shadow-cyan-300 duration-1000">
+                        <Image
+                            className="object-contain mx-auto animate-fade-in"
                             src={PortfolioImage}
                             width={900}
                             height={100}
@@ -168,7 +221,7 @@ export default function Projects() {
                         <h1 className="p-2 text-3xl font-black">
                             THIS WEBSITE!
                         </h1>
-                        <h2 className="p-2 font-medium text-md">
+                        <h2 className="p-2 font-medium transition-colors duration-1000 text-md group-hover:text-cyan-300">
                             MY OWN PERSONAL WEBSITE
                         </h2>
                         <p className="p-2 pt-4 pb-4 font-light">
@@ -179,7 +232,7 @@ export default function Projects() {
                             technologies I used to create them. I may also post
                             some blogs or something later!
                         </p>
-                        <div className="flex justify-center w-full">
+                        <div className="flex justify-center w-full mt-auto">
                             <div className="w-[1170px] h-[1px] bg-[#dddddd] group-hover:bg-cyan-300 transition-colors duration-1000" />
                         </div>
                         <div className="flex pt-8 place-content-evenly">
