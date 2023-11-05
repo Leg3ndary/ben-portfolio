@@ -176,12 +176,18 @@ export default function Projects() {
                             Automated School Announcement Forwarder
                         </h2>
                         <p className="p-2 pt-4 pb-4 font-light">
-                            This website is made using NextJS, TypeScript, and
-                            TailwindCSS. I wanted to make a website that was
-                            simple, yet elegant, and I think I did pretty good.
-                            Here is where I'll showcase my projects, and the
-                            technologies I used to create them. I may also post
-                            some blogs or something later!
+                            Since our School Announcements are crudely added to
+                            a near 100 page Google Document every day, I took it
+                            upon myself to make a better way of checking and
+                            viewing announcements through my phone. Using{" "}
+                            <a
+                                className="font-bold text-blue-500 transition-colors hover:text-green-400"
+                                href="https://discordpy.readthedocs.io/en/stable/"
+                                target="_blank"
+                            >
+                                Discord.py
+                            </a>{" "}
+                            as
                         </p>
                         <div className="flex justify-center w-full mt-auto">
                             <div className="w-[1170px] h-[1px] bg-[#dddddd] group-hover:bg-green-400 transition-colors duration-1000" />
