@@ -20,6 +20,10 @@ export default function Layout({ children }: PropsWithChildren) {
                 />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://benzhou.tech" />
+                <meta
+                    name="description"
+                    content="Ben Z's Portfolio site made with Next.js TypeScript, and TailwindCSS. View my projects and other relevant information about me!"
+                />
             </Head>
             <Navigation />
             {children}

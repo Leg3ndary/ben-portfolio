@@ -22,9 +22,9 @@ export default function Navigation() {
     }, []);
 
     return (
-        <div className="fixed top-0 z-10 flex flex-col w-full h-auto transition-height">
+        <div className="fixed top-0 z-10 flex flex-col w-full h-auto transition-all duration-1000">
             <div
-                className={`flex justify-center w-full transition-height h-20 bg-black ${
+                className={`flex justify-center w-full transition-all h-20 bg-black duration-1000 ${
                     scrollY > 0
                         ? "lg:h-16 lg:bg-black"
                         : "lg:bg-transparent lg:h-32"

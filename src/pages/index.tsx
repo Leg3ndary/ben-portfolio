@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <>
             <div className="relative top-0 flex justify-center w-full h-[700px] bg-rainbow-gradient animate-breathing-gradient">
-                <div className="relative flex h-[900px] lg:h-[600px] bg-white border-black w-11/12 lg:w-[1170px] drop-shadow-2xl mt-44 rounded-3xl flex-col lg:flex-row">
+                <div className="relative flex h-[900px] lg:h-[600px] bg-white border-black w-11/12 lg:w-[1170px] drop-shadow-xl mt-44 rounded-3xl flex-col lg:flex-row hover:drop-shadow-2xl transition-all duration-1000 ease-in-out">
                     <div className="flex flex-wrap justify-center w-full h-full lg:w-1/2">
                         <Image
                             className="object-contain max-w-xs lg:max-w-none animate-fade-in"
@@ -51,7 +51,7 @@ export default function Home() {
                         <div className="flex mt-12 place-content-evenly">
                             <a href="https://nextjs.org/" target="_blank">
                                 <Image
-                                    className="transition-transform ease-in-out animate-fade-in hover:scale-125 duration-200"
+                                    className="transition-transform duration-200 ease-in-out animate-fade-in hover:scale-125"
                                     width={75}
                                     height={75}
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
@@ -63,7 +63,7 @@ export default function Home() {
                                 target="_blank"
                             >
                                 <Image
-                                    className="transition-transform ease-in-out animate-fade-in hover:scale-125 duration-200"
+                                    className="transition-transform duration-200 ease-in-out animate-fade-in hover:scale-125"
                                     width={75}
                                     height={75}
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
@@ -72,7 +72,7 @@ export default function Home() {
                             </a>
                             <a href="https://tailwindcss.com/" target="_blank">
                                 <Image
-                                    className="transition-transform ease-in-out animate-fade-in hover:scale-125 duration-200"
+                                    className="transition-transform duration-200 ease-in-out animate-fade-in hover:scale-125"
                                     width={75}
                                     height={75}
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
