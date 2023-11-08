@@ -41,15 +41,15 @@ export default function Navigation() {
                             />
                         </Link>
                     </div>
-                    <div className="items-center justify-end hidden gap-10 ml-auto lg:flex lg:w-11/12">
+                    <div className="items-center justify-end hidden gap-10 ml-auto lg:flex lg:w-11/12 bg-clip-text bg-rainbow-gradient animate-breathing-gradient">
                         <Link
-                            className="text-xs font-bold text-center text-white"
+                            className={`text-base font-bold text-center text-white transition-all duration-1000 ${scrollY > 0 ? "hover:text-transparent" : ""}`}
                             href="/"
                         >
                             HOME
                         </Link>
                         <Link
-                            className="text-xs font-bold text-center text-white"
+                            className={`text-base font-bold text-center text-white transition-all duration-1000 ${scrollY > 0 ? "hover:text-transparent" : ""}`}
                             href="/projects"
                         >
                             PROJECTS

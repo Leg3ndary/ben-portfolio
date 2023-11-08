@@ -10,26 +10,20 @@ export default function Projects() {
     return (
         <>
             <div className="relative top-0 flex justify-center w-full h-[550px] bg-rainbow-gradient animate-breathing-gradient">
-                <div className="relative flex h-[600px] lg:h-[300px] bg-white border-black w-11/12 lg:w-[1300px] drop-shadow-2xl mt-44 rounded-3xl">
+                <div className="relative flex h-[600px] lg:h-[300px] bg-white border-black w-11/12 lg:w-[1000px] drop-shadow-2xl mt-44 rounded-3xl">
                     <div className="flex flex-col justify-center w-full h-full p-12">
-                        <h3 className="p-2 text-lg text-center">
+                        <h2 className="p-2 text-lg text-center">
                             HERE ARE SOME OF MY PROJECTS!
-                        </h3>
+                        </h2>
                         <h1 className="p-2 text-4xl font-black text-center lg:text-6xl">
                             PROJECTS
                         </h1>
                         <p className="p-2 py-5 font-light">
                             I work with many languages and technologies, you can
                             see some of them below! I'm always learning new
-                            things, and I'm always looking for new projects to
+                            things, looking for new projects to
                             work on.
                         </p>
-                        <h3 className="p-2 text-xl text-center">
-                            Please note that I'm still working on this site and
-                            adding my newest projects is on my to do list... If
-                            you do want to see all my projects, check out my
-                            GitHub!
-                        </h3>
                     </div>
                 </div>
             </div>
@@ -44,12 +38,12 @@ export default function Projects() {
                             alt="Portfolio"
                             loading="lazy"
                         />
-                        <h1 className="p-2 mt-4 text-3xl font-black">
+                        <h2 className="p-2 mt-4 text-3xl font-black">
                             APHS MAKERS COMPETITION
-                        </h1>
-                        <h2 className="p-2 font-medium transition-colors duration-1000 text-md group-hover:text-purple-400">
-                            CLUB WEBSITE USING NEXT.JS & TAILWIND
                         </h2>
+                        <h3 className="p-2 font-medium transition-colors duration-1000 text-md group-hover:text-purple-400">
+                            CLUB WEBSITE USING NEXT.JS & TAILWIND
+                        </h3>
                         <p className="p-2 pt-4 pb-4 font-light">
                             To continue practicing using Tailwind and Next.js I
                             made a static website containing lots of information
@@ -104,12 +98,12 @@ export default function Projects() {
                             alt="Hockey"
                             loading="lazy"
                         />
-                        <h1 className="p-2 mt-4 text-3xl font-black">
+                        <h2 className="p-2 mt-4 text-3xl font-black">
                             BTAGSCRIPT PLAYGROUND
-                        </h1>
-                        <h2 className="p-2 font-medium transition-colors duration-1000 text-md group-hover:text-red-500">
-                            DYNAMICALLY TYPED INTERPRETER AND DEBUGGER
                         </h2>
+                        <h3 className="p-2 font-medium transition-colors duration-1000 text-md group-hover:text-red-500">
+                            DYNAMICALLY TYPED INTERPRETER AND DEBUGGER
+                        </h3>
                         <p className="p-2 pt-4 pb-4 font-light">
                             I made an interpreter and website that allows you to
                             run and debug a small improved string templating
@@ -169,12 +163,12 @@ export default function Projects() {
                             alt="APHS Announcements"
                             loading="lazy"
                         />
-                        <h1 className="p-2 text-3xl font-black">
+                        <h2 className="p-2 text-3xl font-black">
                             SCHOOL ANNOUNCEMENTS
-                        </h1>
-                        <h2 className="p-2 font-medium transition-colors duration-1000 text-md group-hover:text-green-400">
-                            Automated School Announcement Forwarder
                         </h2>
+                        <h3 className="p-2 font-medium transition-colors duration-1000 text-md group-hover:text-green-400">
+                            Automated School Announcement Forwarder
+                        </h3>
                         <p className="p-2 pt-4 pb-4 font-light">
                             Since our School Announcements are crudely added to
                             a near 100 page Google Document every day, I took it
@@ -224,12 +218,12 @@ export default function Projects() {
                             alt="Portfolio"
                             loading="lazy"
                         />
-                        <h1 className="p-2 text-3xl font-black">
+                        <h2 className="p-2 text-3xl font-black">
                             THIS WEBSITE!
-                        </h1>
-                        <h2 className="p-2 font-medium transition-colors duration-1000 text-md group-hover:text-cyan-300">
-                            MY OWN PERSONAL WEBSITE
                         </h2>
+                        <h3 className="p-2 font-medium transition-colors duration-1000 text-md group-hover:text-cyan-300">
+                            MY OWN PERSONAL WEBSITE
+                        </h3>
                         <p className="p-2 pt-4 pb-4 font-light">
                             This website is made using NextJS, TypeScript, and
                             TailwindCSS. I wanted to make a website that was

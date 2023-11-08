@@ -100,12 +100,12 @@ export default function Home() {
                     </div>
                     <div className="flex flex-col justify-center w-full h-full p-12 lg:w-1/2">
                         <h3 className="p-2 text-lg">ABOUT ME</h3>
-                        <h1 className="p-2 text-5xl font-black">
+                        <h2 className="p-2 text-5xl font-black">
                             I LIKE HOCKEY
-                        </h1>
-                        <h2 className="p-2 font-medium text-md">
-                            TIER 2 PLAYER / ASSISTANT COACH
                         </h2>
+                        <h4 className="p-2 font-medium text-md">
+                            TIER 2 PLAYER / ASSISTANT COACH
+                        </h4>
                         <p className="p-2 pt-4 pb-4 font-light">
                             I've been skating since before I can remember, and
                             started playing hockey when I was around 10. I
@@ -123,12 +123,12 @@ export default function Home() {
                 <div className="flex w-11/12 lg:w-[1170px] lg:flex-row flex-col">
                     <div className="flex flex-col justify-center w-full h-full p-12 pb-0 lg:w-1/2">
                         <h3 className="p-2 text-lg">I ALSO ATTEND...</h3>
-                        <h1 className="p-2 text-3xl font-black lg:text-5xl">
+                        <h2 className="p-2 text-3xl font-black lg:text-5xl">
                             HACKATHONS!
-                        </h1>
-                        <h2 className="p-2 font-medium text-md">
-                            WHEN I HAVE TIME :(
                         </h2>
+                        <h4 className="p-2 font-medium text-md">
+                            WHEN I HAVE TIME :(
+                        </h4>
                         <p className="p-2 pt-4 pb-4 font-light">
                             Hackathons are fun competitions where "Hackers"
                             build a working development version of some project
