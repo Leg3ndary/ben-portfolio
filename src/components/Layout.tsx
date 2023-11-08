@@ -14,7 +14,10 @@ export default function Layout({ children }: PropsWithChildren) {
                     property="og:description"
                     content="Ben's Portfolio Website made with Next.js, TypeScript, and TailwindCSS."
                 />
-                <meta property="description" content="Ben's Portfolio Website made with Next.js, TypeScript, and TailwindCSS." />
+                <meta
+                    property="description"
+                    content="Ben's Portfolio Website made with Next.js, TypeScript, and TailwindCSS."
+                />
                 <meta
                     property="og:image"
                     content="https://i.imgur.com/6KdqAaf.png"

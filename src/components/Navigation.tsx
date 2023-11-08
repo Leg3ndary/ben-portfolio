@@ -83,9 +83,7 @@ export default function Navigation() {
                     </div>
                 </div>
             </div>
-            <div
-                className="relative flex flex-col w-full h-auto p-4 transition-all duration-1000 bg-black lg:hidden"
-            >
+            <div className="relative flex flex-col w-full h-auto p-4 transition-all duration-1000 bg-black lg:hidden">
                 <Link
                     className="p-2 text-xl font-bold text-center text-white"
                     href="/"
