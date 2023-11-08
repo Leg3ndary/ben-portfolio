@@ -43,13 +43,17 @@ export default function Navigation() {
                     </div>
                     <div className="items-center justify-end hidden gap-10 ml-auto lg:flex lg:w-11/12 bg-clip-text bg-rainbow-gradient animate-breathing-gradient">
                         <Link
-                            className={`text-base font-bold text-center text-white transition-all duration-1000 ${scrollY > 0 ? "hover:text-transparent" : ""}`}
+                            className={`text-base font-bold text-center text-white transition-all duration-1000 ${
+                                scrollY > 0 ? "hover:text-transparent" : ""
+                            }`}
                             href="/"
                         >
                             HOME
                         </Link>
                         <Link
-                            className={`text-base font-bold text-center text-white transition-all duration-1000 ${scrollY > 0 ? "hover:text-transparent" : ""}`}
+                            className={`text-base font-bold text-center text-white transition-all duration-1000 ${
+                                scrollY > 0 ? "hover:text-transparent" : ""
+                            }`}
                             href="/projects"
                         >
                             PROJECTS
@@ -57,7 +61,7 @@ export default function Navigation() {
                     </div>
                     <div className="flex items-center justify-end gap-10 ml-auto lg:hidden">
                         <button
-                            className="flex flex-col items-center justify-center w-12 h-12 mr-4 rounded"
+                            className="flex flex-col items-center justify-center w-12 h-12 mr-4 duration-500 rounded"
                             onClick={() => setIsOpen(!isOpen)}
                         >
                             <div
@@ -80,9 +84,7 @@ export default function Navigation() {
                 </div>
             </div>
             <div
-                className={`${
-                    isOpen ? "flex h-auto" : "h-0 hidden"
-                } w-full relative lg:hidden flex-col bg-black p-4`}
+                className="relative flex flex-col w-full h-auto p-4 transition-all duration-1000 bg-black lg:hidden"
             >
                 <Link
                     className="p-2 text-xl font-bold text-center text-white"
