@@ -2,6 +2,7 @@ import Logo from "@/assets/home/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function Navigation() {
     const [scrollY, setScrollY] = useState(0);
@@ -31,7 +32,16 @@ export default function Navigation() {
                 }`}
             >
                 <div className="flex flex-row flex-wrap w-[1170px] h-full">
-                    <div className="flex items-center justify-center">
+                    <motion.div
+                        className="flex items-center justify-center"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 10,
+                        }}
+                    >
                         <Link href="/">
                             <Image
                                 className="w-16 ml-8 lg:ml-0 lg:auto lg:w-12"
@@ -40,24 +50,46 @@ export default function Navigation() {
                                 loading="lazy"
                             />
                         </Link>
-                    </div>
-                    <div className="items-center justify-end hidden gap-10 ml-auto lg:flex lg:w-11/12 bg-clip-text bg-rainbow-gradient animate-breathing-gradient">
-                        <Link
-                            className={`text-base font-bold text-center text-white transition-all duration-1000 ${
-                                scrollY > 0 ? "hover:text-transparent" : ""
-                            }`}
-                            href="/"
+                    </motion.div>
+                    <div className="items-center justify-end hidden gap-10 ml-auto lg:flex lg:w-11/12">
+                        <motion.div
+                            className="bg-clip-text bg-rainbow-gradient animate-breathing-gradient"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            transition={{
+                                type: "spring",
+                                stiffness: 300,
+                                damping: 10,
+                            }}
                         >
-                            HOME
-                        </Link>
-                        <Link
-                            className={`text-base font-bold text-center text-white transition-all duration-1000 ${
-                                scrollY > 0 ? "hover:text-transparent" : ""
-                            }`}
-                            href="/projects"
+                            <Link
+                                className={`text-base font-bold text-center text-white transition-all duration-1000 ${
+                                    scrollY > 0 ? "hover:text-transparent" : ""
+                                }`}
+                                href="/"
+                            >
+                                HOME
+                            </Link>
+                        </motion.div>
+                        <motion.div
+                            className="bg-clip-text bg-rainbow-gradient animate-breathing-gradient"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            transition={{
+                                type: "spring",
+                                stiffness: 300,
+                                damping: 10,
+                            }}
                         >
-                            PROJECTS
-                        </Link>
+                            <Link
+                                className={`text-base font-bold text-center text-white transition-all duration-1000 ${
+                                    scrollY > 0 ? "hover:text-transparent" : ""
+                                }`}
+                                href="/projects"
+                            >
+                                PROJECTS
+                            </Link>
+                        </motion.div>
                     </div>
                     <div className="flex items-center justify-end gap-10 ml-auto lg:hidden">
                         <button

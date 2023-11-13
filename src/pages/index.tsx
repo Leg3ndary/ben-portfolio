@@ -2,12 +2,18 @@ import Image from "next/image";
 import Mocha from "@/assets/home/mocha.png";
 import Hockey from "@/assets/home/hockey.jpg";
 import HackTheNorth from "@/assets/home/hackthenorth.jpg";
+import { motion } from "framer-motion";
 
 export default function Home() {
     return (
         <>
             <div className="relative top-0 flex justify-center w-full h-[700px] bg-rainbow-gradient animate-breathing-gradient">
-                <div className="relative flex h-[900px] lg:h-[600px] bg-white border-black w-11/12 lg:w-[1170px] drop-shadow-xl mt-44 rounded-3xl flex-col lg:flex-row hover:drop-shadow-2xl transition-all duration-1000 ease-in-out">
+                <motion.div
+                    className="relative flex h-[900px] lg:h-[600px] bg-white border-black w-11/12 lg:w-[1170px] drop-shadow-xl mt-44 rounded-3xl flex-col lg:flex-row hover:drop-shadow-2xl transition-all duration-1000 ease-in-out"
+                    initial={{ y: -20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1 }}
+                >
                     <div className="flex flex-wrap justify-center w-full h-full lg:w-1/2">
                         <Image
                             className="object-contain max-w-xs lg:max-w-none animate-fade-in"
@@ -81,7 +87,7 @@ export default function Home() {
                             </a>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
             <div className="flex justify-center w-full pt-[360px] lg:pt-32">
                 <div className="flex w-11/12 lg:w-[1170px] lg:flex-row flex-col">

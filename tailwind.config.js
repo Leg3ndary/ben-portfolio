@@ -34,7 +34,7 @@ module.exports = {
                 },
             },
             animation: {
-                "breathing-gradient": "breathing-gradient 30s ease infinite",
+                "breathing-gradient": "breathing-gradient 20s ease infinite",
                 "fade-in": "fade-in 1s ease-in-out",
             },
             height: {
