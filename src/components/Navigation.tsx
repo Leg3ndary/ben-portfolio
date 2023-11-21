@@ -2,7 +2,7 @@ import Logo from "@/assets/home/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Navigation() {
     const [scrollY, setScrollY] = useState(0);
@@ -115,20 +115,29 @@ export default function Navigation() {
                     </div>
                 </div>
             </div>
-            <div className="relative flex flex-col w-full h-auto p-4 transition-all duration-1000 bg-black lg:hidden">
-                <Link
-                    className="p-2 text-xl font-bold text-center text-white"
-                    href="/"
-                >
-                    HOME
-                </Link>
-                <Link
-                    className="p-2 text-xl font-bold text-center text-white"
-                    href="/projects"
-                >
-                    PROJECTS
-                </Link>
-            </div>
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        className="relative flex flex-col w-full h-auto p-4 transition-all duration-1000 bg-black lg:hidden"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                    >
+                        <Link
+                            className="p-2 text-xl font-bold text-center text-white"
+                            href="/"
+                        >
+                            HOME
+                        </Link>
+                        <Link
+                            className="p-2 text-xl font-bold text-center text-white"
+                            href="/projects"
+                        >
+                            PROJECTS
+                        </Link>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }

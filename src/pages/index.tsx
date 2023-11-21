@@ -89,7 +89,13 @@ export default function Home() {
                     </div>
                 </motion.div>
             </div>
-            <div className="flex justify-center w-full pt-[360px] lg:pt-32">
+            <motion.div
+                className="flex justify-center w-full pt-[360px] lg:pt-32"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true, amount: 0.8 }}
+            >
                 <div className="flex w-11/12 lg:w-[1170px] lg:flex-row flex-col">
                     <div className="flex flex-col justify-center w-full h-full p-12 -mb-[100px] lg:w-1/2 lg:mb-0">
                         <Image
@@ -121,13 +127,19 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
             <div className="flex justify-center w-full">
                 <div className="w-10/12 lg:w-[1170px] h-[1px] bg-[#dddddd]" />
             </div>
-            <div className="flex justify-center w-full">
+            <motion.div
+                className="flex justify-center w-full"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true, amount: 0.8 }}
+            >
                 <div className="flex w-11/12 lg:w-[1170px] lg:flex-row flex-col">
-                    <div className="flex flex-col justify-center w-full h-full p-12 pb-0 lg:w-1/2">
+                    <div className="flex flex-col items-end justify-center w-full h-full p-12 lg:w-1/2">
                         <h3 className="p-2 text-lg">I ALSO ATTEND...</h3>
                         <h2 className="p-2 text-3xl font-black lg:text-5xl">
                             HACKATHONS!
@@ -155,7 +167,7 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
     );
 }
