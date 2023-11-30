@@ -7,18 +7,16 @@ import { motion } from "framer-motion";
 export default function Home() {
     return (
         <>
-            <div className="relative top-0 flex justify-center w-full h-[700px] bg-rainbow-gradient animate-breathing-gradient">
+            <div className="relative top-0 flex justify-center w-full h-[650px] md:h-[800px] lg:h-[650px] bg-rainbow-gradient animate-breathing-gradient">
                 <motion.div
-                    className="relative flex h-[900px] lg:h-[600px] bg-white border-black w-11/12 lg:w-[1170px] drop-shadow-xl mt-44 rounded-3xl flex-col lg:flex-row hover:drop-shadow-2xl transition-all duration-1000 ease-in-out"
+                    className="relative flex h-[900px] lg:h-[550px] bg-white border-black w-11/12 md:w-[690px] lg:w-11/12 lg:max-w-[1100px] drop-shadow-xl mt-44 rounded-3xl flex-col lg:flex-row hover:drop-shadow-2xl transition-all duration-1000 ease-in-out"
                     initial={{ y: -20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
                 >
                     <div className="flex flex-wrap justify-center w-full h-full lg:w-1/2">
                         <Image
-                            className="object-contain max-w-xs lg:max-w-none animate-fade-in"
-                            width={512}
-                            height={600}
+                            className="object-contain max-w-md mt-10 -mb-5 lg:mt-0 animate-fade-in"
                             src={Mocha}
                             alt="Mocha"
                         />
@@ -90,14 +88,14 @@ export default function Home() {
                 </motion.div>
             </div>
             <motion.div
-                className="flex justify-center w-full pt-[360px] lg:pt-32"
+                className="flex justify-center w-full pt-[360px] md:pt-80 lg:pt-36"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true, amount: 0.8 }}
             >
-                <div className="flex w-11/12 lg:w-[1170px] lg:flex-row flex-col">
-                    <div className="flex flex-col justify-center w-full h-full p-12 -mb-[100px] lg:w-1/2 lg:mb-0">
+                <div className="flex w-11/12 max-w-[1170px] md:flex-row flex-col py-2">
+                    <div className="flex flex-col justify-center w-full h-full p-12 -mb-[100px] md:w-1/2 lg:mb-0">
                         <Image
                             className="object-contain animate-fade-in"
                             width={489}
@@ -110,9 +108,9 @@ export default function Home() {
                             My U16 Team at a tournament in Niagara, Ontario
                         </p>
                     </div>
-                    <div className="flex flex-col justify-center w-full h-full p-12 lg:w-1/2">
+                    <div className="flex flex-col justify-center w-full h-full p-12 md:w-1/2">
                         <h3 className="p-2 text-lg">ABOUT ME</h3>
-                        <h2 className="p-2 text-5xl font-black">
+                        <h2 className="p-2 text-3xl font-black md:text-5xl">
                             I LIKE HOCKEY
                         </h2>
                         <h4 className="p-2 font-medium text-md">
@@ -132,16 +130,16 @@ export default function Home() {
                 <div className="w-10/12 lg:w-[1170px] h-[1px] bg-[#dddddd]" />
             </div>
             <motion.div
-                className="flex justify-center w-full"
+                className="flex justify-center w-full py-2"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true, amount: 0.8 }}
             >
-                <div className="flex w-11/12 lg:w-[1170px] lg:flex-row flex-col">
-                    <div className="flex flex-col items-end justify-center w-full h-full p-12 lg:w-1/2">
+                <div className="flex w-11/12 lg:w-[1170px] md:flex-row flex-col">
+                    <div className="flex flex-col items-end justify-center w-full h-full p-12 md:w-1/2">
                         <h3 className="p-2 text-lg">I ALSO ATTEND...</h3>
-                        <h2 className="p-2 text-3xl font-black lg:text-5xl">
+                        <h2 className="p-2 text-3xl font-black md:text-5xl">
                             HACKATHONS!
                         </h2>
                         <h4 className="p-2 font-medium text-md">
@@ -153,7 +151,7 @@ export default function Home() {
                             or idea in a short amount of time.
                         </p>
                     </div>
-                    <div className="flex flex-col justify-center w-full h-full p-12 lg:p-12 lg:w-1/2 lg:mb-0">
+                    <div className="flex flex-col justify-center w-full h-full p-12 lg:p-12 md:w-1/2 lg:mb-0">
                         <Image
                             className="object-contain animate-fade-in"
                             width={489}

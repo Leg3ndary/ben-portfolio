@@ -31,7 +31,7 @@ export default function Navigation() {
                         : "lg:bg-transparent lg:h-32"
                 }`}
             >
-                <div className="flex flex-row flex-wrap w-[1170px] h-full">
+                <div className="flex flex-row flex-wrap w-11/12 max-w-[1170px] h-full">
                     <motion.div
                         className="flex items-center justify-center"
                         whileHover={{ scale: 1.1 }}
