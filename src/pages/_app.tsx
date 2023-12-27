@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import Layout from "@/components/Layout";
 import { Roboto } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const roboto = Roboto({
     subsets: ["latin"],
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <div className={roboto.className}>
             <Layout>
                 <Component {...pageProps} />
+                <SpeedInsights />
             </Layout>
             <Analytics />
         </div>
