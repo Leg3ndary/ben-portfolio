@@ -1,10 +1,10 @@
 import Image from "next/image";
 import ProjectHoverable from "@/components/ProjectHoverable";
 
-import bTagScript from "@/assets/projects/bTagScript.png";
-import PortfolioImage from "@/assets/projects/Leg3ndaryPortfolio.png";
-import APMC from "@/assets/projects/APMC.png";
-import Announcements from "@/assets/projects/Announcements.png";
+import bTagScript from "@/../public/projects/bTagScript.png";
+import PortfolioImage from "@/../public/projects/Leg3ndaryPortfolio.png";
+import APMC from "@/../public/projects/APMC.png";
+import Announcements from "@/../public/projects/Announcements.png";
 
 export default function Projects() {
     return (

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Mocha from "@/assets/home/mocha.png";
-import Hockey from "@/assets/home/hockey.jpg";
-import HackTheNorth from "@/assets/home/hackthenorth.jpg";
+import Mocha from "@/../public/home/mocha.png";
+import Hockey from "@/../public/home/hockey.jpg";
+import HackTheNorth from "@/../public/home/hackthenorth.jpg";
 import { motion } from "framer-motion";
 
 export default function Home() {
