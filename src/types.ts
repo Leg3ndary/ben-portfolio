@@ -1,21 +1,21 @@
+import { StaticImageData } from "next/image";
+
 export type ProjectPreviewProps = {
     image: {
-        src: string;
+        src: StaticImageData;
         alt: string;
         width?: number;
         height?: number;
     };
     title: string;
     sub: string;
-    description: string;
-    icons: [
-        {
-            link: string;
-            image: string;
-            alt: string;
-            width?: number;
-            height?: number;
-        }
-    ];
+    description: JSX.Element;
+    icons: {
+        link: string;
+        image: string;
+        alt: string;
+        width?: number;
+        height?: number;
+    }[];
     color: string;
 };

@@ -51,7 +51,7 @@ export default function ProjectPreview({
             <Image
                 className="object-contain mx-auto animate-fade-in"
                 src={image.src}
-                width={image.height ? image.height : 100}
+                width={image.width ? image.width : 100}
                 height={image.height ? image.height : 100}
                 alt={image.alt}
                 loading="lazy"
