@@ -23,7 +23,9 @@ export default function Home() {
                     </div>
                     <div className="flex flex-col justify-center w-full h-full p-12 -mt-10 lg:w-1/2 lg:mt-0">
                         <h3 className="p-2 text-lg">HELLO THERE!</h3>
-                        <h1 className="p-2 text-6xl font-black">I&apos;M BEN</h1>
+                        <h1 className="p-2 text-6xl font-black">
+                            I&apos;M BEN
+                        </h1>
                         <h2 className="p-2 font-bold text-md">
                             PROGRAMMER, HOCKEY PLAYER
                         </h2>
@@ -117,8 +119,8 @@ export default function Home() {
                             TIER 2 PLAYER / ASSISTANT COACH
                         </h4>
                         <p className="p-2 pt-4 pb-4 font-light">
-                            I&apos;ve been skating since before I can remember, and
-                            started playing hockey when I was around 10. I
+                            I&apos;ve been skating since before I can remember,
+                            and started playing hockey when I was around 10. I
                             stopped playing competitively in my junior year to
                             help coach other teams and focus more on
                             programming.
@@ -146,9 +148,10 @@ export default function Home() {
                             WHEN I HAVE TIME :(
                         </h4>
                         <p className="p-2 pt-4 pb-4 font-light">
-                            Hackathons are fun competitions where &quot;Hackers&quot;
-                            build a working development version of some project
-                            or idea in a short amount of time.
+                            Hackathons are fun competitions where
+                            &quot;Hackers&quot; build a working development
+                            version of some project or idea in a short amount of
+                            time.
                         </p>
                     </div>
                     <div className="flex flex-col justify-center w-full h-full p-12 lg:p-12 md:w-1/2 lg:mb-0">

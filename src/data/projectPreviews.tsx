@@ -80,8 +80,8 @@ const projectPreviews = [
                 their main concepts. Though I primarily focused on making a
                 reactive and primarily aesthetic frontend, I also linked our API
                 to our frontend code while also troubleshooting various issues
-                we had when working with OpenAI&apos;s vision model. You can watch
-                our project in action on{" "}
+                we had when working with OpenAI&apos;s vision model. You can
+                watch our project in action on{" "}
                 <a
                     href="https://youtu.be/iBQgLgNp7AE"
                     target="_blank"
