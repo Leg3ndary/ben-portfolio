@@ -27,8 +27,8 @@ export default function Projects() {
                 </div>
             </div>
             <div className="flex flex-col flex-wrap content-center justify-center w-full pt-64 pb-16 lg:pb-20 lg:pt-24">
-                <div className="flex w-11/12 lg:w-[1300px] flex-row flex-wrap place-content-evenly py-5">
-                    <div className="group flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition hover:scale-105 hover:shadow-purple-400 duration-1000">
+                <div className="grid gap-y-10 w-11/12 md:w-[600px] xl:w-[1300px] 3xl:w-[1850px] py-5 grid-flow-row grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3">
+                    <div className="place-self-center group flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition hover:scale-105 hover:shadow-purple-400 duration-1000">
                         <Image
                             className="object-contain mx-auto animate-fade-in"
                             src={APMC}
@@ -88,7 +88,7 @@ export default function Projects() {
                             />
                         </div>
                     </div>
-                    <div className="group mt-10 lg:mt-0 flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition duration-1000 hover:shadow-red-500 hover:scale-105">
+                    <div className="place-self-center group flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition duration-1000 hover:shadow-red-500 hover:scale-105">
                         <Image
                             className="object-contain mx-auto animate-fade-in"
                             src={bTagScript}
@@ -151,9 +151,7 @@ export default function Projects() {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="flex w-11/12 lg:w-[1300px] flex-row flex-wrap place-content-evenly">
-                    <div className="group flex mt-10 flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition hover:scale-105 hover:shadow-green-400 duration-1000">
+                    <div className="place-self-center group flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition hover:scale-105 hover:shadow-green-400 duration-1000">
                         <Image
                             className="object-contain mx-auto animate-fade-in"
                             src={Announcements}
@@ -208,7 +206,7 @@ export default function Projects() {
                             />
                         </div>
                     </div>
-                    <div className="group flex flex-col justify-center mt-10 w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition hover:scale-105 hover:shadow-cyan-300 duration-1000">
+                    <div className="place-self-center group flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition hover:scale-105 hover:shadow-cyan-300 duration-1000">
                         <Image
                             className="object-contain mx-auto animate-fade-in"
                             src={PortfolioImage}

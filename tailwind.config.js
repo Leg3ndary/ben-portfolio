@@ -43,6 +43,9 @@ module.exports = {
             colors: {
                 transparent: "transparent",
             },
+            screens: {
+                "3xl": "1920px",
+            }
         },
     },
     plugins: [],
