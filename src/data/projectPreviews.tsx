@@ -5,10 +5,64 @@ import PortfolioImage from "@/../public/projects/Leg3ndaryPortfolio.png";
 import APMC from "@/../public/projects/APMC.png";
 import Announcements from "@/../public/projects/Announcements.png";
 import FlashNotes from "@/../public/projects/FlashNotes.png";
-
-// https://youtu.be/iBQgLgNp7AE
+import Eureka from "@/../public/projects/Eureka2024.png";
 
 const projectPreviews = [
+    {
+        image: {
+            src: Eureka,
+            alt: "EUREKAHACKS 2024",
+            width: 900,
+            height: 100,
+        },
+        title: "EUREKAHACKS 2024",
+        sub: "RESPONSIVE MODERN HACKATHON WEBSITE",
+        description: (
+            <>
+                As the lead director of web development for EurekaHACKS 2024, I
+                was tasked with creating a modern and responsive website to
+                attract attendees and sponsors. To make sure our department
+                could collaborate effectively we used standard JavaScript along
+                with Next.js to speed up some of our processes. Working with our
+                Design team, I replicated and created layouts, while also
+                creating animations and transitions to make the website more
+                appealing. I also helped transfer domains and manage DNS records
+                while also managing the production site using Netlify. You can
+                view the site at{" "}
+                <a
+                    href="https://eurekahacks.ca"
+                    target="_blank"
+                    className="font-bold text-blue-500 transition-colors duration-1000 hover:text-fuchsia-400"
+                >
+                    eurekahacks.ca
+                </a>
+                .
+            </>
+        ),
+        icons: [
+            {
+                link: "https://nextjs.org",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg",
+                alt: "NextJS",
+            },
+            {
+                link: "https://javascript.com",
+                image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+                alt: "JavaScript",
+            },
+            {
+                link: "https://netlify.com",
+                image: "https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg",
+                alt: "Netlify",
+            },
+            {
+                link: "https://figma.com",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+                alt: "Figma",
+            },
+        ],
+        color: "fuchsia-400",
+    },
     {
         image: {
             src: FlashNotes,
@@ -27,22 +81,23 @@ const projectPreviews = [
                 reactive and primarily aesthetic frontend, I also linked our API
                 to our frontend code while also troubleshooting various issues
                 we had when working with OpenAI's vision model. You can watch
-                our project in action{" "}
+                our project in action on{" "}
                 <a
                     href="https://youtu.be/iBQgLgNp7AE"
                     target="_blank"
                     className="font-bold text-blue-500 transition-colors duration-1000 hover:text-orange-500"
                 >
-                    here
+                    Youtube
                 </a>
-                . You can also view our winning project{" "}
+                . You can also view our winning project's submission on{" "}
                 <a
                     href="https://devpost.com/software/flashnotes-i0cymh"
                     target="_blank"
                     className="font-bold text-blue-500 transition-colors duration-1000 hover:text-orange-500"
                 >
-                    here
-                </a>.
+                    DevPost
+                </a>
+                .
             </>
         ),
         icons: [
@@ -86,13 +141,14 @@ const projectPreviews = [
                 in terms of frameworks hosting static content, I wanted to
                 continue using Next.js to improve my proficiency with the
                 framework. I plan to add more features and submission functions
-                to the website later on. You can view the site{" "}
+                to the website later on. You can view the site hosted by vercel
+                at{" "}
                 <a
                     href="https://apmc.vercel.app/"
                     target="_blank"
                     className="font-bold text-blue-500 transition-colors duration-1000 hover:text-purple-400"
                 >
-                    here
+                    apmc.vercel.app
                 </a>
                 .
             </>
