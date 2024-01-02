@@ -69,10 +69,25 @@ const projectPreviews = [
         sub: "DYNAMICALLY TYPED INTERPRETER AND DEBUGGER",
         description: (
             <>
-                I made an interpreter and website that allows you to run and
-                debug a small improved string templating language that I made
-                called bTagScript, I was intrigued by the static language
-                primarily made popular in the discord bot{" "}
+                I made an{" "}
+                <a
+                    className="font-bold text-blue-500 transition-colors hover:text-red-500"
+                    href="https://github.com/Leg3ndary/bTagScript"
+                    target="_blank"
+                >
+                    interpreter
+                </a>{" "}
+                and{" "}
+                <a
+                    className="font-bold text-blue-500 transition-colors hover:text-red-500"
+                    href="https://leg3ndary.github.io/bTagScriptPlayground/"
+                    target="_blank"
+                >
+                    website
+                </a>{" "}
+                that allows you to run and debug a small improved string
+                templating language that I made called bTagScript. Intrigued by
+                the static language primarily made popular in the discord bot{" "}
                 <a
                     className="font-bold text-blue-500 transition-colors hover:text-red-500"
                     href="https://carl.gg"
@@ -80,11 +95,10 @@ const projectPreviews = [
                 >
                     Carl-bot
                 </a>
-                . I thought I could not only make it better, I thought I could
-                enhance the development experience for this niche language, and
-                that I did. This language focuses on simplicity and quick
-                programming for functions that may be hard to program but simple
-                in practice.
+                , I thought I could not only make it better, but also enhance
+                the development experience for this niche language. This
+                language focuses on simplicity and quick programming for
+                functions that may be tedious to program but simple in practice.
             </>
         ),
         icons: [
@@ -122,8 +136,8 @@ const projectPreviews = [
         sub: "Automated School Announcement Forwarder",
         description: (
             <>
-                Since our School Announcements are crudely added to a near 100
-                page Google Document every day, I took it upon myself to make a
+                Since our School Announcements are crudely added to a 96 page
+                Google Document every day, I took it upon myself to make a
                 better way of checking and viewing announcements through my
                 phone. Using{" "}
                 <a
@@ -133,7 +147,12 @@ const projectPreviews = [
                 >
                     Discord.py
                 </a>{" "}
-                as
+                as a UI, I made a bot that would scrape the entire document at
+                regular intervals throughout the day. I then used regex to parse
+                the document and send the announcements to a Discord channel. I
+                also added a feature that would allow users to subscribe to the
+                announcements list and therefore get notified whenever a new
+                announcement is posted.
             </>
         ),
         icons: [
