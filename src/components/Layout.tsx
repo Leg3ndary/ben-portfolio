@@ -7,7 +7,7 @@ export default function Layout({ children }: PropsWithChildren) {
     return (
         <div className="scroll-smooth">
             <Head>
-                <title>Ben's Portfolio</title>
+                <title>Ben&apos;s Portfolio</title>
                 <meta name="theme-color" content="#339ccd" />
                 <meta property="og:title" content="Ben Z'z Portfolio" />
                 <meta

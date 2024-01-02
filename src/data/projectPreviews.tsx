@@ -80,7 +80,7 @@ const projectPreviews = [
                 their main concepts. Though I primarily focused on making a
                 reactive and primarily aesthetic frontend, I also linked our API
                 to our frontend code while also troubleshooting various issues
-                we had when working with OpenAI's vision model. You can watch
+                we had when working with OpenAI&apos;s vision model. You can watch
                 our project in action on{" "}
                 <a
                     href="https://youtu.be/iBQgLgNp7AE"
@@ -89,7 +89,7 @@ const projectPreviews = [
                 >
                     Youtube
                 </a>
-                . You can also view our winning project's submission on{" "}
+                . You can also view our winning project&apos;s submission on{" "}
                 <a
                     href="https://devpost.com/software/flashnotes-i0cymh"
                     target="_blank"
@@ -311,7 +311,7 @@ const projectPreviews = [
             <>
                 This website is made using NextJS, TypeScript, and TailwindCSS.
                 I wanted to make a website that was simple, yet elegant, and I
-                think I did pretty good. Here is where I'll showcase my
+                think I did pretty good. Here is where I&apos;ll showcase my
                 projects, and the technologies I used to create them. I may also
                 post some blogs or something later!
             </>

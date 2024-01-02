@@ -15,7 +15,7 @@ export default function Projects() {
                         </h1>
                         <p className="p-2 py-5 font-light">
                             I work with many languages and technologies, you can
-                            see some of them below! I'm always learning new
+                            see some of them below! I&apos;m always learning new
                             things, looking for new projects to work on.
                         </p>
                     </div>
