@@ -25,7 +25,7 @@ const colorVariants: { [key: string]: string[] } = {
         "hover:shadow-cyan-300",
         "group-hover:text-cyan-300",
         "hover:text-cyan-300",
-        "group-hover:bg-cyan-300",  
+        "group-hover:bg-cyan-300",
     ],
     default: [
         "hover:shadow-blue-400",
@@ -62,9 +62,7 @@ export default function ProjectPreview({
             >
                 {sub}
             </h3>
-            <p className="p-2 pt-4 pb-4 font-light">
-                {description}
-            </p>
+            <p className="p-2 pt-4 pb-4 font-light">{description}</p>
             <div className="flex justify-center w-full mt-auto">
                 <div
                     className={`w-[1170px] h-[1px] bg-[#dddddd] ${colorVariant[3]} transition-colors duration-1000`}

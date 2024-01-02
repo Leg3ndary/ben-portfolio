@@ -1,5 +1,3 @@
 import { ProjectPreviewProps } from "@/types";
 
-const projectPreviews = [
-
-];
+const projectPreviews = [];
