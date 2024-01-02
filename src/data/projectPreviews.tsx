@@ -4,8 +4,71 @@ import bTagScript from "@/../public/projects/bTagScript.png";
 import PortfolioImage from "@/../public/projects/Leg3ndaryPortfolio.png";
 import APMC from "@/../public/projects/APMC.png";
 import Announcements from "@/../public/projects/Announcements.png";
+import FlashNotes from "@/../public/projects/FlashNotes.png";
+
+// https://youtu.be/iBQgLgNp7AE
 
 const projectPreviews = [
+    {
+        image: {
+            src: FlashNotes,
+            alt: "FlashNotes",
+            width: 900,
+            height: 100,
+        },
+        title: "FLASHNOTES",
+        sub: "PROFESSIONAL AI VISION BASED NOTE SUMMARIZATION",
+        description: (
+            <>
+                For a hackathon I led my team to create FlashNotes, a
+                professional AI based note summarization/organization tool that
+                would read handwritten notes and create flash cards based on
+                their main concepts. Though I primarily focused on making a
+                reactive and primarily aesthetic frontend, I also linked our API
+                to our frontend code while also troubleshooting various issues
+                we had when working with OpenAI's vision model. You can watch
+                our project in action{" "}
+                <a
+                    href="https://youtu.be/iBQgLgNp7AE"
+                    target="_blank"
+                    className="font-bold text-blue-500 transition-colors duration-1000 hover:text-orange-500"
+                >
+                    here
+                </a>
+                . You can also view our winning project{" "}
+                <a
+                    href="https://devpost.com/software/flashnotes-i0cymh"
+                    target="_blank"
+                    className="font-bold text-blue-500 transition-colors duration-1000 hover:text-orange-500"
+                >
+                    here
+                </a>.
+            </>
+        ),
+        icons: [
+            {
+                link: "https://nextjs.org",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg",
+                alt: "NextJS",
+            },
+            {
+                link: "https://typescriptlang.org",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+                alt: "TypeScript",
+            },
+            {
+                link: "https://tailwindcss.com",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+                alt: "TailwindCSS",
+            },
+            {
+                link: "https://openai.com",
+                image: "https://cdn.worldvectorlogo.com/logos/openai-2.svg",
+                alt: "OpenAI",
+            },
+        ],
+        color: "orange-500",
+    },
     {
         image: {
             src: APMC,

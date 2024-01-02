@@ -27,6 +27,12 @@ const colorVariants: { [key: string]: string[] } = {
         "hover:text-cyan-300",
         "group-hover:bg-cyan-300",
     ],
+    "orange-500": [
+        "hover:shadow-orange-500",
+        "group-hover:text-orange-500",
+        "hover:text-orange-500",
+        "group-hover:bg-orange-500",
+    ],
     default: [
         "hover:shadow-blue-400",
         "group-hover:text-blue-400",
@@ -46,7 +52,7 @@ export default function ProjectPreview({
     const colorVariant = colorVariants[color] || colorVariants.default;
     return (
         <div
-            className={`place-self-center group flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition hover:scale-105 ${colorVariant[0]} duration-1000`}
+            className={`self-start justify-self-center group flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition hover:scale-105 ${colorVariant[0]} duration-1000`}
         >
             <Image
                 className="object-contain mx-auto animate-fade-in"
