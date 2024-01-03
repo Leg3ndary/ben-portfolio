@@ -56,28 +56,32 @@ export default function ProjectPreview({
     description,
     icons,
     color,
+    index
 }: ProjectPreviewProps) {
     const colorVariant = colorVariants[color] || colorVariants.default;
     return (
-        <motion.div
-            whileHover={{ scale: 1.01 }}
+        <motion.li
+            className="self-center list-none justify-self-center"
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.99 }}
             transition={{
                 type: "spring",
-                stiffness: 500,
-                damping: 500,
+                stiffness: 50,
+                damping: 10,
             }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0, transition: { delay: 0.2 * index, duration: 1.5} }}
         >
             <div
-                className={`self-start justify-self-center group flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition hover:scale-105 ${colorVariant[0]} duration-1000`}
+                className={`group flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition ${colorVariant[0]} duration-1000`}
             >
                 <Image
-                    className="object-contain mx-auto animate-fade-in"
+                    className="object-contain h-auto mx-auto"
                     src={image.src}
                     width={image.width ? image.width : 100}
-                    height={image.height ? image.height : 100}
                     alt={image.alt}
-                    loading="lazy"
+                    loading={image.priority ? "eager" : "lazy"}
+                    priority={image.priority}
                 />
                 <h2 className="p-2 mt-4 text-3xl font-black">{title}</h2>
                 <h3
@@ -102,6 +106,6 @@ export default function ProjectPreview({
                     ))}
                 </div>
             </div>
-        </motion.div>
+        </motion.li>
     );
 }

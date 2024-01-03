@@ -14,6 +14,7 @@ const projectPreviews = [
             alt: "EUREKAHACKS 2024",
             width: 900,
             height: 100,
+            priority: true,
         },
         title: "EUREKAHACKS 2024",
         sub: "RESPONSIVE MODERN HACKATHON WEBSITE",

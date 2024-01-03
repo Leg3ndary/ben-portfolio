@@ -6,6 +6,7 @@ export type ProjectPreviewProps = {
         alt: string;
         width?: number;
         height?: number;
+        priority?: boolean;
     };
     title: string;
     sub: string;
@@ -18,4 +19,5 @@ export type ProjectPreviewProps = {
         height?: number;
     }[];
     color: string;
+    index: number;
 };
