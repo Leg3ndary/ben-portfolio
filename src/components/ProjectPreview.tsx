@@ -56,7 +56,7 @@ export default function ProjectPreview({
     description,
     icons,
     color,
-    index
+    index,
 }: ProjectPreviewProps) {
     const colorVariant = colorVariants[color] || colorVariants.default;
     return (
@@ -70,13 +70,17 @@ export default function ProjectPreview({
                 damping: 10,
             }}
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0, transition: { delay: 0.2 * index, duration: 1.5} }}
+            animate={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.2 * index, duration: 1.5 },
+            }}
         >
             <div
                 className={`group flex flex-col justify-center w-full lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition ${colorVariant[0]} duration-1000`}
             >
                 <Image
-                    className="object-contain h-auto mx-auto"
+                    className="object-contain h-auto mx-auto rounded-md"
                     src={image.src}
                     width={image.width ? image.width : 100}
                     alt={image.alt}
@@ -89,13 +93,13 @@ export default function ProjectPreview({
                 >
                     {sub}
                 </h3>
-                <p className="p-2 pt-4 pb-4 font-light">{description}</p>
+                <p className="p-2 py-4 font-light">{description}</p>
                 <div className="flex justify-center w-full mt-auto">
                     <div
                         className={`w-[1170px] h-[1px] bg-[#dddddd] ${colorVariant[3]} transition-colors duration-1000`}
                     />
                 </div>
-                <div className="flex pt-8 place-content-evenly">
+                <div className="flex py-6 place-content-evenly">
                     {icons.map((icon, index) => (
                         <ProjectHoverable
                             key={index}
