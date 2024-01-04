@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="flex justify-center w-full bg-black h-96">
             <div className="flex w-[1170px]">
                 <div className="flex flex-col items-center justify-center w-full h-full">
-                    <div className="grid w-full h-full grid-flow-row grid-cols-2 p-12">
+                    <div className="grid w-full h-full grid-flow-col grid-rows-2 p-12 py-4 lg:py-0 lg:grid-cols-2 lg:grid-flow-row lg:grid-rows-none">
                         <div className="flex flex-col items-center justify-center flex-1">
                             <h2 className="py-4 text-4xl font-bold text-white">
                                 Socials
@@ -50,7 +50,7 @@ export default function Footer() {
                             <h2 className="py-4 text-4xl font-bold text-white">
                                 Contact Me
                             </h2>
-                            <p className="text-white">Ideally just send me a message on linkedin, will add more methods later.</p>
+                            <p className="text-center text-white">Ideally just send me a message on linkedin, will add more methods later.</p>
                         </div>
                     </div>
                     <div className="flex items-center justify-center h-16">

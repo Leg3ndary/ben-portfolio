@@ -140,6 +140,12 @@ export default function Navigation() {
                         >
                             PROJECTS
                         </Link>
+                        <Link
+                            className="p-2 text-xl font-bold text-center text-white"
+                            href="/resume.pdf"
+                        >
+                            RESUME
+                        </Link>
                     </motion.div>
                 )}
             </AnimatePresence>
