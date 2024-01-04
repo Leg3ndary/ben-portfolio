@@ -4,6 +4,16 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
+const motionAnim = {
+    whileHover: { scale: 1.1 },
+    transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 10,
+    },
+    whileTap: { scale: 0.9 },
+};
+
 export default function Navigation() {
     const [scrollY, setScrollY] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +33,7 @@ export default function Navigation() {
     }, []);
 
     return (
-        <div className="fixed top-0 z-10 flex flex-col w-full h-auto transition-all duration-1000">
+        <nav className="fixed top-0 z-10 flex flex-col w-full h-auto transition-all duration-1000">
             <div
                 className={`flex justify-center w-full transition-all h-20 bg-black duration-1000 ${
                     scrollY > 0
@@ -34,13 +44,7 @@ export default function Navigation() {
                 <div className="flex flex-row flex-wrap w-11/12 max-w-[1170px] h-full">
                     <motion.div
                         className="flex items-center justify-center"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        transition={{
-                            type: "spring",
-                            stiffness: 300,
-                            damping: 10,
-                        }}
+                        {...motionAnim}
                     >
                         <Link href="/">
                             <Image
@@ -54,13 +58,7 @@ export default function Navigation() {
                     <div className="items-center justify-end hidden gap-10 ml-auto lg:flex lg:w-11/12">
                         <motion.div
                             className="bg-clip-text bg-rainbow-gradient animate-breathing-gradient"
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            transition={{
-                                type: "spring",
-                                stiffness: 300,
-                                damping: 10,
-                            }}
+                            {...motionAnim}
                         >
                             <Link
                                 className={`text-base font-bold text-center text-white transition-all duration-1000 ${
@@ -73,13 +71,7 @@ export default function Navigation() {
                         </motion.div>
                         <motion.div
                             className="bg-clip-text bg-rainbow-gradient animate-breathing-gradient"
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            transition={{
-                                type: "spring",
-                                stiffness: 300,
-                                damping: 10,
-                            }}
+                            {...motionAnim}
                         >
                             <Link
                                 className={`text-base font-bold text-center text-white transition-all duration-1000 ${
@@ -88,6 +80,19 @@ export default function Navigation() {
                                 href="/projects"
                             >
                                 PROJECTS
+                            </Link>
+                        </motion.div>
+                        <motion.div
+                            className="bg-clip-text bg-rainbow-gradient animate-breathing-gradient"
+                            {...motionAnim}
+                        >
+                            <Link
+                                className={`text-base font-bold text-center text-white transition-all duration-1000 ${
+                                    scrollY > 0 ? "hover:text-transparent" : ""
+                                }`}
+                                href="/resume.pdf"
+                            >
+                                RESUME
                             </Link>
                         </motion.div>
                     </div>
@@ -138,6 +143,6 @@ export default function Navigation() {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </div>
+        </nav>
     );
 }

@@ -40,7 +40,7 @@ export default function Home() {
                 >
                     <div className="flex flex-wrap justify-center w-full h-full lg:w-1/2">
                         <Image
-                            className="object-contain max-w-md mt-10 -mb-5 lg:mt-0 animate-fade-in"
+                            className="object-contain w-11/12 max-w-md mt-10 -mb-5 lg:mt-0 animate-fade-in"
                             src={Mocha}
                             alt="Mocha"
                         />
@@ -114,7 +114,7 @@ export default function Home() {
                 </motion.div>
             </div>
             <motion.div
-                className="flex justify-center w-full pt-[360px] md:pt-80 lg:pt-36"
+                className="flex justify-center w-full pt-[360px] mt-20 md:mt-0 md:pt-80 lg:pt-36"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
