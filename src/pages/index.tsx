@@ -3,10 +3,34 @@ import Mocha from "@/../public/home/mocha.png";
 import Hockey from "@/../public/home/hockey.jpg";
 import HackTheNorth from "@/../public/home/hackthenorth.jpg";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 export default function Home() {
     return (
         <>
+            <Head>
+                <title>Ben&apos;s Portfolio</title>
+                <meta name="theme-color" content="#339ccd" />
+                <meta property="og:title" content="Ben Z'z Portfolio" />
+                <meta
+                    property="og:description"
+                    content="Ben's Portfolio Website made with Next.js, TypeScript, and TailwindCSS."
+                />
+                <meta
+                    property="description"
+                    content="Ben's Portfolio Website made with Next.js, TypeScript, and TailwindCSS."
+                />
+                <meta
+                    property="og:image"
+                    content="https://i.imgur.com/6KdqAaf.png"
+                />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://benzhou.tech" />
+                <meta
+                    name="description"
+                    content="Ben Z's Portfolio site made with Next.js TypeScript, and TailwindCSS. View my projects and other relevant information about me!"
+                />
+            </Head>
             <div className="relative top-0 flex justify-center w-full h-[650px] md:h-[800px] lg:h-[650px] bg-rainbow-gradient animate-breathing-gradient">
                 <motion.div
                     className="relative flex h-[900px] lg:h-[550px] bg-white border-black w-11/12 md:w-[690px] lg:w-11/12 lg:max-w-[1100px] drop-shadow-xl mt-44 rounded-3xl flex-col lg:flex-row hover:drop-shadow-2xl transition-all duration-1000 ease-in-out"

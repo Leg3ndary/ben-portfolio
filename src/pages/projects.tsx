@@ -1,6 +1,7 @@
 import ProjectPreview from "@/components/ProjectPreview";
 import projectPreviews from "@/data/projectPreviews";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 const boxAnim = {
     hidden: { opacity: 1, scale: 0 },
@@ -17,6 +18,29 @@ const boxAnim = {
 export default function Projects() {
     return (
         <>
+            <Head>
+                <title>Ben&apos;s Projects</title>
+                <meta name="theme-color" content="#339ccd" />
+                <meta property="og:title" content="Ben Z'z Projects" />
+                <meta
+                    property="og:description"
+                    content="Ben's Projects Page."
+                />
+                <meta
+                    property="description"
+                    content="Ben's Projects Page."
+                />
+                <meta
+                    property="og:image"
+                    content="https://i.imgur.com/6KdqAaf.png"
+                />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://benzhou.tech/projects" />
+                <meta
+                    name="description"
+                    content="Ben's current and featured projects page."
+                />
+            </Head>
             <div className="relative top-0 flex justify-center w-full h-[550px] bg-rainbow-gradient animate-breathing-gradient">
                 <motion.div
                     className="relative flex h-[370px] lg:h-[300px] bg-white border-black w-11/12 lg:w-[1000px] drop-shadow-2xl mt-64 lg:mt-40 rounded-3xl duration-1000 ease-in-out transition-all"
