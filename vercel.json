@@ -4,7 +4,8 @@
             "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
         },
         "pages/api/getColor/**": {
-            "memory": 250
+            "memory": 250,
+            "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
         }
     }
 }
