@@ -13,6 +13,7 @@
         "@vercel/analytics": "^1.1.1",
         "@vercel/speed-insights": "^1.0.2",
         "autoprefixer": "^10.4.14",
+        "color-thief-node": "^1.0.4",
         "eslint": "^8.38.0",
         "framer-motion": "^10.16.4",
         "next": "^13.3.0",
@@ -21,6 +22,7 @@
         "sharp": "^0.33.1"
     },
     "devDependencies": {
+        "@types/color-thief-node": "^1.0.4",
         "@types/node": "20.6.0",
         "@types/react": "18.0.35",
         "eslint-config-next": "^14.0.4",
