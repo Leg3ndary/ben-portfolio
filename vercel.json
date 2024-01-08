@@ -1,7 +1,6 @@
 {
     "functions": {
         "/api/getColor/[hash].js": {
-            "memory": 2048,
             "excludeFiles": "node_modules/**"
         }
     }
