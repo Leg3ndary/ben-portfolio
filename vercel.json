@@ -1,7 +1,7 @@
 {
     "functions": {
-        "src/pages/**/*": {
-            "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
+        "pages/**/*": {
+            "excludeFiles": "public/**"
         }
     }
 }
