@@ -1,6 +1,6 @@
 {
     "functions": {
-        "api/getColor/[hash].js": {
+        "src/pages/api/getColor/[hash].js": {
             "excludeFiles": "(?!node_modules/canvas/build)"
         }
     }
