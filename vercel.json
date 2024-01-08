@@ -1,7 +1,8 @@
 {
     "functions": {
         "src/pages/api/getColor/[hash].js": {
-            "excludeFiles": "(?!node_modules/canvas/build)"
+            "memory": 2048,
+            "excludeFiles": "node_modules/**"
         }
     }
 }
