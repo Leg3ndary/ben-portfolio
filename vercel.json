@@ -1,6 +1,6 @@
 {
     "functions": {
-        "src/pages/**": {
+        "src/pages/api/**": {
             "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
         }
     }
