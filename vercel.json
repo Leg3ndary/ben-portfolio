@@ -1,6 +1,6 @@
 {
     "functions": {
-        "/api/getColor/[hash].js": {
+        "src/page/api/getColor/[hash].js": {
             "excludeFiles": "node_modules/**"
         }
     }
