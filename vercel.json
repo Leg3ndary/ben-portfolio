@@ -3,7 +3,7 @@
         "pages/api/**": {
             "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
         },
-        "pages/api/getColor/**": {
+        "api/getColor/**": {
             "memory": 250,
             "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
         }
