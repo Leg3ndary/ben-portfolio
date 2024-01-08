@@ -1,8 +1,7 @@
 {
     "functions": {
-        "src/pages/**/*": {
-            "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
-
+        "api/getColor/[hash].js": {
+            "excludeFiles": "(?!node_modules/canvas/build)"
         }
     }
 }
