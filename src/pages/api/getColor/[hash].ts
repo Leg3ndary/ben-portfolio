@@ -5,15 +5,41 @@ type Data = {
     answer: number[];
 };
 
-// function rgbToHex(rgb: number[]) {
-//     const hex =
-//         "#" +
-//         rgb.map((x) => {
-//             const hex = x.toString(16);
-//             return hex.length === 1 ? "0" + hex : hex;
-//         });
-//     return hex.replaceAll(",", "");
-// }
+function findNearestColor(rgbArray: number[]): number[] {
+    const colors: number[][] = [
+        [255, 0, 0],
+        [255, 125, 0],
+        [255, 255, 0],
+        [125, 255, 0],
+        [0, 255, 0],
+        [0, 255, 125],
+        [0, 255, 255],
+        [0, 125, 255],
+        [0, 0, 255],
+        [125, 0, 255],
+        [255, 0, 255],
+        [255, 0, 125],
+    ];
+
+    let minDistance: number = Infinity;
+    let closestColor: number[] = [];
+
+    colors.forEach((color: number[]) => {
+        const distance: number = Math.sqrt(
+            Math.pow(rgbArray[0] - color[0], 2) +
+                Math.pow(rgbArray[1] - color[1], 2) +
+                Math.pow(rgbArray[2] - color[2], 2)
+        );
+
+        if (distance < minDistance) {
+            minDistance = distance;
+            closestColor = color;
+        }
+    });
+
+    return closestColor;
+}
+
 
 export default async function handler(
     req: NextApiRequest,
@@ -22,9 +48,9 @@ export default async function handler(
     const hash = req.query.hash as string;
     const url = `https://i.scdn.co/image/${hash}`;
 
-    // const hex = rgbToHex(await getColorFromURL(url));
+    let colors = await getColorFromURL(url);
 
-    let color = await getColorFromURL(url);
+    const color = findNearestColor(colors);
 
     res.status(200).json({ answer: color });
 }
