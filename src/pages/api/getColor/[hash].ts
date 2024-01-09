@@ -2,18 +2,18 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { getColorFromURL } from "color-thief-node";
 
 type Data = {
-    answer: string;
+    answer: number[];
 };
 
-function rgbToHex(rgb: number[]) {
-    const hex =
-        "#" +
-        rgb.map((x) => {
-            const hex = x.toString(16);
-            return hex.length === 1 ? "0" + hex : hex;
-        });
-    return hex.replaceAll(",", "");
-}
+// function rgbToHex(rgb: number[]) {
+//     const hex =
+//         "#" +
+//         rgb.map((x) => {
+//             const hex = x.toString(16);
+//             return hex.length === 1 ? "0" + hex : hex;
+//         });
+//     return hex.replaceAll(",", "");
+// }
 
 export default async function handler(
     req: NextApiRequest,
@@ -22,7 +22,9 @@ export default async function handler(
     const hash = req.query.hash as string;
     const url = `https://i.scdn.co/image/${hash}`;
 
-    const hex = rgbToHex(await getColorFromURL(url));
+    // const hex = rgbToHex(await getColorFromURL(url));
 
-    res.status(200).json({ answer: hex });
+    let color = await getColorFromURL(url)
+
+    res.status(200).json({ answer: color });
 }
