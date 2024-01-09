@@ -24,7 +24,7 @@ export default async function handler(
 
     // const hex = rgbToHex(await getColorFromURL(url));
 
-    let color = await getColorFromURL(url)
+    let color = await getColorFromURL(url);
 
     res.status(200).json({ answer: color });
 }
