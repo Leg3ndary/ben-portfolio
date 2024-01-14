@@ -84,6 +84,7 @@ export default async function handler(
             }
             
             url = `https://api.spotify.com/v1/me/player/volume?volume_percent=${volume}`;
+            metho = "PUT";
         } else if (change === "loop") {
             const responseData = await getPlayerData(res, accessToken);
             let state = responseData.repeat_state;
