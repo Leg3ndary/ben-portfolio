@@ -33,7 +33,7 @@ export default async function handler(
         const accessToken = await getSpotifyAccessToken();
 
         const response = await fetch(
-            `https://api.spotify.com/v1/me/player/currently-playing?market=CA`,
+            `https://api.spotify.com/v1/me/player`,
             {
                 headers: {
                     Authorization: `Bearer ${accessToken}`,
@@ -42,28 +42,21 @@ export default async function handler(
         );
 
         if (response.ok) {
-            const responseData = await response.text();
+            const current = await response.json();
 
-            if (!responseData.trim()) {
-                res.status(404).json({ error: "No currently playing track" });
-                return;
-            }
-
-            const currentlyPlaying = JSON.parse(responseData);
-
-            const dominantColor = await fetch(`https://benzhou.tech/api/getColor/${currentlyPlaying.item.album.images[0].url.split("/")[4]}`).then(res => res.json());
-
+            const dominantColor = await fetch(`https://benzhou.tech/api/getColor/${current.item.album.images[0].url.split("/")[4]}`).then(res => res.json());
+            console.log(current);
             res.status(200).json({
-                title: currentlyPlaying.item.name,
-                artist: currentlyPlaying.item.artists[0].name,
-                album: currentlyPlaying.item.album.name,
+                title: current.item.name,
+                artist: current.item.artists[0].name,
+                album: current.item.album.name,
                 color: dominantColor.answer,
-                duration: currentlyPlaying.item.duration_ms,
-                progress: currentlyPlaying.progress_ms,
-                paused: currentlyPlaying.is_playing,
-                volume: currentlyPlaying.device.volume_percent,
-                shuffle: currentlyPlaying.shuffle_state,
-                loop: currentlyPlaying.repeat_state
+                duration: current.item.duration_ms,
+                progress: current.progress_ms,
+                paused: current.is_playing,
+                volume: current.device.volume_percent,
+                shuffle: current.shuffle_state,
+                loop: current.repeat_state
             });
         } else {
             const errorMessage = await response.text();

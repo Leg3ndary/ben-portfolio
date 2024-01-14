@@ -13,7 +13,7 @@ const changes = ["playPause", "skip", "back", "vinc", "vdec", "loop", "shuffle"]
 
 async function getPlayerData(res: NextApiResponse, accessToken: string) {
     const response = await fetch(
-        `https://api.spotify.com/v1/me/player?market=CA`,
+        `https://api.spotify.com/v1/me/player`,
         {
             headers: {
                 Authorization: `Bearer ${accessToken}`,
