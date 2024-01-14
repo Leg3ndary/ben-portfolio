@@ -9,7 +9,7 @@ type Error = {
     error: string;
 };
 
-const changes = ["play", "pause", "skip", "back", "vinc", "vdec"];
+const changes = ["playPause", "skip", "back", "vinc", "vdec"];
 
 export default async function handler(
     req: NextApiRequest,
@@ -33,12 +33,34 @@ export default async function handler(
         let url = "";
         let metho = "";
 
-        if (change === "play") {
-            url = `https://api.spotify.com/v1/me/player/play`;
-            metho = "PUT";
-        } else if (change === "pause") {
-            url = `https://api.spotify.com/v1/me/player/pause`;
-            metho = "PUT";
+        if (change === "playPause") {
+            const response = await fetch(
+                `https://api.spotify.com/v1/me/player?market=CA`,
+                {
+                    headers: {
+                        Authorization: `Bearer ${accessToken}`,
+                    },
+                }
+            );
+
+            if (response.ok) {
+                const responseData = await response.json();
+
+                if (!responseData.is_playing) {
+                    // If not playing, set URL to play
+                    url = "https://api.spotify.com/v1/me/player/play";
+                    metho = "PUT";
+                } else {
+                    // If playing, set URL to pause
+                    url = "https://api.spotify.com/v1/me/player/pause";
+                    metho = "PUT";
+                }
+            } else {
+                res.status(response.status).json({
+                    error: "Error fetching player status",
+                });
+                return;
+            }
         } else if (change === "skip") {
             url = `https://api.spotify.com/v1/me/player/next`;
             metho = "POST";
@@ -58,22 +80,7 @@ export default async function handler(
             },
         });
 
-        if (response.ok) {
-            const responseData = await response.text();
-
-            if (!responseData.trim()) {
-                res.status(404).json({ error: "failed" });
-                return;
-            }
-
-            res.status(200).json({
-                answer: "success",
-            });
-        } else {
-            const errorMessage = await response.text();
-            console.log(errorMessage);
-            res.status(response.status).json({ error: errorMessage });
-        }
+        res.status(200).json({ answer: "Success" });
     } catch (error) {
         res.status(500).json({ error: "Internal Server Error" });
         console.log(error);

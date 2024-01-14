@@ -8,7 +8,7 @@ type ESPInfo = {
     color: [number, number, number];
     duration: number;
     progress: number;
-
+    paused: boolean;
 }
 
 type Error = {
@@ -47,7 +47,6 @@ export default async function handler(
             }
 
             const currentlyPlaying = JSON.parse(responseData);
-            console.log(currentlyPlaying.item.album.images[0].url.split("/")[4]);
 
             const dominantColor = await fetch(`https://benzhou.tech/api/getColor/${currentlyPlaying.item.album.images[0].url.split("/")[4]}`).then(res => res.json());
 
@@ -58,6 +57,7 @@ export default async function handler(
                 color: dominantColor.answer,
                 duration: currentlyPlaying.item.duration_ms,
                 progress: currentlyPlaying.progress_ms,
+                paused: currentlyPlaying.is_playing,
             });
         } else {
             const errorMessage = await response.text();
