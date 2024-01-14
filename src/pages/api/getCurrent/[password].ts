@@ -84,6 +84,7 @@ export default async function handler(
             }
 
             const currentlyPlaying = JSON.parse(responseData);
+            console.log(currentlyPlaying.item.album.images[0].url.split("/")[4]);
 
             const dominantColor = await fetch(`https://benzhou.tech/api/getColor/${currentlyPlaying.item.album.images[0].url.split("/")[4]}`).then(res => res.json());
 
