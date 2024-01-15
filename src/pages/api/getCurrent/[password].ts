@@ -6,8 +6,8 @@ type ESPInfo = {
     artist: string;
     album: string;
     color: [number, number, number];
-    duration: number;
-    progress: number;
+    duration: string;
+    progress: string;
     paused: boolean;
     volume: number;
     shuffle: boolean;
@@ -51,8 +51,8 @@ export default async function handler(
                 artist: current.item.artists[0].name,
                 album: current.item.album.name,
                 color: dominantColor.answer,
-                duration: Math.round(current.item.duration_ms / 1000),
-                progress: Math.round(current.progress_ms / 1000),
+                duration: String(Math.round(current.item.duration_ms / 1000)),
+                progress: String(Math.round(current.progress_ms / 1000)),
                 paused: current.is_playing,
                 volume: current.device.volume_percent,
                 shuffle: current.shuffle_state,
