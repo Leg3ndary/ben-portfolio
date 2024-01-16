@@ -9,7 +9,7 @@ type ESPInfo = {
     duration: string;
     progress: string;
     paused: string;
-    volume: number;
+    volume: string;
     shuffle: boolean;
     loop: string;
 }
@@ -54,7 +54,7 @@ export default async function handler(
                 duration: String(Math.round(current.item.duration_ms / 1000)),
                 progress: String(Math.round(current.progress_ms / 1000)),
                 paused: String(!current.is_playing),
-                volume: current.device.volume_percent,
+                volume: String(current.device.volume_percent),
                 shuffle: current.shuffle_state,
                 loop: current.repeat_state
             });
