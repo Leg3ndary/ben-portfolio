@@ -6,15 +6,73 @@ import APMC from "@/../public/projects/APMC.png";
 import Announcements from "@/../public/projects/Announcements.png";
 import FlashNotes from "@/../public/projects/FlashNotes.png";
 import Eureka from "@/../public/projects/Eureka2024.png";
+import Macroboard from "@/../public/projects/Macroboard.png";
 
 const projectPreviews = [
+    {
+        image: {
+            src: Macroboard,
+            alt: "Spotify Macroboard",
+            width: 900,
+            height: 100,
+            priority: true,
+        },
+        title: "SPOTIFY MACROBOARD",
+        sub: "FULLY CUSTOM MACROBOARD FOR SPOTIFY",
+        description: (
+            <>
+                I designed and built and fully custom macroboard for Spotify, it
+                has a translucent case, fully wireless capabilities, as well as
+                smooth RGB lighting. Using EasyEDA I designed a PCB and had it
+                printed out, I then soldered all of the components and
+                programmed the board using C++. I also designed a custom case
+                for the project as well as keycaps. The final project includes 7
+                fully programmable keys, a 128x64 OLED screen. I also created an
+                API to help port over information that I needed. This includes
+                matching album covers with their respective overall colours to
+                make an aesthetically pleasing experience. You can view the
+                project on{" "}
+                <a
+                    href="https://github.com/Leg3ndary/SpotifyMacroboard"
+                    target="_blank"
+                    className="font-bold text-blue-500 transition-colors duration-1000 hover:text-fuchsia-400"
+                >
+                    GitHub
+                </a>
+                .
+            </>
+        ),
+        icons: [
+            {
+                link: "https://arduino.cc",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original-wordmark.svg",
+                alt: "Arduino",
+            },
+            {
+                link: "https://typescriptlang.org",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+                alt: "TypeScript",
+            },
+            {
+                link: "https://cplusplus.com/",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+                alt: "C++",
+            },
+            {
+                link: "https://nextjs.org",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+                alt: "NextJS",
+            },
+        ],
+        color: "amber-400",
+    },
     {
         image: {
             src: Eureka,
             alt: "EUREKAHACKS 2024",
             width: 900,
             height: 100,
-            priority: true,
+            priority: false,
         },
         title: "EUREKAHACKS 2024",
         sub: "RESPONSIVE MODERN HACKATHON WEBSITE",
@@ -43,7 +101,7 @@ const projectPreviews = [
         icons: [
             {
                 link: "https://nextjs.org",
-                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original-wordmark.svg",
                 alt: "NextJS",
             },
             {

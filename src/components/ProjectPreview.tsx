@@ -40,7 +40,12 @@ const colorVariants: { [key: string]: string[] } = {
         "hover:text-fuchsia-400",
         "group-hover:bg-fuchsia-400",
     ],
-
+    "amber-400": [
+        "hover:shadow-amber-400",
+        "group-hover:text-amber-400",
+        "hover:text-amber-400",
+        "group-hover:bg-amber-400",
+    ],
     default: [
         "hover:shadow-blue-400",
         "group-hover:text-blue-400",

@@ -123,7 +123,7 @@ export default function Home() {
                 <div className="flex w-11/12 max-w-[1170px] md:flex-row flex-col py-2">
                     <div className="flex flex-col justify-center w-full h-full p-12 -mb-[100px] md:w-1/2 lg:mb-0">
                         <Image
-                            className="object-contain animate-fade-in"
+                            className="object-contain rounded-md animate-fade-in"
                             width={489}
                             height={626}
                             src={Hockey}
@@ -180,7 +180,7 @@ export default function Home() {
                     </div>
                     <div className="flex flex-col justify-center w-full h-full p-12 lg:p-12 md:w-1/2 lg:mb-0">
                         <Image
-                            className="object-contain animate-fade-in"
+                            className="object-contain rounded-md animate-fade-in"
                             width={489}
                             height={367}
                             src={HackTheNorth}
