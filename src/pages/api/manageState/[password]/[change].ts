@@ -31,7 +31,6 @@ async function getPlayerData(res: NextApiResponse, accessToken: string) {
         });
         return;
     }
-        
 }
 
 export default async function handler(
