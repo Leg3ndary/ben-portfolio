@@ -2,6 +2,7 @@ import Image from "next/image";
 import Mocha from "@/../public/home/mocha.png";
 import Hockey from "@/../public/home/hockey.jpg";
 import HackTheNorth from "@/../public/home/hackthenorth.jpg";
+import CompEng from "@/../public/home/compeng.jpg";
 import { motion } from "framer-motion";
 import Head from "next/head";
 
@@ -31,7 +32,7 @@ export default function Home() {
                     content="Ben Z's Portfolio site made with Next.js TypeScript, and TailwindCSS. View my projects and other relevant information about me!"
                 />
             </Head>
-            <div className="relative top-0 flex justify-center w-full h-[650px] md:h-[800px] lg:h-[650px] bg-rainbow-gradient animate-breathing-gradient">
+            <div className="relative top-0 flex justify-center w-full h-[650px] md:h-[800px] lg:h-[650px] bg-rainbow-gradient animate-breathing-gradient mb-32">
                 <motion.div
                     className="relative flex h-[900px] lg:h-[550px] bg-white border-black w-11/12 md:w-[690px] lg:w-11/12 lg:max-w-[1100px] drop-shadow-xl mt-44 rounded-3xl flex-col lg:flex-row hover:drop-shadow-2xl transition-all duration-1000 ease-in-out"
                     initial={{ y: -20, opacity: 0 }}
@@ -114,7 +115,7 @@ export default function Home() {
                 </motion.div>
             </div>
             <motion.div
-                className="flex justify-center w-full pt-[360px] mt-20 md:mt-0 md:pt-80 lg:pt-36"
+                className="flex justify-center w-full py-2"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -137,7 +138,7 @@ export default function Home() {
                     <div className="flex flex-col justify-center w-full h-full p-12 md:w-1/2">
                         <h3 className="p-2 text-lg">ABOUT ME</h3>
                         <h2 className="p-2 text-3xl font-black md:text-5xl">
-                            I LIKE HOCKEY
+                            I ENJOY HOCKEY
                         </h2>
                         <h4 className="p-2 font-medium text-md">
                             TIER 2 PLAYER / ASSISTANT COACH
@@ -164,20 +165,45 @@ export default function Home() {
             >
                 <div className="flex w-11/12 lg:w-[1170px] md:flex-row flex-col">
                     <div className="flex flex-col items-end justify-center w-full h-full p-12 md:w-1/2">
-                        <h3 className="p-2 text-lg">I ALSO ATTEND...</h3>
+                        <h3 className="p-2 text-lg">I CREATE THINGS</h3>
                         <h2 className="p-2 text-3xl font-black md:text-5xl">
-                            HACKATHONS!
+                            PROJECTS
                         </h2>
                         <h4 className="p-2 font-medium text-md">
-                            WHEN I HAVE TIME :(
+                            COMPUTER ENGINEERING
                         </h4>
-                        <p className="p-2 pt-4 pb-4 font-light">
-                            Hackathons are fun competitions where
-                            &quot;Hackers&quot; build a working development
-                            version of some project or idea in a short amount of
-                            time.
+                        <p className="p-2 pt-4 pb-4 font-light text-right">
+                            Since I find computer engineering extremely
+                            interesting I learned and taught myself how to
+                            design and solder PCBs.
                         </p>
                     </div>
+                    <div className="flex flex-col justify-center w-full h-full p-12 lg:p-12 md:w-1/2 lg:mb-0">
+                        <Image
+                            className="object-contain rounded-md animate-fade-in"
+                            width={489}
+                            height={367}
+                            src={CompEng}
+                            alt="Comp Eng"
+                            loading="lazy"
+                        />
+                        <p className="p-2 font-light text-center">
+                            One of my recent projects
+                        </p>
+                    </div>
+                </div>
+            </motion.div>
+            <div className="flex justify-center w-full">
+                <div className="w-10/12 lg:w-[1170px] h-[1px] bg-[#dddddd]" />
+            </div>
+            <motion.div
+                className="flex justify-center w-full py-2"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true, amount: 0.8 }}
+            >
+                <div className="flex w-11/12 lg:w-[1170px] md:flex-row flex-col">
                     <div className="flex flex-col justify-center w-full h-full p-12 lg:p-12 md:w-1/2 lg:mb-0">
                         <Image
                             className="object-contain rounded-md animate-fade-in"
@@ -189,6 +215,21 @@ export default function Home() {
                         />
                         <p className="p-2 font-light text-center">
                             Hack The North Opening Ceremonies!
+                        </p>
+                    </div>
+                    <div className="flex flex-col items-start justify-center w-full h-full p-12 md:w-1/2">
+                        <h3 className="p-2 text-lg">I ALSO ATTEND...</h3>
+                        <h2 className="p-2 text-3xl font-black md:text-5xl">
+                            HACKATHONS
+                        </h2>
+                        <h4 className="p-2 font-medium text-md">
+                            IN-PERSON & ONLINE
+                        </h4>
+                        <p className="p-2 pt-4 pb-4 font-light">
+                            Hackathons are fun competitions where
+                            &quot;Hackers&quot; build a working development
+                            version of some project or idea in a short amount of
+                            time.
                         </p>
                     </div>
                 </div>
