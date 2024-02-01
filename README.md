@@ -8,3 +8,7 @@ You can run this project as you would with every other Nextjs project.
 $ npm install
 $ npm run dev
 ```
+
+## Contributions
+
+Please do not contribute to this project.
