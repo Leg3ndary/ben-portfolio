@@ -101,7 +101,7 @@ const projectPreviews = [
         icons: [
             {
                 link: "https://nextjs.org",
-                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original-wordmark.svg",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg",
                 alt: "NextJS",
             },
             {
