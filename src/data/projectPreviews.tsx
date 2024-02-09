@@ -172,7 +172,7 @@ const projectPreviews = [
             },
             {
                 link: "https://tailwindcss.com",
-                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
                 alt: "TailwindCSS",
             },
             {
@@ -225,7 +225,7 @@ const projectPreviews = [
             },
             {
                 link: "https://tailwindcss.com",
-                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
                 alt: "TailwindCSS",
             },
             {
@@ -388,7 +388,7 @@ const projectPreviews = [
             },
             {
                 link: "https://tailwindcss.com",
-                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
                 alt: "TailwindCSS",
             },
             {

@@ -106,7 +106,7 @@ export default function Home() {
                                     className="transition-transform duration-200 ease-in-out animate-fade-in hover:scale-125"
                                     width={75}
                                     height={75}
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
                                     alt="TailwindCSS"
                                 />
                             </a>
