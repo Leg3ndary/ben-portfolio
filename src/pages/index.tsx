@@ -52,11 +52,11 @@ export default function Home() {
                             I&apos;M BEN
                         </h1>
                         <h2 className="p-2 font-bold text-md">
-                            PROGRAMMER, HOCKEY PLAYER
+                            PROGRAMMER & HOCKEY PLAYER
                         </h2>
                         <p className="p-2 py-4 font-light">
-                            This is my website! I made it using NextJS,
-                            TypeScript, and TailwindCSS!
+                            This is my website!
+                            It was made using NextJS, TypeScript, and TailwindCSS!
                         </p>
                         <p className="p-2 font-light">
                             You can always contact me on{" "}
@@ -68,7 +68,7 @@ export default function Home() {
                             >
                                 Discord
                             </a>
-                            , or{" "}
+                             or{" "}
                             <a
                                 className="font-medium text-blue-500"
                                 href="https://www.linkedin.com/in/ben-zhou06/"
@@ -138,14 +138,14 @@ export default function Home() {
                     <div className="flex flex-col justify-center w-full h-full p-12 md:w-1/2">
                         <h3 className="p-2 text-lg">ABOUT ME</h3>
                         <h2 className="p-2 text-3xl font-black md:text-5xl">
-                            I ENJOY HOCKEY
+                            I LOVE HOCKEY
                         </h2>
                         <h4 className="p-2 font-medium text-md">
                             TIER 2 PLAYER / ASSISTANT COACH
                         </h4>
                         <p className="p-2 pt-4 pb-4 font-light">
                             I&apos;ve been skating since before I can remember,
-                            and started playing hockey when I was around 10. I
+                            and started playing hockey when I was around 10! I
                             stopped playing competitively in my junior year to
                             help coach other teams and focus more on
                             programming.
@@ -174,8 +174,8 @@ export default function Home() {
                         </h4>
                         <p className="p-2 pt-4 pb-4 font-light text-right">
                             Since I find computer engineering extremely
-                            interesting I learned and taught myself how to
-                            design and solder PCBs.
+                            interesting, I taught myself how to
+                            design and older PCBs.
                         </p>
                     </div>
                     <div className="flex flex-col justify-center w-full h-full p-12 lg:p-12 md:w-1/2 lg:mb-0">
@@ -188,7 +188,7 @@ export default function Home() {
                             loading="lazy"
                         />
                         <p className="p-2 font-light text-center">
-                            One of my recent projects
+                            One of my recent projects, Spotify MacroBoard
                         </p>
                     </div>
                 </div>
@@ -214,11 +214,11 @@ export default function Home() {
                             loading="lazy"
                         />
                         <p className="p-2 font-light text-center">
-                            Hack The North Opening Ceremonies!
+                            Hack The North Opening Ceremonies
                         </p>
                     </div>
                     <div className="flex flex-col items-start justify-center w-full h-full p-12 md:w-1/2">
-                        <h3 className="p-2 text-lg">I ALSO ATTEND...</h3>
+                        <h3 className="p-2 text-lg">I ALSO ATTEND (AND HOST!)</h3>
                         <h2 className="p-2 text-3xl font-black md:text-5xl">
                             HACKATHONS
                         </h2>
@@ -229,7 +229,7 @@ export default function Home() {
                             Hackathons are fun competitions where
                             &quot;Hackers&quot; build a working development
                             version of some project or idea in a short amount of
-                            time.
+                            time!
                         </p>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import { ImGithub } from "react-icons/im";
 import { FaLinkedin } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const motionProps = {
@@ -44,13 +45,23 @@ export default function Footer() {
                                         </a>
                                     </div>
                                 </motion.div>
+                                <motion.div {...motionProps}>
+                                    <div className="p-1 transition border border-white rounded-md group hover:border-transparent">
+                                        <a
+                                            href="https://discord.com/users/360061101477724170"
+                                            target="_blank"
+                                        >
+                                            <FaDiscord className="w-6 h-6 lg:w-8 lg:h-8 text-white transition hover:text-[#3752DB]" />
+                                        </a>
+                                    </div>
+                                </motion.div>
                             </div>
                         </div>
                         <div className="flex flex-col items-center justify-center flex-1">
                             <h2 className="py-4 text-4xl font-bold text-white">
                                 Contact Me
                             </h2>
-                            <p className="text-center text-white">Ideally just send me a message on linkedin, will add more methods later.</p>
+                            <p className="text-center text-white">Ideally just send me a message on LinkedIn; I will add more methods later.</p>
                         </div>
                     </div>
                     <div className="flex items-center justify-center h-16">

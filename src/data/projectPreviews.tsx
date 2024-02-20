@@ -21,14 +21,14 @@ const projectPreviews = [
         sub: "FULLY CUSTOM MACROBOARD FOR SPOTIFY",
         description: (
             <>
-                I designed and built and fully custom macroboard for Spotify, it
-                has a translucent case, fully wireless capabilities, as well as
-                smooth RGB lighting. Using EasyEDA I designed a PCB and had it
-                printed out, I then soldered all of the components and
-                programmed the board using C++. I also designed a custom case
-                for the project as well as keycaps. The final project includes 7
-                fully programmable keys, a 128x64 OLED screen. I also created an
-                API to help port over information that I needed. This includes
+                I designed and built and fully custom macroboard for Spotify: it
+                has a translucent case, fully wireless capabilities, and smooth 
+                RGB lighting. Using EasyEDA I designed a PCB and had it
+                printed out, then I soldered all of the components and
+                programmed the board using C++. After that, I designed a custom case
+                for the project along with keycaps. The final project includes 7
+                fully programmable keys and a 128x64 OLED screen. I also created an
+                API to help port over information that I needed, which includes
                 matching album covers with their respective overall colours to
                 make an aesthetically pleasing experience. You can view the
                 project on{" "}
@@ -39,7 +39,7 @@ const projectPreviews = [
                 >
                     GitHub
                 </a>
-                .
+                !
             </>
         ),
         icons: [
@@ -80,8 +80,8 @@ const projectPreviews = [
             <>
                 As the lead director of web development for EurekaHACKS 2024, I
                 was tasked with creating a modern and responsive website to
-                attract attendees and sponsors. To make sure our department
-                could collaborate effectively we used standard JavaScript along
+                attract both attendees and sponsors. To make sure our department
+                could collaborate effectively, we used standard JavaScript along
                 with Next.js to speed up some of our processes. Working with our
                 Design team, I replicated and created layouts, while also
                 creating animations and transitions to make the website more
@@ -92,10 +92,10 @@ const projectPreviews = [
                     href="https://eurekahacks.ca"
                     target="_blank"
                     className="font-bold text-blue-500 transition-colors duration-1000 hover:text-fuchsia-400"
-                >
-                    eurekahacks.ca
+                > 
+                    Eurekahacks.ca
                 </a>
-                .
+                !
             </>
         ),
         icons: [
@@ -133,9 +133,9 @@ const projectPreviews = [
         sub: "PROFESSIONAL AI VISION BASED NOTE SUMMARIZATION",
         description: (
             <>
-                For a hackathon I led my team to create FlashNotes, a
-                professional AI based note summarization/organization tool that
-                would read handwritten notes and create flash cards based on
+                For a hackathon, I led my team to create FlashNotes: a
+                professional AI-based note summarization and organization tool that
+                would read handwritten notes to create flash cards based on
                 their main concepts. Though I primarily focused on making a
                 reactive and primarily aesthetic frontend, I also linked our API
                 to our frontend code while also troubleshooting various issues
@@ -146,9 +146,9 @@ const projectPreviews = [
                     target="_blank"
                     className="font-bold text-blue-500 transition-colors duration-1000 hover:text-orange-500"
                 >
-                    Youtube
+                    YouTube
                 </a>
-                . You can also view our winning project&apos;s submission on{" "}
+                ! You can also view our winning project&apos;s submission on{" "}
                 <a
                     href="https://devpost.com/software/flashnotes-i0cymh"
                     target="_blank"
@@ -195,11 +195,12 @@ const projectPreviews = [
         description: (
             <>
                 To continue practicing using Tailwind and Next.js, I made a
-                static website containing lots of information about an upcoming
-                competition we hosted. Though there are obviously better choices
-                in terms of frameworks hosting static content, I wanted to
-                continue using Next.js to improve my proficiency with the
-                framework. I plan to add more features and submission functions
+                static website containing lots of information about a competition 
+                we had hosted, which we had unfortunately severely misjudged; we
+                accidentally put the winning team in second place. Though there
+                are obviously better choices in terms of frameworks hosting 
+                static content, I wanted to repeatedly use Next.js to improve 
+                my proficiency. I plan to add more features and submission functions
                 to the website later on. You can view the site hosted by vercel
                 at{" "}
                 <a
@@ -209,7 +210,7 @@ const projectPreviews = [
                 >
                     apmc.vercel.app
                 </a>
-                .
+                !
             </>
         ),
         icons: [
@@ -264,7 +265,7 @@ const projectPreviews = [
                     website
                 </a>{" "}
                 that allows you to run and debug a small improved string
-                templating language that I made called bTagScript. Intrigued by
+                templating language that I made, which I named bTagScript. Intrigued by
                 the static language primarily made popular in the discord bot{" "}
                 <a
                     className="font-bold text-blue-500 transition-colors hover:text-red-500"
@@ -274,9 +275,9 @@ const projectPreviews = [
                     Carl-bot
                 </a>
                 , I thought I could not only make it better, but also enhance
-                the development experience for this niche language. This
-                language focuses on simplicity and quick programming for
-                functions that may be tedious to program but simple in practice.
+                the development experience for this niche language. It focuses
+                on simplicity and quick programming for functions that may be 
+                tedious to program, yet simple in practice.
             </>
         ),
         icons: [
@@ -314,8 +315,8 @@ const projectPreviews = [
         sub: "Automated School Announcement Forwarder",
         description: (
             <>
-                Since our School Announcements are crudely added to a 96 page
-                Google Document every day, I took it upon myself to make a
+                Because our School Announcements were crudely added to a 96 page
+                Google Document every single day, I took it upon myself to design a
                 better way of checking and viewing announcements through my
                 phone. Using{" "}
                 <a
@@ -325,8 +326,8 @@ const projectPreviews = [
                 >
                     Discord.py
                 </a>{" "}
-                as a UI, I made a bot that would scrape the entire document at
-                regular intervals throughout the day. I then used regex to parse
+                as a UI, I made a bot that would scrape the document at
+                regular intervals throughout the day, which then used RegEx to parse
                 the document and send the announcements to a Discord channel. I
                 also added a feature that would allow users to subscribe to the
                 announcements list and therefore get notified whenever a new
@@ -368,11 +369,11 @@ const projectPreviews = [
         sub: "MY OWN PERSONAL WEBSITE",
         description: (
             <>
-                This website is made using NextJS, TypeScript, and TailwindCSS.
-                I wanted to make a website that was simple, yet elegant, and I
-                think I did pretty good. Here is where I&apos;ll showcase my
-                projects, and the technologies I used to create them. I may also
-                post some blogs or something later!
+                This website was created by using NextJS, TypeScript, and TailwindCSS!
+                I wanted to design a website that was simple yet elegant, and I
+                think I did pretty well. Here is where I&apos;ll showcase my
+                projects, and the technologies I used to create them! I may also
+                post some blogs or something of the sort later!
             </>
         ),
         icons: [

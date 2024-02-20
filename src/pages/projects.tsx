@@ -56,9 +56,8 @@ export default function Projects() {
                             PROJECTS
                         </h1>
                         <p className="p-2 py-5 font-light">
-                            I work with many languages and technologies, you can
-                            see some of them below! I&apos;m always learning new
-                            things, and looking for new projects to work on.
+                            I work with many languages and technologies! I&apos;m always learning new
+                            things and looking for new projects to work on.
                         </p>
                     </div>
                 </motion.div>
