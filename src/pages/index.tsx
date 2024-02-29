@@ -115,11 +115,11 @@ export default function Home() {
                 </motion.div>
             </div>
             <motion.div
-                className="flex justify-center w-full py-2"
+                className="flex justify-center w-full py-2 md:mt-0 mt-[450px]"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
-                viewport={{ once: true, amount: 0.8 }}
+                viewport={{ once: true, amount: 0.6 }}
             >
                 <div className="flex w-11/12 max-w-[1170px] md:flex-row flex-col py-2">
                     <div className="flex flex-col justify-center w-full h-full p-12 -mb-[100px] md:w-1/2 lg:mb-0">
