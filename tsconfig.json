@@ -18,6 +18,11 @@
             "@/*": ["./src/*"]
         }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/api/manageState/[password]"],
+    "include": [
+        "next-env.d.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        "src/pages/api/manageState/[password]"
+    ],
     "exclude": ["node_modules"]
 }

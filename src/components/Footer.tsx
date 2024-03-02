@@ -50,7 +50,10 @@ export default function Footer() {
                             <h2 className="py-4 text-4xl font-bold text-white">
                                 Contact Me
                             </h2>
-                            <p className="text-center text-white">Ideally just send me a message on linkedin, will add more methods later.</p>
+                            <p className="text-center text-white">
+                                Ideally just send me a message on linkedin, will
+                                add more methods later.
+                            </p>
                         </div>
                     </div>
                     <div className="flex items-center justify-center h-16">

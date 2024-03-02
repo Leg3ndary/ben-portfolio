@@ -40,7 +40,6 @@ function findNearestColor(rgbArray: number[]): number[] {
     return closestColor;
 }
 
-
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>

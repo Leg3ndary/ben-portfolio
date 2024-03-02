@@ -34,4 +34,4 @@ export default async function getSpotifyAccessToken() {
     tokenExpiration = Date.now() + tokenData.expires_in * 1000;
 
     return accessToken;
-};
+}

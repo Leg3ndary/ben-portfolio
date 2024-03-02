@@ -9,23 +9,27 @@ type Error = {
     error: string;
 };
 
-const changes = ["playPause", "skip", "back", "vinc", "vdec", "loop", "shuffle"];
+const changes = [
+    "playPause",
+    "skip",
+    "back",
+    "vinc",
+    "vdec",
+    "loop",
+    "shuffle",
+];
 
 async function getPlayerData(res: NextApiResponse, accessToken: string) {
-    const response = await fetch(
-        `https://api.spotify.com/v1/me/player`,
-        {
-            headers: {
-                Authorization: `Bearer ${accessToken}`,
-            },
-        }
-    );
+    const response = await fetch(`https://api.spotify.com/v1/me/player`, {
+        headers: {
+            Authorization: `Bearer ${accessToken}`,
+        },
+    });
 
     if (response.ok) {
         const responseData = await response.json();
         return responseData;
-    }
-    else {
+    } else {
         res.status(response.status).json({
             error: "Error fetching player status",
         });
@@ -70,8 +74,7 @@ export default async function handler(
         } else if (change === "back") {
             url = `https://api.spotify.com/v1/me/player/previous`;
             metho = "POST";
-        }
-        else if (change === "vinc" || change === "vdec") {
+        } else if (change === "vinc" || change === "vdec") {
             const responseData = await getPlayerData(res, accessToken);
             let volume = responseData.device.volume_percent;
             if (change === "vinc") {
@@ -81,7 +84,7 @@ export default async function handler(
                 volume -= 10;
                 volume = Math.max(volume, 0);
             }
-            
+
             url = `https://api.spotify.com/v1/me/player/volume?volume_percent=${volume}`;
             metho = "PUT";
         } else if (change === "loop") {
@@ -95,7 +98,7 @@ export default async function handler(
                 state = "track";
             }
             url = `https://api.spotify.com/v1/me/player/repeat?state=${state}`;
-            metho = "PUT"
+            metho = "PUT";
         } else if (change === "shuffle") {
             const responseData = await getPlayerData(res, accessToken);
             let shuffle = responseData.shuffle_state;

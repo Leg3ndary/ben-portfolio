@@ -12,11 +12,11 @@ type ESPInfo = {
     volume: string;
     shuffle: boolean;
     loop: string;
-}
+};
 
 type Error = {
     error: string;
-}
+};
 
 export default async function handler(
     req: NextApiRequest,
@@ -32,19 +32,20 @@ export default async function handler(
     try {
         const accessToken = await getSpotifyAccessToken();
 
-        const response = await fetch(
-            `https://api.spotify.com/v1/me/player`,
-            {
-                headers: {
-                    Authorization: `Bearer ${accessToken}`,
-                },
-            }
-        );
+        const response = await fetch(`https://api.spotify.com/v1/me/player`, {
+            headers: {
+                Authorization: `Bearer ${accessToken}`,
+            },
+        });
 
         if (response.ok) {
             const current = await response.json();
 
-            const dominantColor = await fetch(`https://benzhou.tech/api/getColor/${current.item.album.images[0].url.split("/")[4]}`).then(res => res.json());
+            const dominantColor = await fetch(
+                `https://benzhou.tech/api/getColor/${
+                    current.item.album.images[0].url.split("/")[4]
+                }`
+            ).then((res) => res.json());
             console.log(current);
             res.status(200).json({
                 title: current.item.name,
@@ -56,7 +57,7 @@ export default async function handler(
                 paused: String(!current.is_playing),
                 volume: String(current.device.volume_percent),
                 shuffle: current.shuffle_state,
-                loop: current.repeat_state
+                loop: current.repeat_state,
             });
         } else {
             const errorMessage = await response.text();
