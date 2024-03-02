@@ -15,7 +15,7 @@ const boxAnim = {
     },
 };
 
-export default function Projects() {
+export default function Awards() {
     return (
         <>
             <Head>
@@ -73,7 +73,7 @@ export default function Projects() {
                             }}
                         >
                             <div className="flex items-center">
-                                <h2 className="p-2 pb-0 text-4xl font-black">
+                                <h2 className="p-2 pb-0 font-black sm:text-xl md:text-2xl lg:text-3xl 3xl:text-4xl">
                                     {award.award as string}
                                 </h2>
                                 <Image
@@ -81,14 +81,14 @@ export default function Projects() {
                                     alt={award.image.alt}
                                     width={60}
                                     height={60}
-                                    className="ml-auto shadow-2xl rounded-xl"
+                                    className="ml-auto rounded-xl"
                                 />
                             </div>
-                            <h3 className="p-2 pb-0 text-lg font-bold">
+                            <h3 className="p-2 pb-0 text-sm font-bold lg:text-lg">
                                 {award.competition as string} -{" "}
                                 {award.date as string}
                             </h3>
-                            <p className="p-2 text-lg font-light">
+                            <p className="p-2 text-sm font-light lg:text-lg">
                                 {award.description as string}
                             </p>
                         </motion.div>
