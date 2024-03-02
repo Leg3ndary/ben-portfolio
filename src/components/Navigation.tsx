@@ -90,6 +90,19 @@ export default function Navigation() {
                                 className={`text-base font-bold text-center text-white transition-all duration-1000 ${
                                     scrollY > 0 ? "hover:text-transparent" : ""
                                 }`}
+                                href="/awards"
+                            >
+                                AWARDS
+                            </Link>
+                        </motion.div>
+                        <motion.div
+                            className="bg-clip-text bg-rainbow-gradient animate-breathing-gradient"
+                            {...motionAnim}
+                        >
+                            <Link
+                                className={`text-base font-bold text-center text-white transition-all duration-1000 ${
+                                    scrollY > 0 ? "hover:text-transparent" : ""
+                                }`}
                                 href="/resume.pdf"
                             >
                                 RESUME
@@ -124,9 +137,9 @@ export default function Navigation() {
                 {isOpen && (
                     <motion.div
                         className="relative flex flex-col w-full h-auto p-4 transition-all duration-1000 bg-black lg:hidden"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                        initial={{ y: -20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 100 }}
+                        exit={{ y: -20, opacity: 0 }}
                     >
                         <Link
                             className="p-2 text-xl font-bold text-center text-white"
@@ -139,6 +152,12 @@ export default function Navigation() {
                             href="/projects"
                         >
                             PROJECTS
+                        </Link>
+                        <Link
+                            className="p-2 text-xl font-bold text-center text-white"
+                            href="/awards"
+                        >
+                            AWARDS
                         </Link>
                         <Link
                             className="p-2 text-xl font-bold text-center text-white"
