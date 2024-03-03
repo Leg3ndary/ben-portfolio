@@ -8,6 +8,7 @@ import FlashNotes from "@/../public/projects/FlashNotes.png";
 import Eureka from "@/../public/projects/Eureka2024.png";
 import Macroboard from "@/../public/projects/Macroboard.png";
 import BennyBot from "@/../public/projects/bennybot.png";
+import bTagScriptSphinx from "@/../public/projects/btagscriptsphinx.png";
 
 const projectPreviews = [
     {
@@ -306,9 +307,69 @@ const projectPreviews = [
     },
     {
         image: {
+            src: bTagScriptSphinx,
+            alt: "Sphinx Documentation",
+            width: 500,
+            height: 100,
+        },
+        title: "SPHINX EXTENSION",
+        sub: "Custom extension for Sphinx",
+        description: (
+            <>
+                After creating my own modified version of an interpreter with
+                many new blocks and features, I wanted to create some
+                documentation for the project. I ended up looking at using
+                Sphinx, a documentation generator, to create a custom extension
+                for my language. I then spent some time learning and figuring
+                out how to add custom highlighting for my language and ended up
+                creating a fun{" "}
+                <a
+                    href="https://github.com/Leg3ndary/tagscript-ansi"
+                    target="_blank"
+                    className="font-bold text-blue-500 transition-colors hover:text-yellow-400"
+                >
+                    extension
+                </a>{" "}
+                to use. You can view some of the documentation at{" "}
+                <a
+                    href="https://btagscript.readthedocs.io/en/latest/index.html"
+                    target="_blank"
+                    className="font-bold text-blue-500 transition-colors hover:text-yellow-400"
+                >
+                    bTagScript Documentation
+                </a>
+                .
+            </>
+        ),
+        icons: [
+            {
+                link: "https://python.org",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+                alt: "Python",
+            },
+            {
+                link: "https://html.com",
+                image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
+                alt: "HTML5",
+            },
+            {
+                link: "https://www.w3schools.com/css/",
+                image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
+                alt: "CSS",
+            },
+            {
+                link: "https://about.readthedocs.com/",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/readthedocs/readthedocs-original.svg",
+                alt: "Read The Docs",
+            },
+        ],
+        color: "yellow-400",
+    },
+    {
+        image: {
             src: BennyBot,
             alt: "Benny Bot",
-            width: 400,
+            width: 500,
             height: 100,
         },
         title: "BENNY BOT",

@@ -52,6 +52,12 @@ const colorVariants: { [key: string]: string[] } = {
         "hover:text-sky-600",
         "group-hover:bg-sky-600",
     ],
+    "yellow-400": [
+        "hover:shadow-yellow-400",
+        "group-hover:text-yellow-400",
+        "hover:text-yellow-400",
+        "group-hover:bg-yellow-400",
+    ],
     default: [
         "hover:shadow-blue-400",
         "group-hover:text-blue-400",
@@ -100,7 +106,7 @@ export default function ProjectPreview({
                 />
                 <h2 className="p-2 mt-4 text-3xl font-black">{title}</h2>
                 <h3
-                    className={`p-2 font-medium transition-colors duration-1000 text-md ${colorVariant[1]}`}
+                    className={`p-2 font-medium transition-colors duration-500 text-md ${colorVariant[1]}`}
                 >
                     {sub}
                 </h3>
