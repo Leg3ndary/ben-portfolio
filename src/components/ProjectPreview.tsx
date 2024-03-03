@@ -112,7 +112,7 @@ export default function ProjectPreview({
                 >
                     {sub}
                 </h3>
-                <p className="p-2 text-sm font-light lg:text-base">
+                <p className="p-2 mb-2 text-sm font-light lg:text-base">
                     {description}
                 </p>
                 <div className="flex justify-center w-full mt-auto">
