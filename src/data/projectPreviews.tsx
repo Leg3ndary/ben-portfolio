@@ -7,6 +7,7 @@ import Announcements from "@/../public/projects/Announcements.png";
 import FlashNotes from "@/../public/projects/FlashNotes.png";
 import Eureka from "@/../public/projects/Eureka2024.png";
 import Macroboard from "@/../public/projects/Macroboard.png";
+import BennyBot from "@/../public/projects/bennybot.png";
 
 const projectPreviews = [
     {
@@ -302,6 +303,52 @@ const projectPreviews = [
             },
         ],
         color: "red-500",
+    },
+    {
+        image: {
+            src: BennyBot,
+            alt: "Benny Bot",
+            width: 400,
+            height: 100,
+        },
+        title: "BENNY BOT",
+        sub: "Custom Discord Bot",
+        description: (
+            <>
+                After learning more about Python and technologies overall I
+                started integrating many different API&apos;s and libraries I
+                found online into a discord bot. The final product was a bot
+                able to play music from any Spotify Link, near instant image to
+                text, as well as an AI based hurtful message detection system.
+                The bot also implemented a custom command maker based on an
+                interpreter I modified for my own custom language called
+                bTagScript. Hosting the bot 24/7 also taught me a lot about
+                Virtual Private Servers and Linux.
+            </>
+        ),
+        icons: [
+            {
+                link: "https://www.linux.org/",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
+                alt: "Linux",
+            },
+            {
+                link: "https://python.org",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+                alt: "Python",
+            },
+            {
+                link: "https://discord.com",
+                image: "https://cdnlogo.com/logos/d/43/discord.svg",
+                alt: "Discord",
+            },
+            {
+                link: "https://www.oracle.com/ca-en/",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg",
+                alt: "Oracle",
+            },
+        ],
+        color: "sky-600",
     },
     {
         image: {
