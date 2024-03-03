@@ -144,18 +144,21 @@ export default function Navigation() {
                         <Link
                             className="p-2 text-xl font-bold text-center text-white"
                             href="/"
+                            onClick={() => setIsOpen(false)}
                         >
                             HOME
                         </Link>
                         <Link
                             className="p-2 text-xl font-bold text-center text-white"
                             href="/projects"
+                            onClick={() => setIsOpen(false)}
                         >
                             PROJECTS
                         </Link>
                         <Link
                             className="p-2 text-xl font-bold text-center text-white"
                             href="/awards"
+                            onClick={() => setIsOpen(false)}
                         >
                             AWARDS
                         </Link>

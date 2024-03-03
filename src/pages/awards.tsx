@@ -15,7 +15,7 @@ const boxAnim = {
     },
 };
 
-export default function Projects() {
+export default function Awards() {
     return (
         <>
             <Head>
@@ -37,7 +37,7 @@ export default function Projects() {
             </Head>
             <div className="relative top-0 flex justify-center w-full h-[550px] bg-rainbow-gradient animate-breathing-gradient">
                 <motion.div
-                    className="relative flex h-[370px] lg:h-[300px] bg-white border-black w-11/12 lg:w-[1000px] drop-shadow-2xl mt-64 lg:mt-40 rounded-3xl duration-1000 ease-in-out transition-all"
+                    className="relative flex h-[370px] lg:h-[300px] bg-white border-black w-11/12 lg:w-[1000px] drop-shadow-2xl mt-32 lg:mt-40 rounded-3xl duration-1000 ease-in-out transition-all"
                     initial={{ y: -20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
@@ -58,7 +58,7 @@ export default function Projects() {
                     </div>
                 </motion.div>
             </div>
-            <div className="flex flex-col flex-wrap content-center justify-center w-full pb-16 pt-28 lg:pb-20 lg:pt-24">
+            <div className="flex flex-col flex-wrap content-center justify-center w-full pt-8 pb-16 lg:pb-20 lg:pt-24">
                 <motion.div
                     className="grid gap-y-10 w-11/12 md:w-[600px] xl:w-[1300px] 3xl:w-[1850px] py-5 grid-flow-row grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3"
                     variants={boxAnim}
@@ -73,7 +73,7 @@ export default function Projects() {
                             }}
                         >
                             <div className="flex items-center">
-                                <h2 className="p-2 pb-0 text-4xl font-black">
+                                <h2 className="p-2 pb-0 font-black sm:text-xl md:text-2xl lg:text-3xl 3xl:text-4xl">
                                     {award.award as string}
                                 </h2>
                                 <Image
@@ -81,14 +81,14 @@ export default function Projects() {
                                     alt={award.image.alt}
                                     width={60}
                                     height={60}
-                                    className="ml-auto shadow-2xl rounded-xl"
+                                    className="ml-auto rounded-xl"
                                 />
                             </div>
-                            <h3 className="p-2 pb-0 text-lg font-bold">
+                            <h3 className="p-2 pb-0 text-sm font-bold lg:text-lg">
                                 {award.competition as string} -{" "}
                                 {award.date as string}
                             </h3>
-                            <p className="p-2 text-lg font-light">
+                            <p className="p-2 text-sm font-light lg:text-lg">
                                 {award.description as string}
                             </p>
                         </motion.div>
