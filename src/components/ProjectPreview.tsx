@@ -104,13 +104,17 @@ export default function ProjectPreview({
                     loading={image.priority ? "eager" : "lazy"}
                     priority={image.priority}
                 />
-                <h2 className="p-2 mt-4 text-3xl font-black">{title}</h2>
+                <h2 className="p-2 mt-4 text-xl font-black uppercase lg:text-3xl">
+                    {title}
+                </h2>
                 <h3
-                    className={`p-2 font-medium transition-colors duration-500 text-md ${colorVariant[1]}`}
+                    className={`p-2 font-medium transition-colors duration-500 text-sm lg:text-base uppercase ${colorVariant[1]}`}
                 >
                     {sub}
                 </h3>
-                <p className="p-2 py-4 font-light">{description}</p>
+                <p className="p-2 text-sm font-light lg:text-base">
+                    {description}
+                </p>
                 <div className="flex justify-center w-full mt-auto">
                     <div
                         className={`w-[1170px] h-[1px] bg-[#dddddd] ${colorVariant[3]} transition-colors duration-1000`}

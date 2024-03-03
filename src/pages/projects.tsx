@@ -65,7 +65,7 @@ export default function Projects() {
             </div>
             <div className="flex flex-col flex-wrap content-center justify-center w-full pt-12 pb-16 lg:pb-20 lg:pt-24">
                 <motion.div
-                    className="grid gap-y-10 w-11/12 md:w-[600px] xl:w-[1300px] 3xl:w-[1850px] py-5 grid-flow-row grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3"
+                    className="grid gap-y-12 lg:gap-y-10 w-11/12 md:w-[600px] xl:w-[1300px] 3xl:w-[1850px] py-5 grid-flow-row grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3"
                     variants={boxAnim}
                 >
                     {projectPreviews.map((project, index) => (

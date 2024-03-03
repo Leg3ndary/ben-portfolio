@@ -15,11 +15,11 @@ const motionProps = {
 
 export default function Footer() {
     return (
-        <div className="flex justify-center w-full bg-black h-96">
+        <div className="flex justify-center w-full bg-black h-128 lg:h-96">
             <div className="flex xl:w-[1170px] 2xl:w-[1400px]">
                 <div className="flex flex-col items-center justify-center w-full h-full">
                     <div className="grid w-full h-full grid-flow-col grid-rows-2 p-12 py-4 lg:py-0 lg:grid-cols-2 lg:grid-flow-row lg:grid-rows-none">
-                        <div className="flex flex-col flex-1 mx-4 my-24">
+                        <div className="flex flex-col flex-1 mx-4 lg:my-24">
                             <h2 className="py-4 text-3xl font-bold text-white text-start">
                                 Contacts
                             </h2>
@@ -31,7 +31,7 @@ export default function Footer() {
                                 Copyright © 2023 Ben Zhou All rights reserved.
                             </p>
                         </div>
-                        <div className="flex flex-col flex-1 mx-4 my-24">
+                        <div className="flex flex-col flex-1 mx-4 lg:my-24">
                             <h2 className="py-4 text-3xl font-bold text-white">
                                 Socials
                             </h2>
