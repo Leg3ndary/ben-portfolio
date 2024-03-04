@@ -31,7 +31,7 @@ export default function Awards() {
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:url"
-                    content="https://benzhou.tech/projects"
+                    content="https://benzhou.tech/awards"
                 />
                 <meta name="description" content="Some of my accomplishments" />
             </Head>
