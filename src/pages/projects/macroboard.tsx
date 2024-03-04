@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import Head from "next/head";
+import SpotifyMacroboard from "@/../public/home/compeng.jpg";
+import Image from "next/image";
 
 export default function Macroboard() {
     return (
@@ -54,8 +56,60 @@ export default function Macroboard() {
                     </div>
                 </motion.div>
             </div>
-            <div className="flex flex-col flex-wrap content-center justify-center w-full pt-12 pb-16 lg:pb-20 lg:pt-24">
-                
+            <div className="flex mx-auto w-[400px] md:w-[700px] lg:w-[1000px] xl:[1200px] mt-12 mb-16 lg:mb-10 lg:mt-8 p-2 lg:p-4">
+                <div className="flex flex-col w-3/4 px-6 ">
+                    <h1 className="py-1 text-4xl font-black">
+                        Creating my very own Spotify Macroboard
+                    </h1>
+                    <h2 className="py-1 text-xl italic font-base">
+                        The process behind building a macrokeyboard
+                    </h2>
+                    <h3 className="py-1 text-sm font-thin">
+                        Ben Zhou - Posted: [DATE] - Last Updated: [DATE]
+                    </h3>
+                    <Image
+                        src={SpotifyMacroboard}
+                        alt="Spotify Macroboard"
+                        className="w-full mx-auto mt-4 rounded-lg shadow-lg"
+                    />
+                    <p className="px-4 my-2 text-sm italic font-thin">
+                        After soldering all of the components I gave my project
+                        a quick test to see if everything was turning on and
+                        working properly.
+                    </p>
+                    <hr className="my-3" />
+                    <p className="my-3 text-lg font-light">
+                        For my Grade 12 Computer Engineering final performance
+                        task I was tasked with using everything I&apos;d learnt
+                        throughout the course to build a project of my choice. I
+                        decided to build a macrokeyboard that would be able to
+                        control my Spotify music while also having a bunch of
+                        other QOL features.
+                    </p>
+                    <p className="my-3 text-lg font-light">
+                        My inspiration for this project came from the fact that
+                        I listen to a lot of music, and with that I often adjust
+                        the song playing, as well as other features such as
+                        volume or looping. However, since I use a 60% keyboard,
+                        that means that I have to click a few extra keys to
+                        achieve some functionality.
+                    </p>
+                </div>
+                <div className="w-1/4">
+                    <div className="p-4 bg-[#f6f6f6] rounded-md flex flex-col">
+                        <h2 className="py-1 text-2xl font-black text-center">
+                            Table of Contents
+                        </h2>
+                        <ul className="py-1 text-lg font-thin">
+                            <li>Introduction</li>
+                            <li>Planning</li>
+                            <li>Design</li>
+                            <li>Building</li>
+                            <li>Testing</li>
+                            <li>Conclusion</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </>
     );
