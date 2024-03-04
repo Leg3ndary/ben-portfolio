@@ -10,7 +10,7 @@ import Macroboard from "@/../public/projects/Macroboard.png";
 import BennyBot from "@/../public/projects/bennybot.png";
 import bTagScriptSphinx from "@/../public/projects/btagscriptsphinx.png";
 
-const projectPreviews = [
+const projectPreviews: ProjectPreviewProps[] = [
     {
         image: {
             src: Macroboard,
@@ -66,6 +66,7 @@ const projectPreviews = [
                 alt: "NextJS",
             },
         ],
+        projectLink: "https://github.com/Leg3ndary/SpotifyMacroboard",
         color: "amber-400",
     },
     {
@@ -122,6 +123,7 @@ const projectPreviews = [
                 alt: "Figma",
             },
         ],
+        projectLink: "https://eurekahacks.ca",
         color: "fuchsia-400",
     },
     {
@@ -183,6 +185,7 @@ const projectPreviews = [
                 alt: "OpenAI",
             },
         ],
+        projectLink: "https://github.com/Leg3ndary/flashnotes",
         color: "orange-500",
     },
     {
@@ -236,6 +239,7 @@ const projectPreviews = [
                 alt: "React",
             },
         ],
+        projectLink: "https://apmc.vercel.app/",
         color: "purple-400",
     },
     {
@@ -303,6 +307,7 @@ const projectPreviews = [
                 alt: "CSS",
             },
         ],
+        projectLink: "https://leg3ndary.github.io/bTagScriptPlayground/",
         color: "red-500",
     },
     {
@@ -363,6 +368,7 @@ const projectPreviews = [
                 alt: "Read The Docs",
             },
         ],
+        projectLink: "https://btagscript.readthedocs.io/en/latest/index.html",
         color: "yellow-400",
     },
     {
@@ -409,6 +415,7 @@ const projectPreviews = [
                 alt: "Oracle",
             },
         ],
+        projectLink: "https://github.com/Leg3ndary/Benny",
         color: "sky-600",
     },
     {
@@ -463,6 +470,7 @@ const projectPreviews = [
                 alt: "Sheets",
             },
         ],
+        projectLink: "https://github.com/Leg3ndary/SchoolAnnouncements",
         color: "green-400",
     },
     {
@@ -505,6 +513,7 @@ const projectPreviews = [
                 alt: "React",
             },
         ],
+        projectLink: "https://github.com/Leg3ndary/leg3ndary-portfolio",
         color: "cyan-300",
     },
 ];

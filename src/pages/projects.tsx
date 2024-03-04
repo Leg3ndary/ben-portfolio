@@ -78,6 +78,8 @@ export default function Projects() {
                             icons={project.icons}
                             color={project.color}
                             index={index}
+                            projectLink={project.projectLink}
+                            slug={project.slug}
                         />
                     ))}
                 </motion.div>

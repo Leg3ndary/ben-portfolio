@@ -19,7 +19,9 @@ export type ProjectPreviewProps = {
         height?: number;
     }[];
     color: string;
-    index: number;
+    index?: number;
+    projectLink?: string;
+    slug?: string;
 };
 
 export type AwardPreviewProps = {

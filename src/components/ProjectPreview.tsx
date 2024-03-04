@@ -2,6 +2,10 @@ import ProjectHoverable from "@/components/ProjectHoverable";
 import { ProjectPreviewProps } from "@/types";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { FaArrowRight } from "react-icons/fa6";
+
+import { MdOpenInNew } from "react-icons/md";
+import Link from "next/link";
 
 const colorVariants: { [key: string]: string[] } = {
     "purple-400": [
@@ -9,60 +13,70 @@ const colorVariants: { [key: string]: string[] } = {
         "group-hover:text-purple-400",
         "hover:text-purple-400",
         "group-hover:bg-purple-400",
+        "bg-purple-400",
     ],
     "red-500": [
         "hover:shadow-red-500",
         "group-hover:text-red-500",
         "hover:text-red-500",
         "group-hover:bg-red-500",
+        "bg-red-500",
     ],
     "green-400": [
         "hover:shadow-green-400",
         "group-hover:text-green-400",
         "hover:text-green-400",
         "group-hover:bg-green-400",
+        "bg-green-400",
     ],
     "cyan-300": [
         "hover:shadow-cyan-300",
         "group-hover:text-cyan-300",
         "hover:text-cyan-300",
         "group-hover:bg-cyan-300",
+        "bg-cyan-300",
     ],
     "orange-500": [
         "hover:shadow-orange-500",
         "group-hover:text-orange-500",
         "hover:text-orange-500",
         "group-hover:bg-orange-500",
+        "bg-orange-500",
     ],
     "fuchsia-400": [
         "hover:shadow-fuchsia-400",
         "group-hover:text-fuchsia-400",
         "hover:text-fuchsia-400",
         "group-hover:bg-fuchsia-400",
+        "bg-fuchsia-400",
     ],
     "amber-400": [
         "hover:shadow-amber-400",
         "group-hover:text-amber-400",
         "hover:text-amber-400",
         "group-hover:bg-amber-400",
+        "bg-amber-400",
     ],
     "sky-600": [
         "hover:shadow-sky-600",
         "group-hover:text-sky-600",
         "hover:text-sky-600",
         "group-hover:bg-sky-600",
+        "bg-sky-600",
     ],
     "yellow-400": [
         "hover:shadow-yellow-400",
         "group-hover:text-yellow-400",
         "hover:text-yellow-400",
         "group-hover:bg-yellow-400",
+        "bg-yellow-400",
     ],
     default: [
         "hover:shadow-blue-400",
         "group-hover:text-blue-400",
         "hover:text-blue-400",
         "group-hover:bg-blue-400",
+        "bg-blue-400",
     ],
 };
 
@@ -73,14 +87,15 @@ export default function ProjectPreview({
     description,
     icons,
     color,
-    index,
+    index = 1,
+    projectLink,
+    slug,
 }: ProjectPreviewProps) {
     const colorVariant = colorVariants[color] || colorVariants.default;
     return (
         <motion.li
             className="self-center list-none justify-self-center"
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.99 }}
             transition={{
                 type: "spring",
                 stiffness: 50,
@@ -120,7 +135,7 @@ export default function ProjectPreview({
                         className={`w-[1170px] h-[1px] bg-[#dddddd] ${colorVariant[3]} transition-colors duration-1000`}
                     />
                 </div>
-                <div className="flex py-6 place-content-evenly">
+                <div className="flex py-6 pb-0 place-content-evenly">
                     {icons.map((icon, index) => (
                         <ProjectHoverable
                             key={index}
@@ -129,6 +144,54 @@ export default function ProjectPreview({
                             link={icon.link}
                         />
                     ))}
+                </div>
+                <div className="flex justify-center w-full my-6">
+                    <div
+                        className={`w-[1170px] h-[1px] bg-[#dddddd] ${colorVariant[3]} transition-colors duration-1000`}
+                    />
+                </div>
+                <div className="flex items-center mx-2 mt-1">
+                    {projectLink && (
+                        <motion.div
+                            className={`flex items-center gap-2 p-2 px-4 pl-3 text-xl text-white rounded-lg cursor-pointer ${colorVariant[4]}`}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.9 }}
+                            transition={{
+                                type: "spring",
+                                stiffness: 100,
+                                damping: 8,
+                            }}
+                        >
+                            <MdOpenInNew className="text-2xl" />
+                            <a
+                                className="text-lg font-medium"
+                                target="_blank"
+                                href={projectLink}
+                            >
+                                View Project
+                            </a>
+                        </motion.div>
+                    )}
+                    {slug && (
+                        <motion.div
+                            className={`flex items-center ml-auto gap-2 p-2 px-4 text-xl text-black rounded-lg cursor-pointer`}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.9 }}
+                            transition={{
+                                type: "spring",
+                                stiffness: 100,
+                                damping: 8,
+                            }}
+                        >
+                            <Link
+                                className="text-lg font-medium"
+                                href={`/projects/${slug}`}
+                            >
+                                Read More
+                            </Link>
+                            <FaArrowRight className="text-2xl" />
+                        </motion.div>
+                    )}
                 </div>
             </div>
         </motion.li>
