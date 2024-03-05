@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import SpotifyMacroboard from "@/../public/home/compeng.jpg";
 import Image from "next/image";
+import TestingLed from "@/../public/projects/SpotifyMacroboard/testingLed.png";
 
 export default function Macroboard() {
     return (
@@ -94,6 +95,48 @@ export default function Macroboard() {
                         that means that I have to click a few extra keys to
                         achieve some functionality.
                     </p>
+                    <p className="my-3 text-lg font-light">
+                        I wanted to build a macroboard that would allow me to
+                        control my Spotify music with ease, as well as having
+                        other features such as dynamic lighting and built in
+                        screen to display the current song playing.
+                    </p>
+                    <p className="my-3 text-lg font-light">
+                        I first started by brainstorming the general overall
+                        circuit and what components I would need to make this
+                        project a reality, I specifically chose to use blue
+                        switches to make the keyboard feel more tactile and
+                        responsive. I also decided to use an ESP32
+                        microcontroller for the smaller form factor as well as
+                        the more powerful processor. It would also provide me
+                        with a way to connect with external APIs such as
+                        Spotify&apos;s.
+                    </p>
+                    <div className="flex my-3">
+                        <div className="w-1/2 pr-3 text-lg font-light">
+                            <p>
+                                For lighting I decided to go for some simple RGB
+                                addressable LED strips, this allowed me to
+                                control exactly what LEDs I wanted to turn on
+                                and off, as well as the colour of the LEDs. This
+                                particular LED strip is called the WS2812B and
+                                is a popular choice since it is easy to control
+                                and
+                            </p>
+                        </div>
+                        <div className="w-1/2 pl-3">
+                            <Image
+                                src={TestingLed}
+                                alt="Testing the LED"
+                                className="w-full mx-auto mt-4 rounded-lg shadow-lg"
+                            />
+                            <p className="px-4 my-2 text-sm italic font-thin">
+                                After soldering all of the components I gave my
+                                project a quick test to see if everything was
+                                turning on and working properly.
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div className="w-1/4">
                     <div className="p-4 bg-[#f6f6f6] rounded-md flex flex-col">
