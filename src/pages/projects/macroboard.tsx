@@ -64,7 +64,7 @@ export default function Macroboard() {
                     <h2 className="py-1 text-xl italic font-base">
                         The process behind building a macrokeyboard
                     </h2>
-                    <h3 className="py-1 text-sm font-thin">
+                    <h3 className="py-1 text-sm font-light">
                         Ben Zhou - Posted: [DATE] - Last Updated: [DATE]
                     </h3>
                     <Image
@@ -72,7 +72,7 @@ export default function Macroboard() {
                         alt="Spotify Macroboard"
                         className="w-full mx-auto mt-4 rounded-lg shadow-lg"
                     />
-                    <p className="px-4 my-2 text-sm italic font-thin">
+                    <p className="px-4 my-2 text-sm italic font-light">
                         After soldering all of the components I gave my project
                         a quick test to see if everything was turning on and
                         working properly.

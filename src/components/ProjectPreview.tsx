@@ -164,7 +164,7 @@ export default function ProjectPreview({
                         >
                             <MdOpenInNew className="text-2xl" />
                             <a
-                                className="text-lg font-medium"
+                                className="text-sm font-medium lg:text-lg"
                                 target="_blank"
                                 href={projectLink}
                             >
@@ -174,7 +174,7 @@ export default function ProjectPreview({
                     )}
                     {slug && (
                         <motion.div
-                            className={`flex items-center ml-auto gap-2 p-2 px-4 text-xl text-black rounded-lg cursor-pointer`}
+                            className={`flex items-center ml-auto gap-2 p-2 px-4 text-sm lg:text-xl text-black rounded-lg cursor-pointer`}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.9 }}
                             transition={{
@@ -184,7 +184,7 @@ export default function ProjectPreview({
                             }}
                         >
                             <Link
-                                className="text-lg font-medium"
+                                className="text-sm font-medium lg:text-lg"
                                 href={`/projects/${slug}`}
                             >
                                 Read More
