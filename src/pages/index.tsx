@@ -233,6 +233,7 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
+                {/* Gold lines hover */}
             </motion.div>
         </>
     );
