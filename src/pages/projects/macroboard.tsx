@@ -121,7 +121,7 @@ export default function Macroboard() {
                                 and off, as well as the colour of the LEDs. This
                                 particular LED strip is called the WS2812B and
                                 is a popular choice since it is easy to control
-                                and
+                                and has a wide range of colours.
                             </p>
                         </div>
                         <div className="w-1/2 pl-3">
@@ -137,6 +137,7 @@ export default function Macroboard() {
                             </p>
                         </div>
                     </div>
+                    <p className="my-3 text-lg font-light">More text</p>
                 </div>
                 <div className="w-1/4">
                     <div className="p-4 bg-[#f6f6f6] rounded-md flex flex-col">
