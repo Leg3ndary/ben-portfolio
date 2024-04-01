@@ -5,6 +5,8 @@ import HackTheNorth from "@/../public/home/hackthenorth.jpg";
 import CompEng from "@/../public/home/compeng.jpg";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import { FaArrowRight } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -177,6 +179,24 @@ export default function Home() {
                             interesting I learned and taught myself how to
                             design and solder PCBs.
                         </p>
+                        <motion.div
+                            className={`flex items-center ml-auto gap-2 p-2 px-4 text-sm lg:text-xl text-black rounded-lg cursor-pointer`}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.9 }}
+                            transition={{
+                                type: "spring",
+                                stiffness: 100,
+                                damping: 8,
+                            }}
+                        >
+                            <Link
+                                className="text-sm font-medium lg:text-lg"
+                                href="/projects"
+                            >
+                                View Projects
+                            </Link>
+                            <FaArrowRight className="text-2xl" />
+                        </motion.div>
                     </div>
                     <div className="flex flex-col justify-center w-full h-full p-12 lg:p-12 md:w-1/2 lg:mb-0">
                         <Image
