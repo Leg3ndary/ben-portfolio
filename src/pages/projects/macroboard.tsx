@@ -58,7 +58,7 @@ export default function Macroboard() {
                 </motion.div>
             </div>
             <div className="flex mx-auto w-[400px] md:w-[700px] lg:w-[1000px] xl:[1200px] mt-12 mb-16 lg:mb-10 lg:mt-8 p-2 lg:p-4">
-                <div className="flex flex-col w-3/4 px-6 ">
+                <div className="flex flex-col w-full px-6 ">
                     <h1 className="py-1 text-4xl font-black">
                         Creating my very own Spotify Macroboard
                     </h1>
@@ -68,20 +68,21 @@ export default function Macroboard() {
                     <h3 className="py-1 text-sm font-light">
                         Ben Zhou - Posted: [DATE] - Last Updated: [DATE]
                     </h3>
-                    <Image
-                        src={SpotifyMacroboard}
-                        alt="Spotify Macroboard"
-                        className="w-full mx-auto mt-4 rounded-lg shadow-lg"
-                    />
+                    <iframe
+                        src="https://www.youtube.com/embed/Q0jAZzOjw8w?si=cPZXy6WQykXa3-q3"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        className="w-full mx-auto my-4 border-0 rounded-lg shadow-lg aspect-video"
+                    / >
                     <p className="px-4 my-2 text-sm italic font-light">
-                        After soldering all of the components I gave my project
-                        a quick test to see if everything was turning on and
-                        working properly.
+                        A full demo of my project and what it can do.
                     </p>
                     <hr className="my-3" />
                     <p className="my-3 text-lg font-light">
                         For my Grade 12 Computer Engineering final performance
-                        task I was tasked with using everything I&apos;d learnt
+                        task, I was tasked with using everything I&apos;d learnt
                         throughout the course to build a project of my choice. I
                         decided to build a macrokeyboard that would be able to
                         control my Spotify music while also having a bunch of
@@ -112,23 +113,33 @@ export default function Macroboard() {
                         with a way to connect with external APIs such as
                         Spotify&apos;s.
                     </p>
-                    <div className="flex my-3">
-                        <div className="w-1/2 pr-3 text-lg font-light">
+                    <div className="flex flex-col my-3 sm:flex-row">
+                        <div className="flex items-center w-full pr-3 text-lg font-light sm:w-1/2 md:w-2/3">
                             <p>
                                 For lighting I decided to go for some simple RGB
                                 addressable LED strips, this allowed me to
                                 control exactly what LEDs I wanted to turn on
                                 and off, as well as the colour of the LEDs. This
-                                particular LED strip is called the WS2812B and
-                                is a popular choice since it is easy to control
-                                and has a wide range of colours.
+                                particular LED strip is called the{" "}
+                                <a
+                                    href="https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
+                                    target="_blank"
+                                    className="font-medium text-blue-500 underline"
+                                >
+                                    WS2812B
+                                </a>{" "}
+                                and is a popular choice since it is easy to
+                                control and has a wide range of colours. This
+                                would also allow me to implement some cool
+                                lighting effects such as a rainbow wave or a
+                                breathing effect.
                             </p>
                         </div>
-                        <div className="w-1/2 pl-3">
+                        <div className="w-full pl-3 mt-4 sm:mt-0 sm:w-1/2 md:w-1/3">
                             <Image
                                 src={TestingLed}
                                 alt="Testing the LED"
-                                className="w-full mx-auto mt-4 rounded-lg shadow-lg"
+                                className="w-full mx-auto my-4 rounded-lg shadow-lg"
                             />
                             <p className="px-4 my-2 text-sm italic font-thin">
                                 After soldering all of the components I gave my
@@ -138,21 +149,6 @@ export default function Macroboard() {
                         </div>
                     </div>
                     <p className="my-3 text-lg font-light">More text</p>
-                </div>
-                <div className="w-1/4">
-                    <div className="p-4 bg-[#f6f6f6] rounded-md flex flex-col">
-                        <h2 className="py-1 text-2xl font-black text-center">
-                            Table of Contents
-                        </h2>
-                        <ul className="py-1 text-lg font-thin">
-                            <li>Introduction</li>
-                            <li>Planning</li>
-                            <li>Design</li>
-                            <li>Building</li>
-                            <li>Testing</li>
-                            <li>Conclusion</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </>
