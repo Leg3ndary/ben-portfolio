@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import { FaArrowRight } from "react-icons/fa6";
 import Link from "next/link";
+// import Golden from "@/components/Golden";
 
 export default function Home() {
     return (
@@ -253,8 +254,8 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
-                {/* Gold lines hover */}
             </motion.div>
+            {/* <Golden /> */}
         </>
     );
 }

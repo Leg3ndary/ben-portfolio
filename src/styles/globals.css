@@ -3,12 +3,14 @@
 @tailwind utilities;
 
 :root {
-    --background: #ffffff;
+    --background: #ececec;
+    --color: #000000;
 }
-/* 
-@media (prefers-color-scheme: dark) {
+
+/* @media (prefers-color-scheme: dark) {
     :root {
-        --background: #000000;
+        --background: #161616;
+        --color: #ececec;
     }
 } */
 
@@ -16,7 +18,7 @@ html,
 body,
 #__next {
     background-color: var(--background);
-    color: #000000;
+    color: var(--color);
     height: 100%;
     width: 100%;
 }
