@@ -77,7 +77,7 @@ export default function Macroboard() {
                         className="w-full mx-auto my-4 border-0 rounded-lg shadow-lg aspect-video"
                     / >
                     <p className="px-4 my-2 text-sm italic font-light">
-                        A full demo of my project and what it can do.
+                        A full demo of my project and its features.
                     </p>
                     <hr className="my-3" />
                     <p className="my-3 text-lg font-light">
