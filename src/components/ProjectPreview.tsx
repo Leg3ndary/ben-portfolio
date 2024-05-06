@@ -186,6 +186,7 @@ export default function ProjectPreview({
                             <Link
                                 className="text-sm font-medium lg:text-lg"
                                 href={`/projects/${slug}`}
+                                prefetch={false}
                             >
                                 Read More
                             </Link>
