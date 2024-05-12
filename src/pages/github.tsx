@@ -17,16 +17,10 @@ const boxAnim = {
 };
 
 export default function Projects() {
-    const [userData, setUserData] = useState(null);
     const [repoData, setRepoData] = useState<GitHubRepo[]>([]);
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("https://api.github.com/users/leg3ndary/")
-            .then((response) => response.json())
-            .then((userData) => {
-                setUserData(userData);
-            });
         fetch("https://api.github.com/users/leg3ndary/repos")
             .then((response) => response.json())
             .then((repoData) => {
