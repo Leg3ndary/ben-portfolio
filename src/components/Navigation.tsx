@@ -82,7 +82,7 @@ export default function Navigation() {
                                 PROJECTS
                             </Link>
                         </motion.div>
-                        <motion.div
+                        {/* <motion.div
                             className="bg-clip-text bg-rainbow-gradient animate-breathing-gradient"
                             {...motionAnim}
                         >
@@ -93,6 +93,19 @@ export default function Navigation() {
                                 href="/awards"
                             >
                                 AWARDS
+                            </Link>
+                        </motion.div> */}
+                        <motion.div
+                            className="bg-clip-text bg-rainbow-gradient animate-breathing-gradient"
+                            {...motionAnim}
+                        >
+                            <Link
+                                className={`text-base font-bold text-center text-white transition-all duration-1000 ${
+                                    scrollY > 0 ? "hover:text-transparent" : ""
+                                }`}
+                                href="/github"
+                            >
+                                GITHUB
                             </Link>
                         </motion.div>
                         <motion.div
@@ -155,12 +168,19 @@ export default function Navigation() {
                         >
                             PROJECTS
                         </Link>
-                        <Link
+                        {/* <Link
                             className="p-2 text-xl font-bold text-center text-white"
                             href="/awards"
                             onClick={() => setIsOpen(false)}
                         >
                             AWARDS
+                        </Link> */}
+                        <Link
+                            className="p-2 text-xl font-bold text-center text-white"
+                            href="/github"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            GITHUB
                         </Link>
                         <Link
                             className="p-2 text-xl font-bold text-center text-white"
