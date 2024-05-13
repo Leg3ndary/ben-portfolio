@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { AiOutlineLoading } from "react-icons/ai";
 import { GitHubRepo } from "@/types";
+import { ImGithub } from "react-icons/im";
+import { FaStar } from "react-icons/fa6";
 
 const boxAnim = {
     hidden: { opacity: 1, scale: 0 },
@@ -85,7 +87,6 @@ export default function Projects() {
                     className="grid gap-y-12 lg:gap-y-10 w-11/12 md:w-[600px] xl:w-[1300px] 3xl:w-[1850px] py-5 pt-0 grid-flow-row grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3 gap-x-5 md:gap-x-7 lg:gap-x-16"
                     variants={boxAnim}
                 >
-                    
                     {!isLoading &&
                         repoData.map((repo) => (
                             <motion.div
@@ -96,18 +97,20 @@ export default function Projects() {
                                 <h1 className="text-2xl font-bold">
                                     {repo.name}
                                 </h1>
-                                <p className="text-sm font-light">
+                                <p className="py-1 text-sm font-light">
                                     {repo.description}
                                 </p>
-                                <div className="flex justify-between">
+                                <div className="flex justify-between pt-1">
                                     <a
-                                        className="text-sm font-light text-blue-500"
+                                        className="flex justify-center items-center px-2.5 py-1.5 text-sm font-normal text-white transition-all duration-200 ease-in-out bg-black rounded-lg hover:bg-[#6e5494] hover:text-white"
                                         href={repo.html_url}
                                         target="_blank"
-                                        rel="noreferrer"
+                                        rel="noreferrer noopener"
                                     >
-                                        View on GitHub
+                                        <ImGithub className="w-5 h-5 my-auto mr-1.5" />
+                                        GitHub
                                     </a>
+
                                     <p className="text-sm font-light">
                                         {repo.language}
                                     </p>
