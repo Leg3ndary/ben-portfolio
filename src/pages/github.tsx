@@ -78,17 +78,18 @@ export default function Projects() {
             <div className="flex flex-col flex-wrap content-center justify-center w-full pt-12 pb-16 lg:pb-20 lg:pt-24">
                 {isLoading && (
                     <div className="flex flex-col items-center justify-center w-full h-full ">
-                        <AiOutlineLoading className="w-48 h-48 text-black animate-spin" />
+                        <AiOutlineLoading className="w-24 h-24 text-black animate-spin" />
                     </div>
                 )}
                 <motion.div
-                    className="grid gap-y-12 lg:gap-y-10 w-11/12 md:w-[600px] xl:w-[1300px] 3xl:w-[1850px] py-5 grid-flow-row grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3 gap-x-5 md:gap-x-7 lg:gap-x-16"
+                    className="grid gap-y-12 lg:gap-y-10 w-11/12 md:w-[600px] xl:w-[1300px] 3xl:w-[1850px] py-5 pt-0 grid-flow-row grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3 gap-x-5 md:gap-x-7 lg:gap-x-16"
                     variants={boxAnim}
                 >
+                    
                     {!isLoading &&
                         repoData.map((repo) => (
                             <motion.div
-                                className="flex flex-col justify-center w-full h-full p-5 bg-white border-black rounded-3xl drop-shadow-2xl"
+                                className="flex flex-col justify-center w-full h-full px-5 py-4 bg-white border-black rounded-xl drop-shadow-xl"
                                 key={repo.id}
                                 variants={boxAnim}
                             >
