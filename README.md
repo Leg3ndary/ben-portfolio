@@ -11,4 +11,4 @@ $ npm run dev
 
 ## Contributions
 
-Please do not contribute to this project.
+Please do not contribute to this project as it's meant to be solely my own.
