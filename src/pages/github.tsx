@@ -84,7 +84,7 @@ export default function Projects() {
                     </div>
                 )}
                 <motion.div
-                    className="grid gap-y-12 lg:gap-y-10 w-11/12 md:w-[600px] xl:w-[1300px] 3xl:w-[1850px] py-5 pt-0 grid-flow-row grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3 gap-x-5 md:gap-x-7 lg:gap-x-16"
+                    className="grid gap-y-12 lg:gap-y-10 w-11/12 md:w-[600px] xl:w-[1300px] 3xl:w-[1850px] py-5 pt-0 grid-flow-row grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-x-5 md:gap-x-7 lg:gap-x-16"
                     variants={boxAnim}
                 >
                     {!isLoading &&
