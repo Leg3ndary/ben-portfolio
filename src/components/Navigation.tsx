@@ -117,6 +117,7 @@ export default function Navigation() {
                                     scrollY > 0 ? "hover:text-transparent" : ""
                                 }`}
                                 href="/resume.pdf"
+                                target="_blank"
                             >
                                 RESUME
                             </Link>
@@ -185,6 +186,7 @@ export default function Navigation() {
                         <Link
                             className="p-2 text-xl font-bold text-center text-white"
                             href="/resume.pdf"
+                            target="_blank"
                         >
                             RESUME
                         </Link>
