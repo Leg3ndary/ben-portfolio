@@ -4,7 +4,10 @@ import { useState, useEffect } from "react";
 import { AiOutlineLoading } from "react-icons/ai";
 import { GitHubRepo } from "@/types";
 import { ImGithub } from "react-icons/im";
-import { FaStar } from "react-icons/fa6";
+// import { FaStar } from "react-icons/fa6";
+import { IoMenu } from "react-icons/io5";
+import { IoMdGrid } from "react-icons/io";
+
 
 const boxAnim = {
     hidden: { opacity: 1, scale: 0 },
@@ -18,9 +21,15 @@ const boxAnim = {
     },
 };
 
+enum Dropdown {
+    Grid,
+    List
+};
+
 export default function Projects() {
     const [repoData, setRepoData] = useState<GitHubRepo[]>([]);
     const [isLoading, setLoading] = useState(true);
+    const [dropdown, setDropdown] = useState(Dropdown.Grid);
 
     useEffect(() => {
         fetch("https://api.github.com/users/leg3ndary/repos")
@@ -83,12 +92,22 @@ export default function Projects() {
                     </div>
                 </motion.div>
             </div>
-            <div className="flex flex-col flex-wrap content-center justify-center w-full pt-12 pb-16 lg:pb-20 lg:pt-24">
+            <div className="flex flex-col flex-wrap content-center justify-center w-full pt-12 pb-16 lg:pb-20 lg:pt-4">
                 {isLoading && (
                     <div className="flex flex-col items-center justify-center w-full h-full ">
                         <AiOutlineLoading className="w-24 h-24 text-black animate-spin" />
                     </div>
                 )}
+                {/* <div className="flex justify-center p-6 ml-auto">
+                    <IoMdGrid
+                        className={`w-6 h-6 my-auto ${dropdown == Dropdown.Grid ? "text-gray-600 bg-gray-300 rounded-lg" : "text-gray-300"}`}
+                        title="Grid"
+                    />
+                    <IoMenu
+                        className="w-6 h-6 my-auto ml-4 text-gray-300"
+                        title="List"
+                    />  
+                </div> */}
                 <motion.div
                     className="grid gap-y-12 lg:gap-y-10 w-11/12 md:w-[600px] xl:w-[1300px] 3xl:w-[1850px] py-5 pt-0 grid-flow-row grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-x-5 md:gap-x-7 lg:gap-x-16"
                     variants={boxAnim}
@@ -106,7 +125,7 @@ export default function Projects() {
                                 <p className="py-1 text-sm font-light">
                                     {repo.description}
                                 </p>
-                                <div className="flex justify-between pt-1">
+                                <div className="flex justify-between pt-1 mt-auto">
                                     <a
                                         className="flex justify-center items-center px-2.5 py-1.5 text-sm font-normal text-white transition-all duration-200 ease-in-out bg-black rounded-lg hover:bg-[#6e5494] hover:text-white"
                                         href={repo.html_url}
