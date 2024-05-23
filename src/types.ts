@@ -152,4 +152,4 @@ export type GitHubRepo = {
     open_issues: number;
     watchers: number;
     default_branch: string;
-}
+};

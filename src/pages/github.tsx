@@ -27,7 +27,10 @@ export default function Projects() {
             .then((response) => response.json())
             .then((repoData) => {
                 const filteredData = repoData.filter(
-                    (repo: GitHubRepo) => (repo.name != "Leg3ndary" && repo.name.indexOf("experiments") == -1)
+                    (repo: GitHubRepo) =>
+                        repo.name != "Leg3ndary" &&
+                        repo.name.indexOf("experiments") == -1 &&
+                        repo.name.indexOf("learning") == -1
                 );
                 setRepoData(filteredData);
                 setLoading(false);

@@ -29,10 +29,7 @@ export default function Awards() {
                     content="https://i.imgur.com/6KdqAaf.png"
                 />
                 <meta property="og:type" content="website" />
-                <meta
-                    property="og:url"
-                    content="https://benzhou.tech/awards"
-                />
+                <meta property="og:url" content="https://benzhou.tech/awards" />
                 <meta name="description" content="Some of my accomplishments" />
             </Head>
             <div className="relative top-0 flex justify-center w-full h-[550px] bg-rainbow-gradient animate-breathing-gradient">

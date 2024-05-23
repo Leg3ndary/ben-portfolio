@@ -75,7 +75,7 @@ export default function Macroboard() {
                         referrerPolicy="strict-origin-when-cross-origin"
                         allowFullScreen
                         className="w-full mx-auto my-4 border-0 rounded-lg shadow-lg aspect-video"
-                    / >
+                    />
                     <p className="px-4 my-2 text-sm italic font-light">
                         A full demo of my project and its features.
                     </p>
