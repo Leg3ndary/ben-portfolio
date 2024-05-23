@@ -26,7 +26,10 @@ export default function Projects() {
         fetch("https://api.github.com/users/leg3ndary/repos")
             .then((response) => response.json())
             .then((repoData) => {
-                setRepoData(repoData);
+                const filteredData = repoData.filter(
+                    (repo: GitHubRepo) => (repo.name != "Leg3ndary" && repo.name.indexOf("experiments") == -1)
+                );
+                setRepoData(filteredData);
                 setLoading(false);
             });
     }, []);
