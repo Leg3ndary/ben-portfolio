@@ -5,8 +5,8 @@ import { AiOutlineLoading } from "react-icons/ai";
 import { GitHubRepo } from "@/types";
 import { ImGithub } from "react-icons/im";
 // import { FaStar } from "react-icons/fa6";
-import { IoMenu } from "react-icons/io5";
-import { IoMdGrid } from "react-icons/io";
+// import { IoMenu } from "react-icons/io5";
+// import { IoMdGrid } from "react-icons/io";
 
 
 const boxAnim = {
@@ -92,7 +92,7 @@ export default function Projects() {
                     </div>
                 </motion.div>
             </div>
-            <div className="flex flex-col flex-wrap content-center justify-center w-full pt-12 pb-16 lg:pb-20 lg:pt-4">
+            <div className="flex flex-col flex-wrap content-center justify-center w-full pt-12 pb-16 lg:pb-20 lg:pt-24 3xl:pt-4">
                 {isLoading && (
                     <div className="flex flex-col items-center justify-center w-full h-full ">
                         <AiOutlineLoading className="w-24 h-24 text-black animate-spin" />
