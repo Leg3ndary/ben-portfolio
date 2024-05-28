@@ -28,7 +28,7 @@ export default function Footer() {
                                 want to contact me please reach out on LinkedIn.
                             </p>
                             <p className="text-[#777777] py-2">
-                                Copyright © 2023 Ben Zhou All rights reserved.
+                                Copyright © 2023-2024 Ben Zhou All rights reserved.
                             </p>
                         </div>
                         <div className="flex flex-col flex-1 mx-4 lg:my-24">
