@@ -7,6 +7,7 @@ import { ImGithub } from "react-icons/im";
 // import { FaStar } from "react-icons/fa6";
 // import { IoMenu } from "react-icons/io5";
 // import { IoMdGrid } from "react-icons/io";
+// import Tags from "@/components/Tags";
 
 
 const boxAnim = {
@@ -125,6 +126,9 @@ export default function Projects() {
                                 <p className="py-1 text-sm font-light">
                                     {repo.description}
                                 </p>
+                                {/* <div>
+                                    <Tags rawTags={repo.topics} />
+                                </div> */}
                                 <div className="flex justify-between pt-1 mt-auto">
                                     <a
                                         className="flex justify-center items-center px-2.5 py-1.5 text-sm font-normal text-white transition-all duration-200 ease-in-out bg-black rounded-lg hover:bg-[#6e5494] hover:text-white"
