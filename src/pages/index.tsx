@@ -35,9 +35,9 @@ export default function Home() {
                     content="Ben Z's Portfolio site made with Next.js TypeScript, and TailwindCSS. View my projects and other relevant information about me!"
                 />
             </Head>
-            <div className="relative top-0 flex justify-center w-full h-[650px] md:h-[800px] lg:h-[650px] bg-rainbow-gradient animate-breathing-gradient mb-32 md:mb-80 lg:mb-32">
+            <div className="relative top-0 flex justify-center w-full h-[650px] md:h-[800px] lg:h-[650px] bg-rainbow-gradient animate-breathing-gradient mb-40 md:mb-80 lg:mb-32">
                 <motion.div
-                    className="relative flex h-[900px] lg:h-[550px] bg-white border-black w-11/12 md:w-[690px] lg:w-11/12 lg:max-w-[1100px] drop-shadow-xl mt-44 rounded-3xl flex-col lg:flex-row hover:drop-shadow-2xl transition-all duration-1000 ease-in-out"
+                    className="relative flex h-[950px] lg:h-[550px] bg-white border-black w-11/12 md:w-[690px] lg:w-11/12 lg:max-w-[1100px] drop-shadow-xl mt-44 rounded-3xl flex-col lg:flex-row hover:drop-shadow-2xl transition-all duration-1000 ease-in-out"
                     initial={{ y: -20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
@@ -57,21 +57,15 @@ export default function Home() {
                         <h2 className="p-2 font-bold text-md">
                             PROGRAMMER, HOCKEY PLAYER
                         </h2>
-                        <p className="p-2 py-4 font-light">
-                            This is my website! I made it using NextJS,
-                            TypeScript, and TailwindCSS!
+                        <p className="p-2 font-light">
+                            I completely designed this website without any
+                            previously built themes or components!
+                        </p>
+                        <p className="p-2 font-light">
+                            I made it using NextJs, TypeScript, and TailwindCSS!
                         </p>
                         <p className="p-2 font-light">
                             You can always contact me on{" "}
-                            <a
-                                className="font-medium text-blue-500"
-                                href="https://discord.com/users/360061101477724170"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Discord
-                            </a>
-                            , or{" "}
                             <a
                                 className="font-medium text-blue-500"
                                 href="https://www.linkedin.com/in/ben-zhou06/"
@@ -118,7 +112,7 @@ export default function Home() {
                 </motion.div>
             </div>
             <motion.div
-                className="flex justify-center w-full py-2 md:mt-0 mt-[450px]"
+                className="flex justify-center w-full py-2 md:mt-0 mt-[490px]"
                 initial={{ x: -20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -180,10 +174,11 @@ export default function Home() {
                             interesting I learned and taught myself how to
                             design and solder PCBs.
                         </p>
+
                         <motion.div
                             className={`flex items-center ml-auto gap-2 p-2 px-4 text-sm lg:text-xl text-black rounded-lg cursor-pointer`}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.9 }}
+                            whileHover={{ x: 10 }}
+                            whileTap={{ x: -5 }}
                             transition={{
                                 type: "spring",
                                 stiffness: 100,
