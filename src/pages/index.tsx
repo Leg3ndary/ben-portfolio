@@ -160,9 +160,9 @@ export default function Home() {
                 <div className="w-10/12 lg:w-[1170px] h-[1px] bg-[#dddddd]" />
             </div>
             <motion.div
-                className="flex justify-center w-full py-2"
-                initial={{ x: 20, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
+                className="flex justify-center w-full py-2 overflow-hidden"
+                initial={{ x: 0, opacity: 0 }}
+                whileInView={{ x: -10, opacity: 1 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true, amount: 0.8 }}
             >
@@ -219,7 +219,7 @@ export default function Home() {
             </div>
             <motion.div
                 className="flex justify-center w-full py-2"
-                initial={{ x: -20, opacity: 0 }}
+                initial={{ x: -10, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true, amount: 0.8 }}
