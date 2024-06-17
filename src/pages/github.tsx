@@ -123,13 +123,13 @@ export default function Projects() {
                                 <h1 className="text-2xl font-bold">
                                     {repo.name}
                                 </h1>
-                                <p className="py-1 text-sm font-light">
+                                <p className="py-3 text-sm font-light">
                                     {repo.description}
                                 </p>
                                 {/* <div>
                                     <Tags rawTags={repo.topics} />
                                 </div> */}
-                                <div className="flex justify-between pt-1 mt-auto">
+                                <div className="flex justify-between py-1 mt-auto">
                                     <a
                                         className="flex justify-center items-center px-2.5 py-1.5 text-sm font-normal text-white transition-all duration-200 ease-in-out bg-black rounded-lg hover:bg-[#6e5494] hover:text-white"
                                         href={repo.html_url}
