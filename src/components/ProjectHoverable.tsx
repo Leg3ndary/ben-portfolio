@@ -16,7 +16,7 @@ export default function ProjectHoverable({
     height = 45,
 }: ProjectHoverableProps) {
     return (
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" className="flex items-center justify-center">
             <Image
                 className="transition-transform duration-200 ease-in-out animate-fade-in hover:scale-125"
                 src={image}

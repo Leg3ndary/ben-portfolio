@@ -9,8 +9,61 @@ import Eureka from "@/../public/projects/Eureka2024.png";
 import Macroboard from "@/../public/projects/Macroboard.png";
 import BennyBot from "@/../public/projects/bennybot.png";
 import bTagScriptSphinx from "@/../public/projects/btagscriptsphinx.png";
+import RapidRx from "@/../public/projects/rapidrx.png";
 
 const projectPreviews: ProjectPreviewProps[] = [
+    {
+        image: {
+            src: RapidRx,
+            alt: "RapidRx App",
+            width: 900,
+            height: 100,
+            priority: true,
+        },
+        title: "RAPIDRX",
+        sub: "RAPID DIAGNOSIS TOOL FOR SYMPTOMS",
+        description: (
+            <>
+                RapidRx is a tool for rapid diagnosis based on user-inputted symptoms. The app suggests further questions, over-the-counter medications, homeopathic remedies, and common treatments, also providing a likely diagnosis. Users can track different symptom sets over time through multiple sessions. RapidRx reduces the time needed to find and book a doctor and mitigates risks from unreliable online searches, crucial for the 6 million Canadians without a family doctor. The app offers an efficient way to manage health concerns, saving time and providing peace of mind. You can view the project on{" "}
+                <a
+                    href="https://github.com/Leg3ndary/RapidRx"
+                    target="_blank"
+                    className="font-bold text-blue-500 transition-colors duration-1000 hover:text-fuchsia-400"
+                >
+                    GitHub
+                </a>
+                .
+            </>
+        ),
+        icons: [
+            {
+                link: "https://firebase.google.com",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg",
+                alt: "Firebase",
+            },
+            {
+                link: "https://sap.com",
+                image: "https://i.imgur.com/qz7kIud.png",
+                alt: "SAP",
+                width: 60,
+                height: 60,
+            },
+            {
+                link: "https://typescriptlang.org",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+                alt: "TypeScript",
+            },
+            {
+                link: "https://nextjs.org",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg",
+                alt: "Cloudflare",
+                width: 50,
+                height: 50,
+            },
+        ],
+        projectLink: "https://github.com/Leg3ndary/RapidRx",
+        color: "emerald-600",
+    },    
     {
         image: {
             src: Macroboard,

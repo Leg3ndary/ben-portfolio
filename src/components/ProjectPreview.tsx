@@ -71,6 +71,13 @@ const colorVariants: { [key: string]: string[] } = {
         "group-hover:bg-yellow-400",
         "bg-yellow-400",
     ],
+    "emerald-600": [
+        "hover:shadow-emerald-600",
+        "group-hover:text-emerald-600",
+        "hover:text-emerald-600",
+        "group-hover:bg-emerald-600",
+        "bg-emerald-600",
+    ],
     default: [
         "hover:shadow-blue-400",
         "group-hover:text-blue-400",
@@ -142,6 +149,8 @@ export default function ProjectPreview({
                             image={icon.image}
                             alt={icon.alt}
                             link={icon.link}
+                            height={icon.height}
+                            width={icon.width}
                         />
                     ))}
                 </div>
