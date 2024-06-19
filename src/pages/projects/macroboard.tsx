@@ -113,40 +113,35 @@ export default function Macroboard() {
                         with a way to connect with external APIs such as
                         Spotify&apos;s.
                     </p>
-                    <div className="flex flex-col my-3 sm:flex-row">
-                        <div className="flex items-center w-full pr-3 text-lg font-light sm:w-1/2 md:w-2/3">
-                            <p>
-                                For lighting I decided to go for some simple RGB
-                                addressable LED strips, this allowed me to
-                                control exactly what LEDs I wanted to turn on
-                                and off, as well as the colour of the LEDs. This
-                                particular LED strip is called the{" "}
-                                <a
-                                    href="https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
-                                    target="_blank"
-                                    className="font-medium text-blue-500 underline"
-                                >
-                                    WS2812B
-                                </a>{" "}
-                                and is a popular choice since it is easy to
-                                control and has a wide range of colours. This
-                                would also allow me to implement some cool
-                                lighting effects such as a rainbow wave or a
-                                breathing effect.
-                            </p>
-                        </div>
-                        <div className="w-full pl-3 mt-4 sm:mt-0 sm:w-1/2 md:w-1/3">
-                            <Image
-                                src={TestingLed}
-                                alt="Testing the LED"
-                                className="w-full mx-auto my-4 rounded-lg shadow-lg"
-                            />
-                            <p className="px-4 my-2 text-sm italic font-thin">
-                                After soldering all of the components I gave my
-                                project a quick test to see if everything was
-                                turning on and working properly.
-                            </p>
-                        </div>
+                    <p className="my-3 text-lg font-light">
+                        For lighting I decided to go for some simple RGB
+                        addressable LED strips, this allowed me to control
+                        exactly what LEDs I wanted to turn on and off, as well
+                        as the colour of the LEDs. This particular LED strip is
+                        called the{" "}
+                        <a
+                            href="https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
+                            target="_blank"
+                            className="font-medium text-blue-500 underline"
+                        >
+                            WS2812B
+                        </a>{" "}
+                        and is a popular choice since it is easy to control and
+                        has a wide range of colours. This would also allow me to
+                        implement some cool lighting effects such as a rainbow
+                        wave or a breathing effect.
+                    </p>
+                    <div className="w-full mx-auto mt-4 sm:mt-0 sm:w-1/2 md:w-4/5">
+                        <Image
+                            src={TestingLed}
+                            alt="Testing the LED"
+                            className="object-cover w-full mx-auto my-4 rounded-lg shadow-lg"
+                        />
+                        <p className="px-4 my-2 text-sm italic font-thin">
+                            After soldering all of the components I gave my
+                            project a quick test to see if everything was
+                            turning on and working properly.
+                        </p>
                     </div>
                     <p className="my-3 text-lg font-light">More text</p>
                 </div>
