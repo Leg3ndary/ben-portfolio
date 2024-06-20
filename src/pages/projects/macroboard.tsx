@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import Head from "next/head";
-import SpotifyMacroboard from "@/../public/home/compeng.jpg";
+// import SpotifyMacroboard from "@/../public/home/compeng.jpg";
 import Image from "next/image";
 import TestingLed from "@/../public/projects/SpotifyMacroboard/testingLed.png";
 
