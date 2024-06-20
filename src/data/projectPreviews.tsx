@@ -9,7 +9,7 @@ import Eureka from "@/../public/projects/Eureka2024.png";
 import Macroboard from "@/../public/projects/Macroboard.png";
 import BennyBot from "@/../public/projects/bennybot.png";
 import bTagScriptSphinx from "@/../public/projects/btagscriptsphinx.png";
-import RapidRx from "@/../public/projects/rapidrx.png";
+import RapidRx from "@/../public/projects/RapidRx.png";
 
 const projectPreviews: ProjectPreviewProps[] = [
     {
