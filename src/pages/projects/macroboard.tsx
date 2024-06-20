@@ -33,7 +33,7 @@ export default function Macroboard() {
                     content="View my process for building my very own macroboard."
                 />
             </Head>
-            <div className="relative top-0 flex justify-center w-full h-32 bg-rainbow-gradient animate-breathing-gradient" />
+            <div className="relative top-0 flex justify-center w-full h-24 lg:h-32 bg-rainbow-gradient animate-breathing-gradient" />
             <div className="flex mx-auto w-[400px] md:w-[700px] lg:w-[1000px] xl:[1200px] mt-12 mb-16 lg:mb-10 lg:mt-8 p-2 lg:p-4">
                 <div className="flex flex-col w-full px-6 ">
                     <h1 className="py-1 text-4xl font-black">
