@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion"
 
 type ProjectHoverableProps = {
     link: string;
@@ -6,6 +7,14 @@ type ProjectHoverableProps = {
     alt: string;
     width?: number;
     height?: number;
+};
+
+const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+    },
 };
 
 export default function ProjectHoverable({
@@ -16,7 +25,7 @@ export default function ProjectHoverable({
     height = 45,
 }: ProjectHoverableProps) {
     return (
-        <a href={link} target="_blank" className="flex items-center justify-center">
+        <motion.a href={link} target="_blank" className="flex items-center justify-center" variants={item}>
             <Image
                 className="transition-transform duration-200 ease-in-out animate-fade-in hover:scale-125"
                 src={image}
@@ -24,6 +33,6 @@ export default function ProjectHoverable({
                 height={height}
                 alt={alt}
             />
-        </a>
+        </motion.a>
     );
 }

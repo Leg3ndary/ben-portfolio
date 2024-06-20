@@ -67,6 +67,8 @@ export default function Projects() {
                 <motion.div
                     className="grid gap-y-12 lg:gap-y-10 w-11/12 md:w-[600px] xl:w-[1300px] 3xl:w-[1850px] py-5 grid-flow-row grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3"
                     variants={boxAnim}
+                    initial="hidden"
+                    animate="visible"
                 >
                     {projectPreviews.map((project, index) => (
                         <ProjectPreview

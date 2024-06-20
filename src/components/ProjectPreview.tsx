@@ -87,6 +87,30 @@ const colorVariants: { [key: string]: string[] } = {
     ],
 };
 
+const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            delayChildren: 0.3,
+            staggerChildren: 0.2,
+        },
+    },
+};
+
+const boxItem = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 1,
+            ease: "easeInOut" 
+        }
+    },
+};
+
 export default function ProjectPreview({
     image,
     title,
@@ -102,11 +126,7 @@ export default function ProjectPreview({
     return (
         <motion.li
             className="self-center list-none justify-self-center"
-            animate={{
-                opacity: 1,
-                y: 0,
-                transition: { delay: 0.2 * index, duration: 1.5 },
-            }}
+            variants={boxItem}
         >
             <div
                 className={`group flex flex-col justify-center w-[380px] lg:w-[570px] p-10 bg-white shadow-2xl rounded-3xl hover:shadow-2xl transition ${colorVariant[0]} duration-1000`}
@@ -135,7 +155,12 @@ export default function ProjectPreview({
                         className={`w-[1170px] h-[1px] bg-[#dddddd] ${colorVariant[3]} transition-colors duration-1000`}
                     />
                 </div>
-                <div className="flex py-6 pb-0 place-content-evenly">
+                <motion.div
+                    className="flex py-6 pb-0 place-content-evenly"
+                    variants={container}
+                    initial="hidden"
+                    animate="visible"
+                >
                     {icons.map((icon, index) => (
                         <ProjectHoverable
                             key={index}
@@ -146,7 +171,7 @@ export default function ProjectPreview({
                             width={icon.width}
                         />
                     ))}
-                </div>
+                </motion.div>
                 <div className="flex justify-center w-full my-6">
                     <div
                         className={`w-[1170px] h-[1px] bg-[#dddddd] ${colorVariant[3]} transition-colors duration-1000`}
