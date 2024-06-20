@@ -70,7 +70,6 @@ const projectPreviews: ProjectPreviewProps[] = [
             alt: "Spotify Macroboard",
             width: 900,
             height: 100,
-            priority: true,
         },
         title: "SPOTIFY MACROBOARD",
         sub: "FULLY CUSTOM MACROBOARD FOR SPOTIFY",
