@@ -102,13 +102,6 @@ export default function ProjectPreview({
     return (
         <motion.li
             className="self-center list-none justify-self-center"
-            whileHover={{ scale: 1.05 }}
-            transition={{
-                type: "spring",
-                stiffness: 50,
-                damping: 10,
-            }}
-            initial={{ opacity: 0, y: -20 }}
             animate={{
                 opacity: 1,
                 y: 0,
