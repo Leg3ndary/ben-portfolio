@@ -37,10 +37,11 @@ export default function Macroboard() {
             <div className="flex mx-auto w-[400px] md:w-[700px] lg:w-[1000px] xl:[1200px] mt-12 mb-16 lg:mb-10 lg:mt-8 p-2 lg:p-4">
                 <div className="flex flex-col w-full px-6 ">
                     <h1 className="py-1 text-4xl font-black">
-                        Creating my very own Spotify Macroboard
+                        Designing My Custom Spotify Macroboard
                     </h1>
                     <h2 className="py-1 text-xl italic font-base">
-                        The process behind building a macrokeyboard
+                        A Step-by-Step Guide to Building a Personalized Macro
+                        Keyboard for Spotify
                     </h2>
                     <h3 className="py-1 text-sm font-light">
                         Ben Zhou - Posted: [DATE] - Last Updated: [DATE]
@@ -62,16 +63,16 @@ export default function Macroboard() {
                         task, I was tasked with using everything I&apos;d learnt
                         throughout the course to build a project of my choice. I
                         decided to build a macrokeyboard that would be able to
-                        control my Spotify music while also having a bunch of
-                        other QOL features.
+                        control my Spotify music while also having a multitude
+                        of other quality of life features.
                     </p>
                     <p className="my-3 text-lg font-light">
                         My inspiration for this project came from the fact that
                         I listen to a lot of music, and with that I often adjust
                         the song playing, as well as other features such as
                         volume or looping. However, since I use a 60% keyboard,
-                        that means that I have to click a few extra keys to
-                        achieve some functionality.
+                        that means that I have to click 3-4 keys to achieve some
+                        simple functionality such as skipping a song.
                     </p>
                     <p className="my-3 text-lg font-light">
                         I wanted to build a macroboard that would allow me to
@@ -82,13 +83,14 @@ export default function Macroboard() {
                     <p className="my-3 text-lg font-light">
                         I first started by brainstorming the general overall
                         circuit and what components I would need to make this
-                        project a reality, I specifically chose to use blue
-                        switches to make the keyboard feel more tactile and
-                        responsive. I also decided to use an ESP32
-                        microcontroller for the smaller form factor as well as
-                        the more powerful processor. It would also provide me
-                        with a way to connect with external APIs such as
-                        Spotify&apos;s.
+                        project a reality, I specifically chose blue switches to
+                        make the keyboard feel more tactile and responsive. I
+                        also decided to use an ESP32 microcontroller for the
+                        smaller form factor as well as the more powerful
+                        processor. It would also provide me with a way to
+                        connect with external APIs such as Spotify&apos;s. Later
+                        I found that this would be wildly inefficient and
+                        stupid, so I adjusted my approach later on.
                     </p>
                     <p className="my-3 text-lg font-light">
                         For lighting I decided to go for some simple RGB
@@ -108,6 +110,7 @@ export default function Macroboard() {
                         implement some cool lighting effects such as a rainbow
                         wave or a breathing effect.
                     </p>
+                    <hr className="my-3" />
                     <div className="w-full mx-auto mt-4 sm:mt-0 sm:w-1/2 md:w-4/5">
                         <Image
                             src={TestingLed}
@@ -120,7 +123,9 @@ export default function Macroboard() {
                             turning on and working properly.
                         </p>
                     </div>
+                    <hr className="my-3" />
                     <p className="my-3 text-lg font-light">More text</p>
+                    
                 </div>
             </div>
         </>

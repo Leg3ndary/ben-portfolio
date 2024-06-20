@@ -26,3 +26,7 @@ body,
 .transition-height {
     transition: height 1s ease;
 }
+
+hr {
+    border-color: #c1c1c1;
+}
