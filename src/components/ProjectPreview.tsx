@@ -118,7 +118,6 @@ export default function ProjectPreview({
     description,
     icons,
     color,
-    index = 1,
     projectLink,
     slug,
 }: ProjectPreviewProps) {
