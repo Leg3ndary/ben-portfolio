@@ -1,8 +1,10 @@
-// import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Head from "next/head";
 // import SpotifyMacroboard from "@/../public/home/compeng.jpg";
 import Image from "next/image";
 import TestingLed from "@/../public/projects/SpotifyMacroboard/testingLed.png";
+import { useState, useEffect } from "react";
+// import { cookies } from "next/headers";
 
 export async function getStaticProps() {
     return {
@@ -11,6 +13,15 @@ export async function getStaticProps() {
 }
 
 export default function Macroboard() {
+    // const cookieStore = cookies();
+    const [showDisclaimer, setShowDisclaimer] = useState(true);
+
+    // useEffect(() => {
+    //     if (!cookieStore.has("spotifyDisclaimer")) {
+    //         cookieStore.set("spotifyDisclaimer", "t");
+    //     }
+    // }, []);
+
     return (
         <>
             <Head>
@@ -40,16 +51,48 @@ export default function Macroboard() {
                 />
             </Head>
             <div className="relative top-0 flex justify-center w-full h-24 lg:h-32 bg-rainbow-gradient animate-breathing-gradient" />
+            {/* <AnimatePresence>
+                {showDisclaimer && (
+                    <motion.div
+                        className="fixed z-20 p-4 bg-white shadow-xl w-60 bottom-4 right-4 rounded-xl"
+                        initial={{ x: 20, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        exit={{ x: 20, opacity: 0 }}
+                    >
+                        <h2 className="font-black">Disclaimer</h2>
+                        <p className="text-xs">
+                            In accordance with{" "}
+                            <a
+                                href="https://developer.spotify.com/policy#vi-naming-and-branding"
+                                target="_blank"
+                                className="font-medium text-blue-500 underline"
+                            >
+                                Spotify&apos;s Developer Policy
+                            </a>
+                            , I must state that this project is not in anyway
+                            related to or endorsed by Spotify.
+                        </p>
+                        <div
+                            onClick={() => setShowDisclaimer(false)}
+                            className="px-2 py-1 mt-2 text-xs font-medium text-white bg-red-500 rounded-md hover:cursor-pointer"
+                        >
+                            Dismiss
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence> */}
+
             <div className="flex mx-auto w-[400px] md:w-[700px] lg:w-[1000px] xl:[1200px] mt-12 mb-16 lg:mb-10 lg:mt-8 p-2 lg:p-4 scroll-m-6">
                 <div className="flex flex-col w-full px-6 ">
-                    <h1 className="py-2 text-5xl font-black">
+                    <h1 className="py-2 text-3xl font-black lg:text-5xl">
                         Designing My Custom Spotify Macroboard
                     </h1>
-                    <h2 className="py-2 text-xl italic font-base">
+                    <h2 className="py-2 italic text-md lg:text-xl font-base">
                         A Step-by-Step Guide to Building a Personalized Macro
                         Keyboard for Spotify
                     </h2>
-                    <h3 className="py-2 text-sm font-light">
+                    <h3 className="py-2 text-xs font-light lg:text-sm">
                         Ben Zhou - Posted: [DATE] - Last Updated: [DATE]
                     </h3>
                     <iframe
@@ -89,24 +132,22 @@ export default function Macroboard() {
                         enable effortless control over my Spotify music while
                         incorporating features like dynamic lighting and a
                         built-in screen to display the current song. The
-                        finished product has satisfyingly smooth fading
-                        lights, clicky blue switches, a sleek case, and a
-                        vibrant display.
+                        finished product has satisfyingly smooth fading lights,
+                        clicky blue switches, a sleek case, and a vibrant
+                        display.
                     </p>
-                    <h2 className="py-4 text-4xl font-semibold">
-                        Research
-                    </h2>
+                    <h2 className="py-4 text-4xl font-semibold">Research</h2>
                     <p className="my-3 text-lg font-light">
-                        I first started by brainstorming the general overall
-                        circuit and what components I would need to make this
-                        project a reality, I specifically chose blue switches to
-                        make the keyboard feel more tactile and responsive. I
-                        also decided to use an ESP32 microcontroller for the
-                        smaller form factor as well as the more powerful
-                        processor. It would also provide me with a way to
-                        connect with external APIs such as Spotify&apos;s. Later
-                        I found that this would be wildly inefficient and
-                        stupid, so I adjusted my approach later on.
+                        Before creating this macroboard, I had to do some basic
+                        research. I started by considering the essential
+                        functions I wanted my keyboard to have. Firstly, I
+                        wanted custom RGB lighting that could match the color of
+                        the currently playing music. Additionally, I wanted a
+                        screen, even if small, to display the current song and
+                        related information. Finally, I aimed to have maximum
+                        control over the music player, including the ability to
+                        shuffle and loop without needing to manually open
+                        Spotify.
                     </p>
                     <p className="my-3 text-lg font-light">
                         For lighting I decided to go for some simple RGB
@@ -140,6 +181,16 @@ export default function Macroboard() {
                         </p>
                     </div>
                     <hr className="my-3" />
+                    <h2 className="py-4 text-4xl font-semibold">
+                        Circuit/PCB Design
+                    </h2>
+                    <h2 className="py-4 text-4xl font-semibold">
+                        User Instructions
+                    </h2>
+                    <h2 className="py-4 text-4xl font-semibold">Code Review</h2>
+                    <h2 className="py-4 text-4xl font-semibold">
+                        Required Parts
+                    </h2>
                     <p className="my-3 text-lg font-light">More text</p>
                 </div>
             </div>
