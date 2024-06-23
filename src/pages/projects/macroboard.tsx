@@ -4,6 +4,12 @@ import Head from "next/head";
 import Image from "next/image";
 import TestingLed from "@/../public/projects/SpotifyMacroboard/testingLed.png";
 
+export async function getStaticProps() {
+    return {
+        props: {},
+    };
+}
+
 export default function Macroboard() {
     return (
         <>
@@ -34,16 +40,16 @@ export default function Macroboard() {
                 />
             </Head>
             <div className="relative top-0 flex justify-center w-full h-24 lg:h-32 bg-rainbow-gradient animate-breathing-gradient" />
-            <div className="flex mx-auto w-[400px] md:w-[700px] lg:w-[1000px] xl:[1200px] mt-12 mb-16 lg:mb-10 lg:mt-8 p-2 lg:p-4">
+            <div className="flex mx-auto w-[400px] md:w-[700px] lg:w-[1000px] xl:[1200px] mt-12 mb-16 lg:mb-10 lg:mt-8 p-2 lg:p-4 scroll-m-6">
                 <div className="flex flex-col w-full px-6 ">
-                    <h1 className="py-1 text-4xl font-black">
+                    <h1 className="py-2 text-5xl font-black">
                         Designing My Custom Spotify Macroboard
                     </h1>
-                    <h2 className="py-1 text-xl italic font-base">
+                    <h2 className="py-2 text-xl italic font-base">
                         A Step-by-Step Guide to Building a Personalized Macro
                         Keyboard for Spotify
                     </h2>
-                    <h3 className="py-1 text-sm font-light">
+                    <h3 className="py-2 text-sm font-light">
                         Ben Zhou - Posted: [DATE] - Last Updated: [DATE]
                     </h3>
                     <iframe
@@ -54,32 +60,42 @@ export default function Macroboard() {
                         allowFullScreen
                         className="w-full mx-auto my-4 border-0 rounded-lg shadow-lg aspect-video"
                     />
-                    <p className="px-4 my-2 text-sm italic font-light">
+                    <p className="px-4 my-2 text-sm italic font-light text-center">
                         A full demo of my project and its features.
                     </p>
                     <hr className="my-3" />
+                    <h2 className="py-4 text-4xl font-semibold">
+                        Introduction
+                    </h2>
                     <p className="my-3 text-lg font-light">
-                        For my Grade 12 Computer Engineering final performance
-                        task, I was tasked with using everything I&apos;d learnt
-                        throughout the course to build a project of my choice. I
-                        decided to build a macrokeyboard that would be able to
-                        control my Spotify music while also having a multitude
-                        of other quality of life features.
+                        For my Computer Engineering Final Performance Task
+                        (FPT), I was tasked with using everything I&apos;d
+                        learnt throughout the course to build a project of my
+                        choice. I decided to build a macrokeyboard that would be
+                        able to control my Spotify music while also having a
+                        multitude of other quality of life features.
                     </p>
                     <p className="my-3 text-lg font-light">
                         My inspiration for this project came from the fact that
                         I listen to a lot of music, and with that I often adjust
                         the song playing, as well as other features such as
-                        volume or looping. However, since I use a 60% keyboard,
-                        that means that I have to click 3-4 keys to achieve some
-                        simple functionality such as skipping a song.
+                        volume or looping. However, since I used a 60% keyboard,
+                        that meant that I would have to click 3-4 keys to
+                        achieve some simple functionality such as skipping a
+                        song.
                     </p>
                     <p className="my-3 text-lg font-light">
-                        I wanted to build a macroboard that would allow me to
-                        control my Spotify music with ease, as well as having
-                        other features such as dynamic lighting and built in
-                        screen to display the current song playing.
+                        Therefore, I aimed to build a macroboard that would
+                        enable effortless control over my Spotify music while
+                        incorporating features like dynamic lighting and a
+                        built-in screen to display the current song. The
+                        finished product has satisfyingly smooth fading
+                        lights, clicky blue switches, a sleek case, and a
+                        vibrant display.
                     </p>
+                    <h2 className="py-4 text-4xl font-semibold">
+                        Research
+                    </h2>
                     <p className="my-3 text-lg font-light">
                         I first started by brainstorming the general overall
                         circuit and what components I would need to make this
@@ -117,7 +133,7 @@ export default function Macroboard() {
                             alt="Testing the LED"
                             className="object-cover w-full mx-auto my-4 rounded-lg shadow-lg"
                         />
-                        <p className="px-4 my-2 text-sm italic font-thin">
+                        <p className="px-4 my-2 text-sm italic font-light text-center">
                             After soldering all of the components I gave my
                             project a quick test to see if everything was
                             turning on and working properly.
@@ -125,7 +141,6 @@ export default function Macroboard() {
                     </div>
                     <hr className="my-3" />
                     <p className="my-3 text-lg font-light">More text</p>
-                    
                 </div>
             </div>
         </>
