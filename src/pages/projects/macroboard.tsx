@@ -1,9 +1,9 @@
-import { AnimatePresence, motion } from "framer-motion";
+// import { AnimatePresence, motion } from "framer-motion";
 import Head from "next/head";
 // import SpotifyMacroboard from "@/../public/home/compeng.jpg";
 import Image from "next/image";
 import TestingLed from "@/../public/projects/SpotifyMacroboard/testingLed.png";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 // import { cookies } from "next/headers";
 
 export async function getStaticProps() {
@@ -14,7 +14,7 @@ export async function getStaticProps() {
 
 export default function Macroboard() {
     // const cookieStore = cookies();
-    const [showDisclaimer, setShowDisclaimer] = useState(true);
+    // const [showDisclaimer, setShowDisclaimer] = useState(true);
 
     // useEffect(() => {
     //     if (!cookieStore.has("spotifyDisclaimer")) {
