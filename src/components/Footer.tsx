@@ -28,7 +28,8 @@ export default function Footer() {
                                 want to contact me please reach out on LinkedIn.
                             </p>
                             <p className="text-[#777777] py-2">
-                                Copyright © 2023-2024 Ben Zhou All rights reserved.
+                                Copyright © 2023-2024 Ben Zhou All rights
+                                reserved.
                             </p>
                         </div>
                         <div className="flex flex-col flex-1 mx-4 lg:my-24">
@@ -42,10 +43,10 @@ export default function Footer() {
                                 <motion.div {...motionProps}>
                                     <div className="p-1 transition border border-white rounded-md group hover:border-transparent">
                                         <a
-                                            href="https://discord.com/users/360061101477724170"
+                                            href="https://www.linkedin.com/in/ben-zhou06/"
                                             target="_blank"
                                         >
-                                            <FaDiscord className="w-6 h-6 lg:w-8 lg:h-8 text-white transition hover:text-[#7289DA]" />
+                                            <FaLinkedin className="w-6 h-6 lg:w-8 lg:h-8 text-white transition hover:text-[#0077B5]" />
                                         </a>
                                     </div>
                                 </motion.div>
@@ -62,10 +63,10 @@ export default function Footer() {
                                 <motion.div {...motionProps}>
                                     <div className="p-1 transition border border-white rounded-md group hover:border-transparent">
                                         <a
-                                            href="https://www.linkedin.com/in/ben-zhou06/"
+                                            href="https://discord.com/users/360061101477724170"
                                             target="_blank"
                                         >
-                                            <FaLinkedin className="w-6 h-6 lg:w-8 lg:h-8 text-white transition hover:text-[#0077B5]" />
+                                            <FaDiscord className="w-6 h-6 lg:w-8 lg:h-8 text-white transition hover:text-[#7289DA]" />
                                         </a>
                                     </div>
                                 </motion.div>
