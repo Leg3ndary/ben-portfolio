@@ -3,8 +3,7 @@ import Head from "next/head";
 // import SpotifyMacroboard from "@/../public/home/compeng.jpg";
 import Image from "next/image";
 import TestingLed from "@/../public/projects/SpotifyMacroboard/testingLed.png";
-// import { useState, useEffect } from "react";
-// import { cookies } from "next/headers";
+import GenericCodeBlock from "@/components/CodeBlocks/GenericCodeBlock";
 
 export async function getStaticProps() {
     return {
@@ -13,15 +12,6 @@ export async function getStaticProps() {
 }
 
 export default function Macroboard() {
-    // const cookieStore = cookies();
-    // const [showDisclaimer, setShowDisclaimer] = useState(true);
-
-    // useEffect(() => {
-    //     if (!cookieStore.has("spotifyDisclaimer")) {
-    //         cookieStore.set("spotifyDisclaimer", "t");
-    //     }
-    // }, []);
-
     return (
         <>
             <Head>
@@ -51,38 +41,6 @@ export default function Macroboard() {
                 />
             </Head>
             <div className="relative top-0 flex justify-center w-full h-24 lg:h-32 bg-rainbow-gradient animate-breathing-gradient" />
-            {/* <AnimatePresence>
-                {showDisclaimer && (
-                    <motion.div
-                        className="fixed z-20 p-4 bg-white shadow-xl w-60 bottom-4 right-4 rounded-xl"
-                        initial={{ x: 20, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.5 }}
-                        exit={{ x: 20, opacity: 0 }}
-                    >
-                        <h2 className="font-black">Disclaimer</h2>
-                        <p className="text-xs">
-                            In accordance with{" "}
-                            <a
-                                href="https://developer.spotify.com/policy#vi-naming-and-branding"
-                                target="_blank"
-                                className="font-medium text-blue-500 underline"
-                            >
-                                Spotify&apos;s Developer Policy
-                            </a>
-                            , I must state that this project is not in anyway
-                            related to or endorsed by Spotify.
-                        </p>
-                        <div
-                            onClick={() => setShowDisclaimer(false)}
-                            className="px-2 py-1 mt-2 text-xs font-medium text-white bg-red-500 rounded-md hover:cursor-pointer"
-                        >
-                            Dismiss
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence> */}
-
             <div className="flex mx-auto w-[400px] md:w-[700px] lg:w-[1000px] xl:[1200px] mt-12 mb-16 lg:mb-10 lg:mt-8 p-2 lg:p-4 scroll-m-6">
                 <div className="flex flex-col w-full px-6 ">
                     <h1 className="py-2 text-3xl font-black lg:text-5xl">
@@ -188,6 +146,12 @@ export default function Macroboard() {
                         User Instructions
                     </h2>
                     <h2 className="py-4 text-4xl font-semibold">Code Review</h2>
+                    <GenericCodeBlock
+                        code={`const String PASSWORD = "REDACTED";
+const char SSID[] = "REDACTED";
+const char SSID_PASS[] = "REDACTED";`}
+                        language="cpp"
+                    />
                     <h2 className="py-4 text-4xl font-semibold">
                         Required Parts
                     </h2>
@@ -197,3 +161,35 @@ export default function Macroboard() {
         </>
     );
 }
+
+/* <AnimatePresence>
+    {showDisclaimer && (
+        <motion.div
+            className="fixed z-20 p-4 bg-white shadow-xl w-60 bottom-4 right-4 rounded-xl"
+            initial={{ x: 20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            exit={{ x: 20, opacity: 0 }}
+        >
+            <h2 className="font-black">Disclaimer</h2>
+            <p className="text-xs">
+                In accordance with{" "}
+                <a
+                    href="https://developer.spotify.com/policy#vi-naming-and-branding"
+                    target="_blank"
+                    className="font-medium text-blue-500 underline"
+                >
+                    Spotify&apos;s Developer Policy
+                </a>
+                , I must state that this project is not in anyway
+                related to or endorsed by Spotify.
+            </p>
+            <div
+                onClick={() => setShowDisclaimer(false)}
+                className="px-2 py-1 mt-2 text-xs font-medium text-white bg-red-500 rounded-md hover:cursor-pointer"
+            >
+                Dismiss
+            </div>
+        </motion.div>
+    )}
+</AnimatePresence> */
