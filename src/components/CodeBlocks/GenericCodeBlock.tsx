@@ -19,7 +19,7 @@ export default function CodeBlockDemo({ code, language }: CodeBlockProps) {
 
         setTimeout(() => {
             setIsCopied("Copy");
-        }, 3000);
+        }, 1500);
     };
 
     return (
