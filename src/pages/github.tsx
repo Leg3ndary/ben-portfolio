@@ -9,7 +9,6 @@ import { ImGithub } from "react-icons/im";
 // import { IoMdGrid } from "react-icons/io";
 // import Tags from "@/components/Tags";
 
-
 const boxAnim = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -22,10 +21,22 @@ const boxAnim = {
     },
 };
 
+const boxItem = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 1,
+            ease: "easeInOut",
+        },
+    },
+};
+
 enum Dropdown {
     Grid,
-    List
-};
+    List,
+}
 
 export default function Projects() {
     const [repoData, setRepoData] = useState<GitHubRepo[]>([]);
@@ -112,13 +123,15 @@ export default function Projects() {
                 <motion.div
                     className="grid gap-y-12 lg:gap-y-10 w-11/12 md:w-[600px] xl:w-[1300px] 3xl:w-[1850px] py-5 pt-0 grid-flow-row grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-x-5 md:gap-x-7 lg:gap-x-16"
                     variants={boxAnim}
+                    initial="hidden"
+                    animate="visible"
                 >
                     {!isLoading &&
                         repoData.map((repo) => (
                             <motion.div
                                 className="flex flex-col justify-center w-full h-full px-5 py-4 bg-white border-black rounded-xl drop-shadow-xl"
                                 key={repo.id}
-                                variants={boxAnim}
+                                variants={boxItem}
                             >
                                 <h1 className="text-2xl font-bold">
                                     {repo.name}
