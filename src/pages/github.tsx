@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import { AiOutlineLoading } from "react-icons/ai";
 import { GitHubRepo } from "@/types";
 import { ImGithub } from "react-icons/im";
-// import { FaStar } from "react-icons/fa6";
+import { FaStar, FaCodeFork } from "react-icons/fa6";
 // import { IoMenu } from "react-icons/io5";
 // import { IoMdGrid } from "react-icons/io";
-// import Tags from "@/components/Tags";
+import Tags from "@/components/Tags";
 
 const boxAnim = {
     hidden: { opacity: 1, scale: 0 },
@@ -139,10 +139,7 @@ export default function Projects() {
                                 <p className="py-3 text-sm font-light">
                                     {repo.description}
                                 </p>
-                                {/* <div>
-                                    <Tags rawTags={repo.topics} />
-                                </div> */}
-                                <div className="flex justify-between py-1 mt-auto">
+                                <div className="flex items-center py-1 mt-auto">
                                     <a
                                         className="flex justify-center items-center px-2.5 py-1.5 text-sm font-normal text-white transition-all duration-200 ease-in-out bg-black rounded-lg hover:bg-[#6e5494] hover:text-white"
                                         href={repo.html_url}
@@ -152,10 +149,21 @@ export default function Projects() {
                                         <ImGithub className="w-5 h-5 my-auto mr-1.5" />
                                         GitHub
                                     </a>
-
-                                    <p className="text-sm font-light">
-                                        {repo.language}
-                                    </p>
+                                    {repo.stargazers_count > 0 && (
+                                        <p className="flex items-center mx-1.5 text-sm font-base">
+                                            <FaStar className="w-4 h-4 mx-1 my-auto text-yellow-300" />
+                                            {repo.stargazers_count}
+                                        </p>
+                                    )}
+                                    {repo.forks > 0 && (
+                                        <p className="flex items-center justify-center mx-1.5 mr-auto text-sm font-base">
+                                            <FaCodeFork className="w-4 h-4 mx-1 my-auto" />
+                                            {repo.forks_count}
+                                        </p>
+                                    )}
+                                    <div className="ml-auto">
+                                    <Tags rawTags={[repo.language]} />
+                                    </div>
                                 </div>
                             </motion.div>
                         ))}

@@ -30,17 +30,20 @@ export const tags: Tag[] = [
     { name: "Vercel", colour: "bg-[#000000]" },
 ];
 
-export default function Tags(props: { rawTags: string[]}) {
+export default function Tags(props: { rawTags: string[] }) {
     return (
         <div className="flex flex-wrap items-center w-full gap-2">
-            {tags.map((tag) => (
-                <span
-                    key={tag.name}
-                    className={`px-2 py-1 text-white rounded-md ${tag.colour}`}
-                >
-                    {tag.name}
-                </span>
-            ))}
+            {props.rawTags.map((tag) => {
+                const tagObj = tags.find((t) => t.name === tag);
+                return (
+                    <span
+                        key={tag}
+                        className={`px-2 py-1 text-sm font-semibold rounded-md ${tagObj?.colour} text-white`}
+                    >
+                        {tag}
+                    </span>
+                );
+            })}
         </div>
     );
 }
