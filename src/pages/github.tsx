@@ -7,7 +7,8 @@ import { ImGithub } from "react-icons/im";
 import { FaStar, FaCodeFork } from "react-icons/fa6";
 // import { IoMenu } from "react-icons/io5";
 // import { IoMdGrid } from "react-icons/io";
-import Tags from "@/components/Tags";
+import Tags from "@/components/GitHub/Tags";
+import LanguageBar from "@/components/GitHub/LanguageBar";
 
 const boxAnim = {
     hidden: { opacity: 1, scale: 0 },
@@ -127,7 +128,7 @@ export default function Projects() {
                     animate="visible"
                 >
                     {!isLoading &&
-                        repoData.map((repo) => (
+                        repoData.map((repo, index) => (
                             <motion.div
                                 className="flex flex-col justify-center w-full h-full px-5 py-4 bg-white border-black rounded-xl drop-shadow-xl"
                                 key={repo.id}
