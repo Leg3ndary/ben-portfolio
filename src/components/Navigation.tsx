@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import ToggleDLMode from "./toggleMode";
 
 const motionAnim = {
     whileHover: { scale: 1.1 },
@@ -82,19 +83,6 @@ export default function Navigation() {
                                 PROJECTS
                             </Link>
                         </motion.div>
-                        {/* <motion.div
-                            className="bg-clip-text bg-rainbow-gradient animate-breathing-gradient"
-                            {...motionAnim}
-                        >
-                            <Link
-                                className={`text-base font-bold text-center text-white transition-all duration-1000 ${
-                                    scrollY > 0 ? "hover:text-transparent" : ""
-                                }`}
-                                href="/awards"
-                            >
-                                AWARDS
-                            </Link>
-                        </motion.div> */}
                         <motion.div
                             className="bg-clip-text bg-rainbow-gradient animate-breathing-gradient"
                             {...motionAnim}
@@ -113,15 +101,16 @@ export default function Navigation() {
                             {...motionAnim}
                         >
                             <Link
-                                className={`text-base font-bold text-center text-white transition-all duration-1000 ${
+                                className={`text-base font-bold text-center text-white transition-all duration-1000 uppercase ${
                                     scrollY > 0 ? "hover:text-transparent" : ""
                                 }`}
                                 href="/resume.pdf"
                                 target="_blank"
                             >
-                                RESUME
+                                Résumé
                             </Link>
                         </motion.div>
+                        <ToggleDLMode />
                     </div>
                     <div className="flex items-center justify-end gap-10 ml-auto lg:hidden">
                         <button
@@ -169,13 +158,6 @@ export default function Navigation() {
                         >
                             PROJECTS
                         </Link>
-                        {/* <Link
-                            className="p-2 text-xl font-bold text-center text-white"
-                            href="/awards"
-                            onClick={() => setIsOpen(false)}
-                        >
-                            AWARDS
-                        </Link> */}
                         <Link
                             className="p-2 text-xl font-bold text-center text-white"
                             href="/github"
@@ -184,11 +166,11 @@ export default function Navigation() {
                             GITHUB
                         </Link>
                         <Link
-                            className="p-2 text-xl font-bold text-center text-white"
+                            className="p-2 text-xl font-bold text-center text-white uppercase"
                             href="/resume.pdf"
                             target="_blank"
                         >
-                            RESUME
+                            Résumé
                         </Link>
                     </motion.div>
                 )}

@@ -2,17 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --background: #ececec;
-    --color: #000000;
-}
-
-/* @media (prefers-color-scheme: dark) {
-    :root {
-        --background: #161616;
-        --color: #ececec;
+@layer base {
+    body {
+        @apply transition-all duration-100 ease-in-out bg-[#ececec] dark:bg-[#181818];
     }
-} */
+}
 
 html,
 body,

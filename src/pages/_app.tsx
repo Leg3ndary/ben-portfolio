@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import { Roboto } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ThemeProvider } from "next-themes";
 
 const roboto = Roboto({
     subsets: ["latin"],
@@ -13,11 +14,13 @@ const roboto = Roboto({
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <div className={roboto.className}>
-            <Layout>
-                <Component {...pageProps} />
-                <SpeedInsights />
-            </Layout>
-            <Analytics />
+            <ThemeProvider attribute="class">
+                <Layout>
+                    <Component {...pageProps} />
+                    <SpeedInsights />
+                </Layout>
+                <Analytics />
+            </ThemeProvider>
         </div>
     );
 }

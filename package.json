@@ -17,6 +17,7 @@
         "eslint": "^8.38.0",
         "framer-motion": "^10.16.4",
         "next": "^14.2.3",
+        "next-themes": "^0.3.0",
         "prettier": "^2.8.7",
         "prism-react-renderer": "^2.3.1",
         "react-code-block": "^1.0.0",
