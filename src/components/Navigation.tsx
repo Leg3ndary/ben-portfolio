@@ -112,7 +112,9 @@ export default function Navigation() {
                         </motion.div>
                         <ToggleDLMode />
                     </div>
+
                     <div className="flex items-center justify-end gap-10 ml-auto lg:hidden">
+                        <ToggleDLMode />
                         <button
                             className="flex flex-col items-center justify-center w-12 h-12 mr-4 duration-500 rounded"
                             onClick={() => setIsOpen(!isOpen)}

@@ -8,7 +8,7 @@ export default function ToggleDLMode() {
     return (
         <button
             onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
-            className="p-2 my-auto text-lg text-white transition-all duration-100 rounded-lg dark:text-[#161616]"
+            className="p-2 my-auto -mr-5 text-2xl text-white transition-all duration-100 rounded-lg lg:text-lg lg:-ml-5 lg:mr-0"
         >
             {currentTheme === "light" ? <FaSun /> : <FaMoon />}
         </button>
