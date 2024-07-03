@@ -39,6 +39,42 @@ enum Dropdown {
     List,
 }
 
+type TagGlow = {
+    [key: string]: string;
+};
+
+export const boxGlows: TagGlow[] = [
+    // Languages
+    { Python: "hover:shadow-blue-500" },
+    { CSS: "hover:shadow-purple-500" },
+    { "C++": "hover:shadow-yellow-400" },
+    { GDScript: "hover:shadow-slate-800" },
+    { Svelte: "hover:shadow-[#ff3e00]" },
+    { C: "hover:shadow-gray-500" },
+    { Java: "hover:shadow-red-500" },
+    { Rust: "hover:shadow-[#CE412B]" },
+    { TypeScript: "hover:shadow-[#007acc]" },
+    { HTML: "hover:shadow-emerald-500" },
+    { JavaScript: "hover:shadow-[#f0db4f]" },
+    // Frameworks/Misc
+    { React: "hover:shadow-[#61dafb]" },
+    { "Next.js": "hover:shadow-[#000000]" },
+    { MongoDB: "hover:shadow-[#00ed64]" },
+    { "Node.js": "hover:shadow-[#68a063]" },
+    { Redis: "hover:shadow-[#dc382d]" },
+    { TailwindCSS: "hover:shadow-[#0ea5e9]" },
+    { MySQL: "hover:shadow-[#00758f]" },
+    { SQLite: "hover:shadow-[#003b57]" },
+    { PostgreSQL: "hover:shadow-[#336791]" },
+    { Firebase: "hover:shadow-[#ffca28]" },
+    { Vercel: "hover:shadow-[#000000]" },
+];
+
+function getGlowClass(language: string): string{
+    const glow = boxGlows.find((glow) => glow[language]);
+    return (glow ? glow[language] : "hover:shadow-white") + " hover:shadow-xl duration-500 ease-in-out";
+};
+
 export default function Projects() {
     const [repoData, setRepoData] = useState<GitHubRepo[]>([]);
     const [isLoading, setLoading] = useState(true);
@@ -83,7 +119,7 @@ export default function Projects() {
             </Head>
             <div className="relative top-0 flex justify-center w-full h-[550px] bg-rainbow-gradient animate-breathing-gradient">
                 <motion.div
-                    className="relative flex h-[370px] lg:h-[300px] bg-white border-black w-11/12 lg:w-[1000px] drop-shadow-2xl mt-32 lg:mt-40 rounded-3xl duration-1000 ease-in-out transition-all"
+                    className="relative flex h-[370px] lg:h-[300px] bg-white dark:text-[#ececec] dark:bg-[#121212] border-black w-11/12 lg:w-[1000px] drop-shadow-2xl mt-32 lg:mt-40 rounded-3xl duration-1000 ease-in-out transition-all"
                     initial={{ y: -20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
@@ -130,7 +166,7 @@ export default function Projects() {
                     {!isLoading &&
                         repoData.map((repo, index) => (
                             <motion.div
-                                className="flex flex-col justify-center w-full h-full px-5 py-4 bg-white border-black rounded-xl drop-shadow-xl"
+                                className={`flex flex-col justify-center w-full h-full px-5 py-4 bg-white dark:bg-[#121212] dark:text-[#ececec] border-black rounded-xl drop-shadow-xl ${getGlowClass(repo.language)}`}
                                 key={repo.id}
                                 variants={boxItem}
                             >
@@ -163,7 +199,7 @@ export default function Projects() {
                                         </p>
                                     )}
                                     <div className="ml-auto">
-                                    <Tags rawTags={[repo.language]} />
+                                        <Tags rawTags={[repo.language]} />
                                     </div>
                                 </div>
                             </motion.div>
