@@ -34,7 +34,7 @@ export default function Macroboard() {
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:url"
-                    content="https://benzhou.tech/projects/macroboard"
+                    content="https://bzhou.ca/projects/macroboard"
                 />
                 <meta
                     name="description"
@@ -256,7 +256,6 @@ export default function Macroboard() {
                     </p>
                     <hr className="my-3" />
 
-                    
                     <h2 className="py-4 text-4xl font-semibold">
                         Circuit/PCB Design
                     </h2>

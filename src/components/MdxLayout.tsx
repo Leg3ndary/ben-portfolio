@@ -23,7 +23,7 @@ export default function MdxLayout({ children, metadata }: { children: React.Reac
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:url"
-                    content="https://benzhou.tech/projects/macroboard"
+                    content={`https://bzhou.ca/blog/${metadata.slug}`}
                 />
                 <meta
                     name="description"

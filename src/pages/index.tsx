@@ -29,7 +29,7 @@ export default function Home() {
                     content="https://i.imgur.com/6KdqAaf.png"
                 />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://benzhou.tech" />
+                <meta property="og:url" content="https://bzhou.ca" />
                 <meta
                     name="description"
                     content="Ben Z's Portfolio site made with Next.js TypeScript, and TailwindCSS. View my projects and other relevant information about me!"

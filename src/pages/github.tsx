@@ -70,10 +70,13 @@ export const boxGlows: TagGlow[] = [
     { Vercel: "hover:shadow-[#000000]" },
 ];
 
-function getGlowClass(language: string): string{
+function getGlowClass(language: string): string {
     const glow = boxGlows.find((glow) => glow[language]);
-    return (glow ? glow[language] : "hover:shadow-white") + " hover:shadow-xl duration-500 ease-in-out";
-};
+    return (
+        (glow ? glow[language] : "hover:shadow-white") +
+        " hover:shadow-xl duration-500 ease-in-out"
+    );
+}
 
 export default function Projects() {
     const [repoData, setRepoData] = useState<GitHubRepo[]>([]);
@@ -111,7 +114,7 @@ export default function Projects() {
                     content="https://i.imgur.com/6KdqAaf.png"
                 />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://benzhou.tech/github" />
+                <meta property="og:url" content="https://bzhou.ca/github" />
                 <meta
                     name="description"
                     content="Ben's GitHub page, view some of my current projects in progress!"
@@ -166,7 +169,9 @@ export default function Projects() {
                     {!isLoading &&
                         repoData.map((repo, index) => (
                             <motion.div
-                                className={`flex flex-col justify-center w-full h-full px-5 py-4 bg-white dark:bg-[#121212] dark:text-[#ececec] border-black rounded-xl drop-shadow-xl ${getGlowClass(repo.language)}`}
+                                className={`flex flex-col justify-center w-full h-full px-5 py-4 bg-white dark:bg-[#121212] dark:text-[#ececec] border-black rounded-xl drop-shadow-xl ${getGlowClass(
+                                    repo.language
+                                )}`}
                                 key={repo.id}
                                 variants={boxItem}
                             >

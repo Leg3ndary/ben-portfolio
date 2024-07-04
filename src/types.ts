@@ -157,6 +157,7 @@ export type GitHubRepo = {
 export type BlogMetadata = {
     title: string;
     description: string;
+    slug: string;
     created: string;
     updated: string;
     tags: string[];

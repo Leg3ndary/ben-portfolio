@@ -42,7 +42,7 @@ export default async function handler(
             const current = await response.json();
 
             const dominantColor = await fetch(
-                `https://benzhou.tech/api/getColor/${
+                `https://bzhou.ca/api/getColor/${
                     current.item.album.images[0].url.split("/")[4]
                 }`
             ).then((res) => res.json());

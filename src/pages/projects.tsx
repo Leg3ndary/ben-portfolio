@@ -32,10 +32,7 @@ export default function Projects() {
                     content="https://i.imgur.com/6KdqAaf.png"
                 />
                 <meta property="og:type" content="website" />
-                <meta
-                    property="og:url"
-                    content="https://benzhou.tech/projects"
-                />
+                <meta property="og:url" content="https://bzhou.ca/projects" />
                 <meta
                     name="description"
                     content="Ben's current and featured projects page."
