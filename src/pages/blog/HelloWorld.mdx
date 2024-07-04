@@ -1,0 +1,17 @@
+import MdxLayout from "@/components/MDXLayout";
+
+export const metadata = {
+    title: "Hello World",
+    created: "2024-07-04",
+    updated: "2024-07-04",
+    tags: ["hello-world"],
+    description: "A simple hello world blog post.",
+};
+ 
+![Nature photo](https://i.imgur.com/ooYKzMJ.jpeg)
+
+Welcome to my personal blog, I will be sharing my thoughts and experiences here, enjoy!
+ 
+export default function MDXPage({ children }) {
+    return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
+}
