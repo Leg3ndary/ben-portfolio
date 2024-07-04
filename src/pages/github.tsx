@@ -141,7 +141,7 @@ export default function Projects() {
                     </div>
                 </motion.div>
             </div>
-            <div className="flex flex-col flex-wrap content-center justify-center w-full pt-12 pb-16 lg:pb-20 lg:pt-24 3xl:pt-12">
+            <div className="flex flex-col flex-wrap content-center justify-center w-full min-h-screen pt-12 pb-16 lg:pb-20 lg:pt-24 3xl:pt-12">
                 {isLoading && (
                     <div className="flex flex-col items-center justify-center w-full h-full ">
                         <AiOutlineLoading className="w-24 h-24 text-black animate-spin" />
