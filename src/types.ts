@@ -153,3 +153,11 @@ export type GitHubRepo = {
     watchers: number;
     default_branch: string;
 };
+
+export type BlogMetadata = {
+    title: string;
+    description: string;
+    created: string;
+    updated: string;
+    tags: string[];
+}
