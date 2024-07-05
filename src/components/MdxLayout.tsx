@@ -8,7 +8,6 @@ export default function MdxLayout({
     children: React.ReactNode;
     metadata: BlogMetadata;
 }) {
-
     return (
         <>
             <Head>

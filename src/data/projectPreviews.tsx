@@ -24,7 +24,16 @@ const projectPreviews: ProjectPreviewProps[] = [
         sub: "RAPID DIAGNOSIS TOOL FOR SYMPTOMS",
         description: (
             <>
-                RapidRx is a tool for rapid diagnosis based on user-inputted symptoms. The app suggests further questions, over-the-counter medications, homeopathic remedies, and common treatments, also providing a likely diagnosis. Users can track different symptom sets over time through multiple sessions. RapidRx reduces the time needed to find and book a doctor and mitigates risks from unreliable online searches, crucial for the 6 million Canadians without a family doctor. The app offers an efficient way to manage health concerns, saving time and providing peace of mind. You can view the project on{" "}
+                RapidRx is a tool for rapid diagnosis based on user-inputted
+                symptoms. The app suggests further questions, over-the-counter
+                medications, homeopathic remedies, and common treatments, also
+                providing a likely diagnosis. Users can track different symptom
+                sets over time through multiple sessions. RapidRx reduces the
+                time needed to find and book a doctor and mitigates risks from
+                unreliable online searches, crucial for the 6 million Canadians
+                without a family doctor. The app offers an efficient way to
+                manage health concerns, saving time and providing peace of mind.
+                You can view the project on{" "}
                 <a
                     href="https://github.com/Leg3ndary/RapidRx"
                     target="_blank"
@@ -63,7 +72,7 @@ const projectPreviews: ProjectPreviewProps[] = [
         ],
         projectLink: "https://github.com/Leg3ndary/RapidRx",
         color: "emerald-600",
-    },    
+    },
     {
         image: {
             src: Macroboard,

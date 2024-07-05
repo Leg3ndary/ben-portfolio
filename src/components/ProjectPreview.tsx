@@ -106,8 +106,8 @@ const boxItem = {
         opacity: 1,
         transition: {
             duration: 1,
-            ease: "easeInOut" 
-        }
+            ease: "easeInOut",
+        },
     },
 };
 

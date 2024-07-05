@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 type ProjectHoverableProps = {
     link: string;
@@ -25,7 +25,12 @@ export default function ProjectHoverable({
     height = 45,
 }: ProjectHoverableProps) {
     return (
-        <motion.a href={link} target="_blank" className="flex items-center justify-center" variants={item}>
+        <motion.a
+            href={link}
+            target="_blank"
+            className="flex items-center justify-center"
+            variants={item}
+        >
             <Image
                 className="transition-transform duration-200 ease-in-out animate-fade-in hover:scale-125"
                 src={image}

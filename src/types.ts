@@ -161,4 +161,4 @@ export type BlogMetadata = {
     created: string;
     updated: string;
     tags: string[];
-}
+};
