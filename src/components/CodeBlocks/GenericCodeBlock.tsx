@@ -9,7 +9,7 @@ type CodeBlockProps = {
     language: string;
 };
 
-export default function CodeBlockDemo({ code, language }: CodeBlockProps) {
+export default function GenericCodeBlock({ code, language }: CodeBlockProps) {
     const [state, copyToClipboard] = useCopyToClipboard();
     const [isCopied, setIsCopied] = useState("Copy");
 

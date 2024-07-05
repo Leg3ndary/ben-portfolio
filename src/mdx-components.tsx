@@ -1,5 +1,6 @@
 import type { MDXComponents } from "mdx/types";
 import Image, { ImageProps } from "next/image";
+import GenericCodeBlock from "./components/CodeBlocks/GenericCodeBlock";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
     return {
@@ -26,6 +27,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             >
                 {children}
             </a>
+        ),
+        strong: ({ children }) => (
+            <strong className="font-bold">{children}</strong>
         ),
         img: (props) => (
             <Image
