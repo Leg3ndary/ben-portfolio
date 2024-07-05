@@ -1,5 +1,6 @@
 import { BlogMetadata } from "@/types";
 import Head from "next/head";
+import Hashtag from "@/components/Hashtag";
 
 export default function MdxLayout({
     children,
@@ -46,8 +47,11 @@ export default function MdxLayout({
                         {metadata.description}
                     </h2>
                     <h3 className="py-2 text-xs font-light lg:text-sm">
-                        Posted: {metadata.created} - Last Updated:{" "}
-                        {metadata.updated}
+                        Posted: {metadata.created} - Last Updated:
+                        {metadata.updated} - Tags:{" "}
+                        {metadata.tags.map((tag) => (
+                            <Hashtag key={tag} hashtag={tag} />
+                        ))}
                     </h3>
                     {children}
                 </div>
