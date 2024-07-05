@@ -17,6 +17,16 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         p: ({ children }) => (
             <p className="my-3 text-lg font-light">{children}</p>
         ),
+        a: ({ children, href }) => (
+            <a
+                className="text-blue-500 underline"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                {children}
+            </a>
+        ),
         img: (props) => (
             <Image
                 className="w-full h-auto rounded-lg shadow-lg"
