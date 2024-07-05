@@ -91,7 +91,7 @@ export default function Blog({ posts }: { posts: BlogMetadata[] }) {
                     <tbody>
                         {posts.map((post) => (
                             <tr key={post.slug}>
-                                <td className="w-2/5 px-4 py-2 text-2xl font-bold text-blue-500 underline">
+                                <td className="w-2/5 px-4 py-2 text-lg font-bold text-blue-500 underline lg:text-2xl">
                                     <Link
                                         href={`/blog/${post.slug}`}
                                         prefetch={false}
@@ -99,7 +99,7 @@ export default function Blog({ posts }: { posts: BlogMetadata[] }) {
                                         {post.title}
                                     </Link>
                                 </td>
-                                <td className="w-2/5 px-4 py-2 text-lg text-right">
+                                <td className="w-2/5 px-4 py-2 text-right text-md lg:text-lg">
                                     {post.tags.map((element) => (
                                         <Hashtag
                                             key={element}
@@ -107,7 +107,7 @@ export default function Blog({ posts }: { posts: BlogMetadata[] }) {
                                         />
                                     ))}
                                 </td>
-                                <td className="justify-end px-4 py-2 text-lg text-right">
+                                <td className="justify-end px-4 py-2 text-xs text-center right lg:text-lg">
                                     {post.updated}
                                 </td>
                             </tr>

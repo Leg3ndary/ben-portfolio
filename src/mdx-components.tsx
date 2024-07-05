@@ -40,6 +40,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
                 alt={{ ...props }.alt as string}
             />
         ),
+        li: ({ children }) => (<li className="ml-3 text-lg font-light "><span className="mx-2">-</span> {children}</li>),
         ...components,
     };
 }
