@@ -12,7 +12,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             </h2>
         ),
         h3: ({ children }) => (
-            <h3 className="py-2 italic text-md lg:text-xl font-base">{children}</h3>
+            <h3 className="py-2 font-black text-md lg:text-xl">{children}</h3>
         ),
         p: ({ children }) => (
             <p className="my-3 text-sm font-light lg:text-lg">{children}</p>
