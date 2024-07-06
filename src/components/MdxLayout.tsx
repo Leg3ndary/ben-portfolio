@@ -12,16 +12,16 @@ export default function MdxLayout({
     return (
         <>
             <Head>
-                <title>Ben - HelloWorld</title>
+                <title>Ben - {metadata.title}</title>
                 <meta name="theme-color" content="#339ccd" />
-                <meta property="og:title" content="Ben's Macroboard" />
+                <meta property="og:title" content={metadata.title} />
                 <meta
                     property="og:description"
-                    content="Ben's Projects Page."
+                    content={metadata.description}
                 />
                 <meta
                     property="description"
-                    content="Ben's Macroboard project page."
+                    content={metadata.description}
                 />
                 <meta
                     property="og:image"
@@ -34,7 +34,7 @@ export default function MdxLayout({
                 />
                 <meta
                     name="description"
-                    content="View my process for building my very own macroboard."
+                    content={metadata.description}
                 />
             </Head>
             <div className="relative top-0 flex justify-center w-full h-24 lg:h-32 bg-rainbow-gradient animate-breathing-gradient" />
@@ -43,16 +43,16 @@ export default function MdxLayout({
                     <h1 className="py-2 text-3xl font-black lg:text-5xl">
                         {metadata.title}
                     </h1>
-                    <h2 className="py-2 italic text-md lg:text-xl font-base">
+                    <h3 className="py-2 italic text-md lg:text-xl font-base">
                         {metadata.description}
-                    </h2>
-                    <h3 className="py-2 text-xs font-light lg:text-sm">
+                    </h3>
+                    <h4 className="py-2 text-xs font-light lg:text-sm">
                         Posted: {metadata.created} - Last Updated:
                         {metadata.updated} - Tags:{" "}
                         {metadata.tags.map((tag) => (
                             <Hashtag key={tag} hashtag={tag} />
                         ))}
-                    </h3>
+                    </h4>
                     {children}
                 </div>
             </div>
