@@ -34,9 +34,9 @@ export default function Navigation() {
     }, []);
 
     return (
-        <nav className="fixed top-0 z-10 flex flex-col w-full h-auto transition-all duration-1000">
+        <nav className="fixed top-0 z-10 flex flex-col w-full h-auto transition-all duration-1000 ease-in-out">
             <div
-                className={`flex justify-center w-full transition-all h-20 bg-black duration-1000 ${
+                className={`flex justify-center w-full transition-all h-20 bg-black duration-1000 ease-in-out ${
                     scrollY > 0
                         ? "lg:h-16 lg:bg-black"
                         : "lg:bg-transparent lg:h-32"
@@ -62,7 +62,7 @@ export default function Navigation() {
                             {...motionAnim}
                         >
                             <Link
-                                className={`text-base font-bold text-center text-white transition-all duration-1000 ${
+                                className={`text-base font-bold text-center text-white transition-all ease-in-out duration-500 ${
                                     scrollY > 0 ? "hover:text-transparent" : ""
                                 }`}
                                 href="/"
@@ -75,7 +75,7 @@ export default function Navigation() {
                             {...motionAnim}
                         >
                             <Link
-                                className={`text-base font-bold text-center text-white transition-all duration-1000 ${
+                                className={`text-base font-bold text-center text-white transition-all ease-in-out duration-500 ${
                                     scrollY > 0 ? "hover:text-transparent" : ""
                                 }`}
                                 href="/projects"
@@ -88,7 +88,7 @@ export default function Navigation() {
                             {...motionAnim}
                         >
                             <Link
-                                className={`text-base font-bold text-center text-white transition-all duration-1000 ${
+                                className={`text-base font-bold text-center text-white transition-all ease-in-out duration-500 ${
                                     scrollY > 0 ? "hover:text-transparent" : ""
                                 }`}
                                 href="/blog"
@@ -101,7 +101,7 @@ export default function Navigation() {
                             {...motionAnim}
                         >
                             <Link
-                                className={`text-base font-bold text-center text-white transition-all duration-1000 ${
+                                className={`text-base font-bold text-center text-white transition-all ease-in-out duration-500 ${
                                     scrollY > 0 ? "hover:text-transparent" : ""
                                 }`}
                                 href="/github"
@@ -114,7 +114,7 @@ export default function Navigation() {
                             {...motionAnim}
                         >
                             <Link
-                                className={`text-base font-bold text-center text-white transition-all duration-1000 uppercase ${
+                                className={`text-base font-bold text-center text-white transition-all duration-500 ease-in-out uppercase ${
                                     scrollY > 0 ? "hover:text-transparent" : ""
                                 }`}
                                 href="/resume.pdf"
@@ -154,7 +154,7 @@ export default function Navigation() {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        className="relative flex flex-col w-full h-auto p-4 transition-all duration-1000 bg-black lg:hidden"
+                        className="relative flex flex-col w-full h-auto p-4 transition-all duration-500 ease-in-out bg-black lg:hidden"
                         initial={{ y: -20, opacity: 0 }}
                         animate={{ y: 0, opacity: 100 }}
                         exit={{ y: -20, opacity: 0 }}
