@@ -28,7 +28,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             </a>
         ),
         strong: ({ children }) => (
-            <strong className="font-bold">{children}</strong>
+            <strong className="font-bold animate-breathing-gradient bg-rainbow-gradient bg-clip-text">{children}</strong>
         ),
         img: (props) => (
             <Image
