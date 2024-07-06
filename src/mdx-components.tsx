@@ -1,6 +1,5 @@
 import type { MDXComponents } from "mdx/types";
 import Image, { ImageProps } from "next/image";
-import GenericCodeBlock from "./components/CodeBlocks/GenericCodeBlock";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
     return {
@@ -8,15 +7,15 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             <h1 className="py-2 text-3xl font-black lg:text-5xl">{children}</h1>
         ),
         h2: ({ children }) => (
-            <h2 className="py-2 italic text-md lg:text-xl font-base">
+            <h2 className="py-2 text-lg font-black lg:text-2xl">
                 {children}
             </h2>
         ),
         h3: ({ children }) => (
-            <h3 className="py-2 text-xs font-light lg:text-sm">{children}</h3>
+            <h3 className="py-2 italic text-md lg:text-xl font-base">{children}</h3>
         ),
         p: ({ children }) => (
-            <p className="my-3 text-lg font-light">{children}</p>
+            <p className="my-3 text-sm font-light lg:text-lg">{children}</p>
         ),
         a: ({ children, href }) => (
             <a
@@ -40,7 +39,13 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
                 alt={{ ...props }.alt as string}
             />
         ),
-        li: ({ children }) => (<li className="ml-3 text-lg font-light "><span className="mx-2">-</span> {children}</li>),
+        ol: ({ children }) => (
+            <ol className="list-decimal">{children}</ol>
+        ),
+        ul: ({ children }) => (
+            <ul className="list-disc">{children}</ul>
+        ),
+        li: ({ children }) => <li className="my-2 text-sm font-light lg:text-lg">{children}</li>,
         ...components,
     };
 }
