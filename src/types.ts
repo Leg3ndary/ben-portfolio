@@ -162,3 +162,12 @@ export type BlogMetadata = {
     updated: string;
     tags: string[];
 };
+
+export type RawBlogMetadata = {
+    title: string;
+    description: string;
+    slug: string;
+    created: [number, number, number, number, number, number];
+    updated: [number, number, number, number, number, number];
+    tags: string[];
+}

@@ -2,7 +2,7 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import fs from "fs";
 import path from "path";
-import { BlogMetadata } from "@/types";
+import { BlogMetadata, RawBlogMetadata } from "@/types";
 import Link from "next/link";
 import Hashtag from "@/components/Hashtag";
 
@@ -15,19 +15,24 @@ export async function getStaticProps() {
         const filePath = path.join(dir, filename);
         const fileContent = fs.readFileSync(filePath, "utf8");
 
-        const data = JSON.parse(
-            fileContent.split("export const metadata = ")[1].split("};")[0] +
-                "}"
+        const data: RawBlogMetadata = JSON.parse(
+            fileContent.split("export const metadata = ")[1].split("};")[0] + "}"
         );
+
+        const createdDate = new Date(...data.created).toISOString();
+        const updatedDate = new Date(...data.updated).toISOString();
+
         return {
             ...data,
+            created: createdDate,
+            updated: updatedDate,
             slug: filename.replace(/\.mdx?$/, ""),
         };
     });
 
     posts.sort((a, b) => {
         const dateA = new Date(a.updated);
-        const dateB = new Date(b.updated);
+        const dateB = new Date(b.updated)
 
         if (dateA > dateB) return -1;
         if (dateA < dateB) return 1;
@@ -108,7 +113,7 @@ export default function Blog({ posts }: { posts: BlogMetadata[] }) {
                                     ))}
                                 </td>
                                 <td className="justify-end px-4 py-2 text-xs text-center right lg:text-lg">
-                                    {post.updated}
+                                    {new Date(post.updated).toLocaleDateString()}
                                 </td>
                             </tr>
                         ))}
