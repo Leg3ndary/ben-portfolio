@@ -13,6 +13,19 @@ export const metadata = {
 
 Welcome to my personal blog, I will be sharing my thoughts and experiences here, enjoy!
 
-export default function MDXPage({ children }) {
-    return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
+export default function MDXPage({ children, metadata, createdDate, updatedDate }) {
+    return <MdxLayout metadata={metadata} createdDate={createdDate} updatedDate={updatedDate}>{children}</MdxLayout>;
+}
+
+export async function getStaticProps() {
+    const createdDate = new Date(...metadata.created).toLocaleString();
+    const updatedDate = new Date(...metadata.updated).toLocaleString();
+
+    return {
+        props: {
+            metadata,
+            createdDate,
+            updatedDate,
+        },
+    };
 }

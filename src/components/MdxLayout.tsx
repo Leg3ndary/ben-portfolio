@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { RawBlogMetadata } from "@/types";
 import Head from "next/head";
 import Hashtag from "@/components/Hashtag";
@@ -6,22 +5,19 @@ import Hashtag from "@/components/Hashtag";
 export default function MdxLayout({
     children,
     metadata,
+    createdDate,
+    updatedDate,
 }: {
     children: React.ReactNode;
     metadata: RawBlogMetadata;
+    createdDate: string;
+    updatedDate: string;
 }) {
-    const [createdDate, setCreatedDate] = useState<Date>();
-    const [updatedDate, setUpdatedDate] = useState<Date>();
-
-    useEffect(() => {
-        setCreatedDate(new Date(...metadata.created));
-        setUpdatedDate(new Date(...metadata.updated));
-    }, [metadata.created, metadata.updated]);
-
+    const title = `Ben - ${metadata.title}`;
     return (
         <>
             <Head>
-                <title>Ben - Blog Post</title> {/* use static props to pre render everything in the future */}
+                <title>{title}</title>
                 <meta name="theme-color" content="#339ccd" />
                 <meta property="og:title" content={metadata.title} />
                 <meta
@@ -50,9 +46,8 @@ export default function MdxLayout({
                         {metadata.description}
                     </h3>
                     <h4 className="py-2 text-xs font-light lg:text-sm">
-                        Posted: {createdDate?.toLocaleString()}{" "}
-                        - Last Updated:{" "}
-                        {updatedDate?.toLocaleString()} - Tags:{" "}
+                        Posted: {createdDate} - Last Updated: {updatedDate} -
+                        Tags:{" "}
                         {metadata.tags.map((tag) => (
                             <Hashtag key={tag} hashtag={tag} />
                         ))}
