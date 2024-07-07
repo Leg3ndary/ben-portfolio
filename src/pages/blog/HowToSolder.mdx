@@ -59,6 +59,19 @@ Having soldered hundreds of boards and thousands of components I have learned a 
 
 Enjoy your time soldering, it's honestly a ton of fun and can be extremely useful. If you have any questions or need some more pointers you can always message me on [LinkedIn](https://www.linkedin.com/in/ben-zhou06/).
 
-export default function MDXPage({ children }) {
-    return <MdxLayout metadata={metadata}>{children}</MdxLayout>;
+export default function MDXPage({ children, metadata, createdDate, updatedDate }) {
+    return <MdxLayout metadata={metadata} createdDate={createdDate} updatedDate={updatedDate}>{children}</MdxLayout>;
+}
+
+export async function getStaticProps() {
+    const createdDate = new Date(...metadata.created).toLocaleString();
+    const updatedDate = new Date(...metadata.updated).toLocaleString();
+
+    return {
+        props: {
+            metadata,
+            createdDate,
+            updatedDate,
+        },
+    };
 }
