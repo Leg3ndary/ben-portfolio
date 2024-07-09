@@ -19,6 +19,10 @@ I started learning Next.js using the pages router, and by the time I started lea
 
 Read the `Contributions` section below, this is open source purely so people can view the code behind my portfolio.
 
+3. Can I reference your design?
+
+Sure, please give attribution whenever you can though, thanks.
+
 ## Contributions
 
 Please do not contribute to this project as it's meant to be solely my own.
