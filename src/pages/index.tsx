@@ -210,7 +210,7 @@ export default function Home() {
                 </div>
             </motion.div>
             <div className="flex justify-center w-full">
-                <div className="w-10/12 lg:w-[1170px] h-[1px] bg-[#dddddd]dark:bg-[#121212] dark:bg-[#121212]" />
+                <div className="w-10/12 lg:w-[1170px] h-[1px] bg-[#dddddd] dark:bg-[#121212] dark:bg-[#121212]" />
             </div>
             <motion.div
                 className="flex justify-center w-full py-2 dark:text-[#ececec]"
