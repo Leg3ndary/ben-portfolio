@@ -1,10 +1,12 @@
 # Leg3ndary's Portfolio
 
-This is my official website and portfolio, it's built with TypeScript, Next.JS and TailwindCSS.
+This is my official website and portfolio, it's built with TypeScript, Next.JS, and TailwindCSS.
 
 You can run this project as you would with every other Nextjs project.
 
 ```bash
+$ git clone https://github.com/Leg3ndary/leg3ndary-portfolio.git
+$ cd leg3ndary-portfolio
 $ npm install
 $ npm run dev
 ```
