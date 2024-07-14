@@ -1,5 +1,5 @@
 import { ImGithub } from "react-icons/im";
-import { FaLinkedin, FaDiscord } from "react-icons/fa";
+import { FaLinkedin, FaDiscord, FaInstagram } from "react-icons/fa";
 import { SiMonkeytype } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -68,6 +68,16 @@ export default function Footer() {
                                             target="_blank"
                                         >
                                             <FaDiscord className="w-6 h-6 lg:w-8 lg:h-8 text-white transition hover:text-[#7289DA]" />
+                                        </a>
+                                    </div>
+                                </motion.div>
+                                <motion.div {...motionProps}>
+                                    <div className="p-1 transition border border-white rounded-md group hover:border-transparent">
+                                        <a
+                                            href="https://www.instagram.com/bennyz_06/"
+                                            target="_blank"
+                                        >
+                                            <FaInstagram className="w-6 h-6 lg:w-8 lg:h-8 text-white transition hover:text-[#fd1d1d]" />
                                         </a>
                                     </div>
                                 </motion.div>
