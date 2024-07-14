@@ -1,5 +1,6 @@
 import { ImGithub } from "react-icons/im";
 import { FaLinkedin, FaDiscord } from "react-icons/fa";
+import { SiMonkeytype } from "react-icons/si";
 import { motion } from "framer-motion";
 
 const motionProps = {
@@ -67,6 +68,16 @@ export default function Footer() {
                                             target="_blank"
                                         >
                                             <FaDiscord className="w-6 h-6 lg:w-8 lg:h-8 text-white transition hover:text-[#7289DA]" />
+                                        </a>
+                                    </div>
+                                </motion.div>
+                                <motion.div {...motionProps}>
+                                    <div className="p-1 transition border border-white rounded-md group hover:border-transparent">
+                                        <a
+                                            href="https://monkeytype.com/profile/_Leg3ndary"
+                                            target="_blank"
+                                        >
+                                            <SiMonkeytype className="w-6 h-6 lg:w-8 lg:h-8 text-white transition hover:text-[#e2b714]" />
                                         </a>
                                     </div>
                                 </motion.div>
