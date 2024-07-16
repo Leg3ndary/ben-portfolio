@@ -9,7 +9,7 @@ export default function The404() {
             </Head>
             <div className="relative top-0 flex items-center justify-center w-full h-screen bg-rainbow-gradient animate-breathing-gradient">
                 <motion.div
-                    className="relative flex h-[370px] lg:h-[300px] bg-white border-black w-11/12 lg:w-[1000px] drop-shadow-2xl rounded-3xl duration-1000 ease-in-out transition-all"
+                    className="relative flex h-[370px] lg:h-[300px] bg-white dark:bg-[#121212] border-black w-11/12 lg:w-[1000px] drop-shadow-2xl rounded-3xl duration-1000 ease-in-out transition-all"
                     initial={{ y: -20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
