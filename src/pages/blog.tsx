@@ -16,7 +16,8 @@ export async function getStaticProps() {
         const fileContent = fs.readFileSync(filePath, "utf8");
 
         const data: RawBlogMetadata = JSON.parse(
-            fileContent.split("export const metadata = ")[1].split("};")[0] + "}"
+            fileContent.split("export const metadata = ")[1].split("};")[0] +
+                "}"
         );
 
         const createdDate = new Date(...data.created).toISOString();
@@ -32,7 +33,7 @@ export async function getStaticProps() {
 
     posts.sort((a, b) => {
         const dateA = new Date(a.updated);
-        const dateB = new Date(b.updated)
+        const dateB = new Date(b.updated);
 
         if (dateA > dateB) return -1;
         if (dateA < dateB) return 1;
@@ -113,7 +114,9 @@ export default function Blog({ posts }: { posts: BlogMetadata[] }) {
                                     ))}
                                 </td>
                                 <td className="justify-end px-4 py-2 text-xs text-center right lg:text-lg">
-                                    {new Date(post.updated).toLocaleDateString()}
+                                    {new Date(
+                                        post.updated
+                                    ).toLocaleDateString()}
                                 </td>
                             </tr>
                         ))}

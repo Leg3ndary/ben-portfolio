@@ -170,4 +170,4 @@ export type RawBlogMetadata = {
     created: [number, number, number, number, number, number];
     updated: [number, number, number, number, number, number];
     tags: string[];
-}
+};

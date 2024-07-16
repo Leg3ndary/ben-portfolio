@@ -7,9 +7,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             <h1 className="py-2 text-3xl font-black lg:text-5xl">{children}</h1>
         ),
         h2: ({ children }) => (
-            <h2 className="py-2 text-lg font-black lg:text-2xl">
-                {children}
-            </h2>
+            <h2 className="py-2 text-lg font-black lg:text-2xl">{children}</h2>
         ),
         h3: ({ children }) => (
             <h3 className="py-2 font-black text-md lg:text-xl">{children}</h3>
@@ -28,7 +26,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             </a>
         ),
         strong: ({ children }) => (
-            <strong className="font-bold animate-breathing-gradient bg-rainbow-gradient bg-clip-text">{children}</strong>
+            <strong className="font-bold animate-breathing-gradient bg-rainbow-gradient bg-clip-text">
+                {children}
+            </strong>
         ),
         img: (props) => (
             <Image
@@ -39,13 +39,11 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
                 alt={{ ...props }.alt as string}
             />
         ),
-        ol: ({ children }) => (
-            <ol className="list-decimal">{children}</ol>
+        ol: ({ children }) => <ol className="list-decimal">{children}</ol>,
+        ul: ({ children }) => <ul className="list-disc">{children}</ul>,
+        li: ({ children }) => (
+            <li className="my-2 text-sm font-light lg:text-lg">{children}</li>
         ),
-        ul: ({ children }) => (
-            <ul className="list-disc">{children}</ul>
-        ),
-        li: ({ children }) => <li className="my-2 text-sm font-light lg:text-lg">{children}</li>,
         ...components,
     };
 }
