@@ -151,7 +151,7 @@ export default function ProjectPreview({
                 </p>
                 <div className="flex justify-center w-full mt-auto">
                     <div
-                        className={`w-[1170px] h-[1px] bg-[#dddddd] ${colorVariant[3]} transition-colors duration-1000`}
+                        className={`w-[1170px] h-[1px] bg-[#dddddd] dark:bg-[#383838] ${colorVariant[3]} transition-colors duration-1000`}
                     />
                 </div>
                 <motion.div
@@ -173,7 +173,7 @@ export default function ProjectPreview({
                 </motion.div>
                 <div className="flex justify-center w-full my-6">
                     <div
-                        className={`w-[1170px] h-[1px] bg-[#dddddd] ${colorVariant[3]} transition-colors duration-1000`}
+                        className={`w-[1170px] h-[1px] bg-[#dddddd] dark:bg-[#383838] ${colorVariant[3]} transition-colors duration-1000`}
                     />
                 </div>
                 <div className="flex items-center mx-2 mt-1">
