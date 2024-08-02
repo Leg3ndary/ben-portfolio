@@ -50,22 +50,29 @@ export default function Home() {
                         />
                     </div>
                     <div className="flex flex-col justify-center w-full h-full p-12 -mt-10 lg:w-1/2 lg:mt-0">
-                        <h3 className="p-2 text-lg">HELLO THERE!</h3>
+                        <h3 className="p-2 text-lg">HI THERE</h3>
                         <h1 className="p-2 text-6xl font-black">
                             I&apos;M BEN
                         </h1>
                         <h2 className="p-2 font-bold text-md">
-                            PROGRAMMER, HOCKEY PLAYER
+                            UNIVERSITY OF WATERLOO COMPUTER ENGINEERING
                         </h2>
                         <p className="p-2 font-light">
                             I completely designed this website without any
                             previously built themes or components!
                         </p>
                         <p className="p-2 font-light">
-                            I made it using NextJs, TypeScript, and TailwindCSS!
+                            This site uses NextJs, TypeScript, and TailwindCSS!
                         </p>
                         <p className="p-2 font-light">
-                            You can always contact me on{" "}
+                            Feel free to contact me at{" "}
+                            <a
+                                className="font-medium text-blue-500"
+                                href="mailto:ben.zhou@uwaterloo.ca"
+                            >
+                                ben.zhou@uwaterloo.ca
+                            </a>{" "}
+                            on{" "}
                             <a
                                 className="font-medium text-blue-500"
                                 href="https://www.linkedin.com/in/ben-zhou06/"
