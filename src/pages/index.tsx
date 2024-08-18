@@ -15,7 +15,7 @@ export default function Home() {
             <Head>
                 <title>Ben&apos;s Portfolio</title>
                 <meta name="theme-color" content="#339ccd" />
-                <meta property="og:title" content="Ben Z'z Portfolio" />
+                <meta property="og:title" content="Ben Z's Portfolio" />
                 <meta
                     property="og:description"
                     content="Ben's Portfolio Website made with Next.js, TypeScript, and TailwindCSS."
