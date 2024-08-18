@@ -72,7 +72,7 @@ export default function Home() {
                             >
                                 ben.zhou@uwaterloo.ca
                             </a>{" "}
-                            on{" "}
+                            or on{" "}
                             <a
                                 className="font-medium text-blue-500"
                                 href="https://www.linkedin.com/in/ben-zhou06/"
@@ -220,7 +220,7 @@ export default function Home() {
                 <div className="w-10/12 lg:w-[1170px] h-[1px] bg-[#dddddd] dark:bg-[#121212]" />
             </div>
             <motion.div
-                className="flex justify-center w-full py-2 dark:text-[#ececec]"
+                className="flex justify-center w-full py-2 mb-8 dark:text-[#ececec]"
                 initial={{ x: -10, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
