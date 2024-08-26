@@ -104,6 +104,19 @@ export default function Navigation() {
                                 className={`text-base font-bold text-center text-white transition-all ease-in-out duration-500 ${
                                     scrollY > 0 ? "hover:text-transparent" : ""
                                 }`}
+                                href="/gallery"
+                            >
+                                GALLERY
+                            </Link>
+                        </motion.div>
+                        <motion.div
+                            className="bg-clip-text bg-rainbow-gradient animate-breathing-gradient"
+                            {...motionAnim}
+                        >
+                            <Link
+                                className={`text-base font-bold text-center text-white transition-all ease-in-out duration-500 ${
+                                    scrollY > 0 ? "hover:text-transparent" : ""
+                                }`}
                                 href="/github"
                             >
                                 GITHUB
@@ -179,6 +192,13 @@ export default function Navigation() {
                             onClick={() => setIsOpen(false)}
                         >
                             BLOG
+                        </Link>
+                        <Link
+                            className="p-2 text-xl font-bold text-center text-white"
+                            href="/gallery"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            GALLERY
                         </Link>
                         <Link
                             className="p-2 text-xl font-bold text-center text-white"
