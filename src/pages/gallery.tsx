@@ -108,7 +108,6 @@ export default function Projects({ images }: ProjectsProps) {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         variants={itemAnim}
-                        
                     >
                         <CldImage
                             className="object-cover w-64 h-64 rounded-lg cursor-pointer lg:h-96 lg:w-96"
@@ -135,9 +134,9 @@ export default function Projects({ images }: ProjectsProps) {
                 >
                     <motion.div
                         className="relative"
-                        initial={{ scale: 0.8 }}
-                        animate={{ scale: 1 }}
-                        transition={{ duration: 0.3 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.7 }}
                     >
                         <CldImage
                             className="rounded-lg max-w-[75vw] max-h-[75vh] object-contain"
