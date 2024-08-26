@@ -16,6 +16,26 @@ type ProjectsProps = {
     images: Image[];
 };
 
+const boxAnim = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            delayChildren: 0.3,
+            staggerChildren: 0.2,
+        },
+    },
+};
+
+const itemAnim = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+    },
+};
+
 cloudinary.config({
     cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME!,
     api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY!,
@@ -72,7 +92,14 @@ export default function Projects({ images }: ProjectsProps) {
                     </div>
                 </motion.div>
             </div>
-            <div className={`grid gap-3 w-full min-h-screen grid-flow-row px-12 pt-12 pb-16 mx-auto place-items-center max-w-7xl md:grid-cols-2 lg:grid-cols-3 lg:pb-20 lg:pt-24 3xl:pt-12 ${selectedImage ? "blur-sm" : ""}`}>
+            <motion.div
+                className={`grid gap-3 w-full min-h-screen grid-flow-row px-12 pt-12 pb-16 mx-auto place-items-center max-w-7xl md:grid-cols-2 lg:grid-cols-3 lg:pb-20 lg:pt-24 3xl:pt-12 ${
+                    selectedImage ? "blur-sm" : ""
+                }`}
+                variants={boxAnim}
+                initial="hidden"
+                animate="visible"
+            >
                 {images.map((image) => (
                     <motion.div
                         key={image.public_id}
@@ -80,6 +107,8 @@ export default function Projects({ images }: ProjectsProps) {
                         onClick={() => setSelectedImage(image)}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        variants={itemAnim}
+                        
                     >
                         <CldImage
                             className="object-cover w-64 h-64 rounded-lg cursor-pointer lg:h-96 lg:w-96"
@@ -95,7 +124,7 @@ export default function Projects({ images }: ProjectsProps) {
                         />
                     </motion.div>
                 ))}
-            </div>
+            </motion.div>
             {selectedImage && (
                 <motion.div
                     className="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-black/60"
@@ -111,7 +140,7 @@ export default function Projects({ images }: ProjectsProps) {
                         transition={{ duration: 0.3 }}
                     >
                         <CldImage
-                            className="object-cover rounded-lg max-w-[75vw] max-h-[75vh]"
+                            className="rounded-lg max-w-[75vw] max-h-[75vh] object-contain"
                             width={selectedImage.width}
                             height={selectedImage.height}
                             src={selectedImage.public_id}
