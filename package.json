@@ -34,6 +34,7 @@
     },
     "devDependencies": {
         "@types/color-thief-node": "^1.0.4",
+        "@types/next": "^8.0.7",
         "@types/node": "20.6.0",
         "@types/react": "18.0.35",
         "eslint-config-next": "^14.0.4",
