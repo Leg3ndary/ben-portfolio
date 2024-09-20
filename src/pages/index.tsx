@@ -50,9 +50,8 @@ export default function Home() {
                         />
                     </div>
                     <div className="flex flex-col justify-center w-full h-full p-12 -mt-10 lg:w-1/2 lg:mt-0">
-                        <h3 className="p-2 text-lg">HI THERE</h3>
                         <h1 className="p-2 text-6xl font-black">
-                            I&apos;M BEN
+                            BEN ZHOU
                         </h1>
                         <h2 className="p-2 font-bold text-md">
                             UNIVERSITY OF WATERLOO COMPUTER ENGINEERING
