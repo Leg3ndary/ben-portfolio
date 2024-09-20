@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Mocha from "@/../public/home/mocha.png";
 import Hockey from "@/../public/home/hockey.jpg";
-import HackTheNorth from "@/../public/home/hackthenorth.jpg";
 import CompEng from "@/../public/home/compeng.jpg";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import { FaArrowRight } from "react-icons/fa6";
 import Link from "next/link";
+import Experience from "@/components/Experience";
 // import Golden from "@/components/Golden";
 
 export default function Home() {
@@ -119,71 +119,28 @@ export default function Home() {
                 </motion.div>
             </div>
             <motion.div
-                className="flex justify-center w-full py-2 md:mt-0 mt-[490px] dark:text-[#ececec]"
-                initial={{ x: -20, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1 }}
-                viewport={{ once: true, amount: 0.6 }}
-            >
-                <div className="flex w-11/12 max-w-[1170px] md:flex-row flex-col py-2">
-                    <div className="flex flex-col justify-center w-full h-full p-12 -mb-[100px] md:w-1/2 lg:mb-0">
-                        <Image
-                            className="object-contain rounded-md animate-fade-in"
-                            width={489}
-                            height={626}
-                            src={Hockey}
-                            alt="Hockey"
-                            loading="lazy"
-                        />
-                        <p className="p-2 font-light text-center">
-                            My U16 Team at a tournament in Niagara, Ontario
-                        </p>
-                    </div>
-                    <div className="flex flex-col justify-center w-full h-full p-12 md:w-1/2">
-                        <h3 className="p-2 text-lg">ABOUT ME</h3>
-                        <h2 className="p-2 text-3xl font-black md:text-5xl">
-                            I ENJOY HOCKEY
-                        </h2>
-                        <h4 className="p-2 font-medium text-md">
-                            TIER 2 PLAYER / ASSISTANT COACH
-                        </h4>
-                        <p className="p-2 pt-4 pb-4 font-light">
-                            I&apos;ve been skating since before I can remember,
-                            and started playing hockey when I was around 10. I
-                            stopped playing competitively in my junior year to
-                            help coach other teams and focus more on
-                            programming.
-                        </p>
-                    </div>
-                </div>
-            </motion.div>
-            <div className="flex justify-center w-full">
-                <div className="w-10/12 lg:w-[1170px] h-[1px] bg-[#dddddd] dark:bg-[#121212]" />
-            </div>
-            <motion.div
-                className="flex justify-center w-full py-2 overflow-hidden dark:text-[#ececec]"
+                className="flex justify-center w-full py-2 md:mt-0 mt-[490px] overflow-hidden dark:text-[#ececec]"
                 initial={{ x: 0, opacity: 0 }}
                 whileInView={{ x: -10, opacity: 1 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true, amount: 0.8 }}
             >
                 <div className="flex w-11/12 lg:w-[1170px] md:flex-row flex-col">
-                    <div className="flex flex-col items-end justify-center w-full h-full p-12 md:w-1/2">
-                        <h3 className="p-2 text-lg">I CREATE THINGS</h3>
+                    <div className="flex flex-col items-start justify-center w-full h-full px-12 md:p-12 md:w-1/2">
                         <h2 className="p-2 text-3xl font-black md:text-5xl">
                             PROJECTS
                         </h2>
                         <h4 className="p-2 font-medium text-md">
-                            COMPUTER ENGINEERING
+                            SOME OF MY WORK
                         </h4>
-                        <p className="p-2 pt-4 pb-4 font-light text-right">
+                        <p className="p-2 pt-4 pb-4 font-light">
                             Since I find computer engineering extremely
                             interesting I learned and taught myself how to
                             design and solder PCBs.
                         </p>
 
                         <motion.div
-                            className={`flex items-center ml-auto gap-2 p-2 px-4 text-sm lg:text-xl text-black dark:text-[#ececec] rounded-lg cursor-pointer`}
+                            className={`flex items-center gap-2 p-2 px-4 text-sm lg:text-xl text-black dark:text-[#ececec] rounded-lg cursor-pointer`}
                             whileHover={{ x: 10 }}
                             whileTap={{ x: -5 }}
                             transition={{
@@ -219,40 +176,49 @@ export default function Home() {
             <div className="flex justify-center w-full">
                 <div className="w-10/12 lg:w-[1170px] h-[1px] bg-[#dddddd] dark:bg-[#121212]" />
             </div>
+            <motion.div className="flex justify-center w-full py-2 mb-8 dark:text-[#ececec]">
+                <div className="flex w-11/12 max-w-[1170px] flex-row py-8 px-20">
+                    <Experience />
+                </div>
+            </motion.div>
+            <div className="flex justify-center w-full">
+                <div className="w-10/12 lg:w-[1170px] h-[1px] bg-[#dddddd] dark:bg-[#121212]" />
+            </div>
             <motion.div
-                className="flex justify-center w-full py-2 mb-8 dark:text-[#ececec]"
-                initial={{ x: -10, opacity: 0 }}
+                className="flex justify-center w-full py-2  dark:text-[#ececec]"
+                initial={{ x: -20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
-                viewport={{ once: true, amount: 0.8 }}
+                viewport={{ once: true, amount: 0.4 }}
             >
-                <div className="flex w-11/12 lg:w-[1170px] md:flex-row flex-col">
-                    <div className="flex flex-col justify-center w-full h-full p-12 lg:p-12 md:w-1/2 lg:mb-0">
+                <div className="flex w-11/12 max-w-[1170px] md:flex-row flex-col py-2">
+                    <div className="flex flex-col justify-center w-full h-full p-12 -mb-[100px] md:w-1/2 lg:mb-0">
                         <Image
                             className="object-contain rounded-md animate-fade-in"
                             width={489}
-                            height={367}
-                            src={HackTheNorth}
-                            alt="HTN"
+                            height={626}
+                            src={Hockey}
+                            alt="Hockey"
                             loading="lazy"
                         />
                         <p className="p-2 font-light text-center">
-                            Hack The North Opening Ceremonies!
+                            My U16 Team at a tournament in Niagara, Ontario
                         </p>
                     </div>
-                    <div className="flex flex-col items-start justify-center w-full h-full p-12 md:w-1/2">
-                        <h3 className="p-2 text-lg">I ALSO ATTEND...</h3>
+                    <div className="flex flex-col justify-center w-full h-full p-12 md:w-1/2">
+                        <h3 className="p-2 text-lg">ABOUT ME</h3>
                         <h2 className="p-2 text-3xl font-black md:text-5xl">
-                            HACKATHONS
+                            I ENJOY HOCKEY
                         </h2>
                         <h4 className="p-2 font-medium text-md">
-                            IN-PERSON & ONLINE
+                            TIER 2 PLAYER / ASSISTANT COACH
                         </h4>
                         <p className="p-2 pt-4 pb-4 font-light">
-                            Hackathons are fun competitions where
-                            &quot;Hackers&quot; build a working development
-                            version of some project or idea in a short amount of
-                            time.
+                            I&apos;ve been skating since before I can remember,
+                            and started playing hockey when I was around 10. I
+                            stopped playing competitively in my junior year to
+                            help coach other teams and focus more on
+                            programming.
                         </p>
                     </div>
                 </div>
