@@ -7,14 +7,14 @@ type Job = {
 };
 
 type JobProps = {
-    index: number;
+    key: number;
     job: Job;
 };
 
-function Job({ index, job }: JobProps) {
+function Job({ key, job }: JobProps) {
     return (
         <motion.li
-            key={index}
+            key={key}
             initial={{ x: 0, opacity: 0 }}
             whileInView={{ x: -20, opacity: 1 }}
             transition={{ duration: 1}}
@@ -61,7 +61,7 @@ export default function Experience() {
             <div className="w-2 h-full m-2 mx-4 mr-4 lg:mr-12 bg-rainbow-gradient animate-breathing-gradient rounded-xl" />
             <ol className="relative flex flex-col justify-center p-2">
                 {jobs.map((job, index) => (
-                    <Job index={index} job={job} />
+                    <Job key={index} job={job} />
                 ))}
             </ol>
         </div>
