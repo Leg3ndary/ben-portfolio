@@ -36,7 +36,7 @@ const jobs: Job[] = [
             "Developed 12 diverse firmware and hardware prototypes, utilizing C++ and Python to iteratively test, validate, and optimize core product functionalities.",
     },
     {
-        title: "Innovation Developer Coop Student",
+        title: "Software Developer Coop Student",
         company: "SAP Toronto, Ontario",
         description:
             "Developed a Cloudflare worker to handle and sanitize GPT-4 requests using TypeScript, and implemented comprehensive tests to achieve 100% coverage.",
