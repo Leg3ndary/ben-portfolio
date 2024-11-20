@@ -57,7 +57,9 @@ export async function getStaticProps() {
                 ).toString("utf8");
 
                 const { data } = matter(fileContent);
-                // data.tags = data.tags.split(",").map((tag: string) => tag.trim());
+                // if (data.tags && typeof data.tags === "string") {
+                //     data.tags = data.tags.split(",").map((tag: string) => tag.trim());
+                // }
 
                 return {
                     ...data,
@@ -91,7 +93,6 @@ export default function Blog({ posts }: { posts: BlogMetadata[] }) {
             day: "numeric",
         });
     });
-
     return (
         <>
             <Head>
@@ -150,14 +151,14 @@ export default function Blog({ posts }: { posts: BlogMetadata[] }) {
                                         {post.title}
                                     </Link>
                                 </td>
-                                <td className="w-2/5 px-4 py-2 text-right text-md lg:text-lg">
+                                {/* <td className="w-2/5 px-4 py-2 text-right text-md lg:text-lg">
                                     {post.tags.map((element) => (
                                         <Hashtag
                                             key={element}
                                             hashtag={element}
                                         />
                                     ))}
-                                </td>
+                                </td> */}
                                 <td className="justify-end px-4 py-2 text-xs text-center right lg:text-lg">
                                     {post.updated}
                                 </td>

@@ -85,10 +85,8 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
         "base64"
     ).toString("utf8");
 
-    // Parse frontmatter metadata and content
     const { data, content } = matter(fileContent);
 
-    // Fetch commit data to get creation and update dates
     const commitsResponse = await octokit.rest.repos.listCommits({
         owner,
         repo,
@@ -101,6 +99,8 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     const updatedDate = latestCommit?.commit?.committer?.date || null;
 
     const mdxSource = await serialize(content);
+
+    data.tags = data.tags.split(",").map((tag: string) => tag.trim());
 
     const metadata: RawBlogMetadata = {
         title: data.title,
