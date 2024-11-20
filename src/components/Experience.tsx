@@ -17,11 +17,13 @@ function Job({ key, job }: JobProps) {
             key={key}
             initial={{ x: 0, opacity: 0 }}
             whileInView={{ x: -20, opacity: 1 }}
-            transition={{ duration: 1}}
+            transition={{ duration: 1 }}
             viewport={{ once: true, amount: 0.8 }}
             className="py-8 list-none bg-clip-text bg-rainbow-gradient animate-breathing-gradient"
         >
-            <h3 className="pt-3 text-xl font-black text-transparent lg:text-4xl">{job.title}</h3>
+            <h3 className="pt-3 text-xl font-black text-transparent lg:text-4xl">
+                {job.title}
+            </h3>
             <h4 className="py-2 text-lg font-bold">{job.company}</h4>
             <p>{job.description}</p>
         </motion.li>

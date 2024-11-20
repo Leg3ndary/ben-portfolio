@@ -1,52 +1,97 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
-import fs from "fs";
-import path from "path";
 import { BlogMetadata, RawBlogMetadata } from "@/types";
 import Link from "next/link";
 import Hashtag from "@/components/Hashtag";
+import { Octokit } from "octokit";
+import matter from "gray-matter";
 
 export async function getStaticProps() {
-    const div = "src/pages/blog";
-    const dir = path.resolve(process.cwd(), div);
-    const filenames = fs.readdirSync(dir);
+    const octokit = new Octokit({ auth: process.env.BLOG_PAT });
+    const owner = "Leg3ndary";
+    const repo = "blog";
+    const directoryPath = "posts";
 
-    const posts = filenames.map((filename) => {
-        const filePath = path.join(dir, filename);
-        const fileContent = fs.readFileSync(filePath, "utf8");
+    let response;
+    try {
+        response = await octokit.rest.repos.getContent({
+            owner,
+            repo,
+            path: directoryPath,
+        });
+    } catch (error) {
+        console.error("Error fetching content from GitHub:", error);
+        response = { data: [] };
+    }
 
-        const data: RawBlogMetadata = JSON.parse(
-            fileContent.split("export const metadata = ")[1].split("};")[0] +
-                "}"
-        );
+    const files = Array.isArray(response.data) ? response.data : [];
 
-        const createdDate = new Date(...data.created).toISOString();
-        const updatedDate = new Date(...data.updated).toISOString();
+    const posts: RawBlogMetadata[] = await Promise.all(
+        files
+            .filter((file: any) => file.name.endsWith(".mdx"))
+            .map(async (file: any) => {
+                const commitsResponse = await octokit.rest.repos.listCommits({
+                    owner,
+                    repo,
+                    path: file.path,
+                    per_page: 1,
+                });
 
-        return {
-            ...data,
-            created: createdDate,
-            updated: updatedDate,
-            slug: filename.replace(/\.mdx?$/, ""),
-        };
-    });
+                const latestCommit = commitsResponse.data[0];
+                const createdDate = latestCommit
+                    ? latestCommit.commit.author.date
+                    : null;
+                const updatedDate = latestCommit
+                    ? latestCommit.commit.committer.date
+                    : null;
 
-    posts.sort((a, b) => {
-        const dateA = new Date(a.updated);
-        const dateB = new Date(b.updated);
+                const fileResponse = await octokit.rest.repos.getContent({
+                    owner,
+                    repo,
+                    path: file.path,
+                });
 
-        if (dateA > dateB) return -1;
-        if (dateA < dateB) return 1;
-        return 0;
-    });
+                const fileContent = Buffer.from(
+                    (fileResponse.data as any).content,
+                    "base64"
+                ).toString("utf8");
 
+                const { data } = matter(fileContent);
+                // data.tags = data.tags.split(",").map((tag: string) => tag.trim());
+
+                return {
+                    ...data,
+                    created: createdDate,
+                    updated: updatedDate,
+                    slug: file.name.replace(".mdx", ""),
+                };
+            })
+    );
+
+    posts.sort(
+        (a, b) => new Date(b.updated).getTime() - new Date(a.updated).getTime()
+    );
     return {
         props: {
             posts,
         },
     };
 }
+
 export default function Blog({ posts }: { posts: BlogMetadata[] }) {
+    posts.forEach((post) => {
+        post.created = new Date(post.created).toLocaleDateString("en-CA", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+        });
+        post.updated = new Date(post.updated).toLocaleDateString("en-CA", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+        });
+    });
+
     return (
         <>
             <Head>
@@ -114,9 +159,7 @@ export default function Blog({ posts }: { posts: BlogMetadata[] }) {
                                     ))}
                                 </td>
                                 <td className="justify-end px-4 py-2 text-xs text-center right lg:text-lg">
-                                    {new Date(
-                                        post.updated
-                                    ).toLocaleDateString()}
+                                    {post.updated}
                                 </td>
                             </tr>
                         ))}
