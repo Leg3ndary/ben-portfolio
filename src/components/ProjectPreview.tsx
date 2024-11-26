@@ -78,6 +78,13 @@ const colorVariants: { [key: string]: string[] } = {
         "group-hover:bg-emerald-600",
         "bg-emerald-600",
     ],
+    "rose-500": [
+        "hover:shadow-rose-500",
+        "group-hover:text-rose-500",
+        "hover:text-rose-500",
+        "group-hover:bg-rose-500",
+        "bg-rose-500",
+    ],
     default: [
         "hover:shadow-blue-400",
         "group-hover:text-blue-400",

@@ -10,8 +10,60 @@ import Macroboard from "@/../public/projects/Macroboard.png";
 import BennyBot from "@/../public/projects/bennybot.png";
 import bTagScriptSphinx from "@/../public/projects/btagscriptsphinx.png";
 import RapidRx from "@/../public/projects/RapidRx.png";
+import GooseOnTheLoose from "@/../public/projects/gooseontheloose.jpg";
 
 const projectPreviews: ProjectPreviewProps[] = [
+    {
+        image: {
+            src: GooseOnTheLoose,
+            alt: "Goose on the Loose",
+            width: 900,
+            height: 100,
+        },
+        title: "GOOSE ON THE LOOSE",
+        sub: "HACK THE NORTH 2024 WINNER",
+        description: (
+            <>
+                Amid the fast-paced rhythm of university life at Waterloo, one
+                universal experience ties us all together: the geese. Whether
+                you've encountered them on your way to class, been woken up by
+                honking at 7 am, or spent your days trying to bypass flocks of
+                geese during nesting season, the geese have established
+                themselves as a central fixture of the Waterloo campus. How can
+                we turn the staple bird of the university into a asset? Inspired
+                by the quintessential role the geese play in campus life, we
+                built an app to integrate our feather friends into our academic
+                lives. Our app, Goose on the Loose allows you to take pictures
+                of geese around the campus and turn them into your study
+                buddies! Instead of being intimidated by the fowl fowl, we can
+                now all be friends!
+            </>
+        ),
+        icons: [
+            {
+                link: "https://www.mongodb.com/",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg",
+                alt: "MongoDB",
+            },
+            {
+                link: "https://typescriptlang.org",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+                alt: "TypeScript",
+            },
+            {
+                link: "https://nextjs.org",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+                alt: "NextJS",
+            },
+            {
+                link: "https://cloud.google.com/",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg",
+                alt: "Google Cloud",
+            },
+        ],
+        projectLink: "https://devpost.com/software/goosehunt",
+        color: "rose-500"
+    },
     {
         image: {
             src: RapidRx,
