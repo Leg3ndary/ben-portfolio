@@ -34,7 +34,7 @@ const jobs: Job[] = [
     {
         title: "Software Engineering Intern",
         company: "Fuego.io, San Francisco, California",
-        description: "I will be joining Fuego for the January 2025 term."
+        description: "I will be joining Fuego for the January 2025 term.",
     },
     {
         title: "Prototype Engineering Intern",

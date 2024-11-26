@@ -62,7 +62,7 @@ const projectPreviews: ProjectPreviewProps[] = [
             },
         ],
         projectLink: "https://devpost.com/software/goosehunt",
-        color: "rose-500"
+        color: "rose-500",
     },
     {
         image: {
