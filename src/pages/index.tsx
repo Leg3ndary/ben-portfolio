@@ -116,7 +116,7 @@ export default function Home() {
                 </motion.div>
             </div>
             <motion.div
-                className="flex justify-center w-full py-2 md:mt-0 mt-[490px] overflow-hidden dark:text-[#ececec]"
+                className="flex justify-center w-full py-2 md:mt-0 mt-[520px] overflow-hidden dark:text-[#ececec]"
                 initial={{ x: 0, opacity: 0 }}
                 whileInView={{ x: -10, opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -174,7 +174,7 @@ export default function Home() {
                 <div className="w-10/12 lg:w-[1170px] h-[1px] bg-[#dddddd] dark:bg-[#121212]" />
             </div>
             <motion.div className="flex justify-center w-full py-2 mb-8 dark:text-[#ececec]">
-                <div className="flex w-11/12 max-w-[1170px] flex-row py-8 px-20">
+                <div className="flex w-11/12 max-w-[1170px] flex-row py-8 px-1 md:px-10 lg:px-20">
                     <Experience />
                 </div>
             </motion.div>
@@ -182,7 +182,7 @@ export default function Home() {
                 <div className="w-10/12 lg:w-[1170px] h-[1px] bg-[#dddddd] dark:bg-[#121212]" />
             </div>
             <motion.div
-                className="flex justify-center w-full py-2  dark:text-[#ececec]"
+                className="flex justify-center w-full py-2 pb-8 dark:text-[#ececec]"
                 initial={{ x: -20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1 }}

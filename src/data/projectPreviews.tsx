@@ -26,9 +26,9 @@ const projectPreviews: ProjectPreviewProps[] = [
             <>
                 Amid the fast-paced rhythm of university life at Waterloo, one
                 universal experience ties us all together: the geese. Whether
-                you&apos;ve encountered them on your way to class, been woken up by
-                honking at 7 am, or spent your days trying to bypass flocks of
-                geese during nesting season, the geese have established
+                you&apos;ve encountered them on your way to class, been woken up
+                by honking at 7 am, or spent your days trying to bypass flocks
+                of geese during nesting season, the geese have established
                 themselves as a central fixture of the Waterloo campus. How can
                 we turn the staple bird of the university into a asset? Inspired
                 by the quintessential role the geese play in campus life, we
