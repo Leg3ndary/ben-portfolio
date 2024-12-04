@@ -59,7 +59,7 @@ function Job({ key, job }: JobProps) {
 const jobs: Job[] = [
     {
         title: "Software Engineering Intern",
-        company: "Fuego.io, San Francisco, California",
+        company: "Fuego.io - San Francisco, California",
         description: "I will be joining Fuego for the January 2025 term.",
         image: {
             src: fuego,
