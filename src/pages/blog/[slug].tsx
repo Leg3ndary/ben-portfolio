@@ -91,16 +91,26 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
         owner,
         repo,
         path: filePath,
-        per_page: 1,
     });
 
     const latestCommit = commitsResponse.data[0];
-    const createdDate = latestCommit?.commit?.author?.date || null;
-    const updatedDate = latestCommit?.commit?.committer?.date || null;
+    const oldestCommit = commitsResponse.data[commitsResponse.data.length - 1];
+
+    const createdDate = oldestCommit
+        ? oldestCommit.commit.committer.date
+        : null;
+
+    const updatedDate = latestCommit
+        ? latestCommit.commit.committer.date
+        : null;
 
     const mdxSource = await serialize(content);
 
-    data.tags = data.tags.split(",").map((tag: string) => tag.trim());
+    if (data.tags && typeof data.tags === "string") {
+        data.tags = data.tags.split(",").map((tag: string) => tag.trim());
+    } else {
+        data.tags = [];
+    }
 
     const metadata: RawBlogMetadata = {
         title: data.title,

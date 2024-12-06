@@ -34,14 +34,16 @@ export async function getStaticProps() {
                     owner,
                     repo,
                     path: file.path,
-                    per_page: 1,
                 });
-                // console.log(commitsResponse);
 
                 const latestCommit = commitsResponse.data[0];
-                const createdDate = latestCommit
-                    ? latestCommit.commit.author.date
+                const oldestCommit =
+                    commitsResponse.data[commitsResponse.data.length - 1];
+
+                const createdDate = oldestCommit
+                    ? oldestCommit.commit.committer.date
                     : null;
+
                 const updatedDate = latestCommit
                     ? latestCommit.commit.committer.date
                     : null;
@@ -58,8 +60,14 @@ export async function getStaticProps() {
                 ).toString("utf8");
 
                 const { data } = matter(fileContent);
-                if (data.tags && typeof data.tags === "string") {
-                    data.tags = data.tags.split(",").map((tag: string) => tag.trim());
+                try {
+                    if (data.tags && typeof data.tags === "string") {
+                        data.tags = data.tags
+                            .split(",")
+                            .map((tag: string) => tag.trim());
+                    }
+                } catch (error) {
+                    console.error("Error parsing tags:", error);
                 }
 
                 return {
