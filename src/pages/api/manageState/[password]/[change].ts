@@ -116,6 +116,6 @@ export default async function handler(
         res.status(200).json({ answer: "Success" });
     } catch (error) {
         res.status(500).json({ error: "Internal Server Error" });
-        console.log(error);
+        // console.log(error);
     }
 }

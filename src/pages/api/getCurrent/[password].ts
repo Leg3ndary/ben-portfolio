@@ -46,7 +46,7 @@ export default async function handler(
                     current.item.album.images[0].url.split("/")[4]
                 }`
             ).then((res) => res.json());
-            console.log(current);
+            // console.log(current);
             res.status(200).json({
                 title: current.item.name,
                 artist: current.item.artists[0].name,
@@ -65,6 +65,6 @@ export default async function handler(
         }
     } catch (error) {
         res.status(500).json({ error: "Internal Server Error" });
-        console.log(error);
+        // console.log(error);
     }
 }
