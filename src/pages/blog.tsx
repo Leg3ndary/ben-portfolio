@@ -94,7 +94,6 @@ export default function Blog({ posts }: { posts: BlogMetadata[] }) {
             day: "numeric",
         });
     });
-    console.log(posts);
     return (
         <>
             <Head>

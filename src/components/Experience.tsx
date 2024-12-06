@@ -21,14 +21,12 @@ type Job = {
 };
 
 type JobProps = {
-    key_: number;
     job: Job;
 };
 
-function Job({ key_, job }: JobProps) {
+function Job({ job }: JobProps) {
     return (
         <motion.li
-            key={key_}
             initial={{ x: 0, opacity: 0 }}
             whileInView={{ x: -20, opacity: 1 }}
             transition={{ duration: 1 }}
