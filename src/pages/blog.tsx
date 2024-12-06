@@ -65,6 +65,7 @@ export async function getStaticProps() {
                     ...data,
                     created: createdDate,
                     updated: updatedDate,
+                    tags: data.tags ? data.tags.split(",") : [],
                     slug: file.name.replace(".mdx", ""),
                 };
             })
@@ -84,15 +85,16 @@ export default function Blog({ posts }: { posts: BlogMetadata[] }) {
     posts.forEach((post) => {
         post.created = new Date(post.created).toLocaleDateString("en-CA", {
             year: "numeric",
-            month: "long",
+            month: "short",
             day: "numeric",
         });
         post.updated = new Date(post.updated).toLocaleDateString("en-CA", {
             year: "numeric",
-            month: "long",
+            month: "short",
             day: "numeric",
         });
     });
+    console.log(posts);
     return (
         <>
             <Head>
@@ -151,14 +153,14 @@ export default function Blog({ posts }: { posts: BlogMetadata[] }) {
                                         {post.title}
                                     </Link>
                                 </td>
-                                {/* <td className="w-2/5 px-4 py-2 text-right text-md lg:text-lg">
+                                <td className="w-2/5 px-4 py-2 text-right text-md lg:text-lg">
                                     {post.tags.map((element) => (
                                         <Hashtag
                                             key={element}
                                             hashtag={element}
                                         />
                                     ))}
-                                </td> */}
+                                </td>
                                 <td className="justify-end px-4 py-2 text-xs text-center right lg:text-lg">
                                     {post.updated}
                                 </td>
