@@ -36,6 +36,7 @@ export async function getStaticProps() {
                     path: file.path,
                     per_page: 1,
                 });
+                // console.log(commitsResponse);
 
                 const latestCommit = commitsResponse.data[0];
                 const createdDate = latestCommit
@@ -57,15 +58,14 @@ export async function getStaticProps() {
                 ).toString("utf8");
 
                 const { data } = matter(fileContent);
-                // if (data.tags && typeof data.tags === "string") {
-                //     data.tags = data.tags.split(",").map((tag: string) => tag.trim());
-                // }
+                if (data.tags && typeof data.tags === "string") {
+                    data.tags = data.tags.split(",").map((tag: string) => tag.trim());
+                }
 
                 return {
                     ...data,
                     created: createdDate,
                     updated: updatedDate,
-                    tags: data.tags ? data.tags.split(",") : [],
                     slug: file.name.replace(".mdx", ""),
                 };
             })
