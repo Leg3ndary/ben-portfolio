@@ -1,5 +1,6 @@
 import type { MDXComponents } from "mdx/types";
 import Image, { ImageProps } from "next/image";
+import GenericCodeBlock from "./components/CodeBlocks/GenericCodeBlock";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
     return {
@@ -36,7 +37,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
                 {...(props as ImageProps)}
                 width={2500}
                 height={2500}
-                alt={{ ...props }.alt as string}
+                alt={({ ...props }.alt as string) || "Image"}
             />
         ),
         ol: ({ children }) => <ol className="list-decimal">{children}</ol>,
@@ -44,6 +45,20 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         li: ({ children }) => (
             <li className="my-2 text-sm font-light lg:text-lg">{children}</li>
         ),
+
+        code: ({ children, className }) => {
+            if (className?.includes("language-")) {
+                const language = className.replace("language-", "");
+                return (
+                    <GenericCodeBlock
+                        code={children as string}
+                        language={language}
+                    />
+                );
+            }
+            return <code className={className}>{children}</code>;
+        },
+
         ...components,
     };
 }
