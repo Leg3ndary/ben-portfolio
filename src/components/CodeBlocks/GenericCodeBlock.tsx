@@ -1,4 +1,4 @@
-import { CodeBlock } from "react-code-block/dist/code-block";
+import { CodeBlock } from "react-code-block";
 import { useCopyToClipboard } from "react-use";
 import { themes } from "prism-react-renderer";
 import { useState } from "react";
