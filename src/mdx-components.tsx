@@ -1,5 +1,6 @@
 import type { MDXComponents } from "mdx/types";
 import Image, { ImageProps } from "next/image";
+import YouTubeEmbed from "./components/mdx/YoutubeEmbed";
 import GenericCodeBlock from "./components/CodeBlocks/GenericCodeBlock";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
@@ -58,7 +59,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             }
             return <code className={className}>{children}</code>;
         },
-
+        Youtube: ({ src }: { src: string }) => <YouTubeEmbed src={src} />,
         ...components,
     };
 }
