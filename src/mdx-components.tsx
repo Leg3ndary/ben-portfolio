@@ -37,7 +37,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         ),
         img: (props) => (
             <Image
-                className="w-full h-auto rounded-lg shadow-lg"
+                className="w-full h-auto my-4 rounded-lg shadow-lg"
                 {...(props as ImageProps)}
                 width={2500}
                 height={2500}
@@ -62,7 +62,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             }
             return <code className={className}>{children}</code>;
         },
-        hr: () => <hr className="my-4 border-[#c1c1c1]" />,
+        hr: () => <div className="my-6 max-w-[1170px] h-[1px] bg-[#dddddd] dark:bg-[#383838] transition-colors duration-1000" />,
         Youtube: ({ src }: { src: string }) => <YouTubeEmbed src={src} />,
         ...components,
     };
