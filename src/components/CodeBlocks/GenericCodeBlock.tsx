@@ -24,7 +24,7 @@ export default function GenericCodeBlock({ code, language }: CodeBlockProps) {
 
     return (
         <CodeBlock code={code} language={language} theme={themes.vsDark}>
-            <motion.div className="relative">
+            <motion.div className="relative my-2">
                 <CodeBlock.Code className="bg-[#242424] lg:!p-6 !px-5 !py-4 rounded-xl shadow-lg overflow-auto">
                     <div className="table-row">
                         <CodeBlock.LineNumber className="table-cell pr-4 text-sm text-right text-gray-500 select-none" />

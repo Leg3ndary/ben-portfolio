@@ -14,6 +14,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         h3: ({ children }) => (
             <h3 className="py-2 font-black text-md lg:text-xl">{children}</h3>
         ),
+        h4: ({ children }) => (
+            <h4 className="py-2 text-sm font-black lg:text-lg">{children}</h4>
+        ),
         p: ({ children }) => (
             <p className="my-3 text-sm font-light lg:text-lg">{children}</p>
         ),
@@ -59,6 +62,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             }
             return <code className={className}>{children}</code>;
         },
+        hr: () => <hr className="my-4 border-[#c1c1c1]" />,
         Youtube: ({ src }: { src: string }) => <YouTubeEmbed src={src} />,
         ...components,
     };
