@@ -180,7 +180,7 @@ const projectPreviews: ProjectPreviewProps[] = [
             },
         ],
         projectLink: "https://github.com/Leg3ndary/SpotifyMacroboard",
-        slug: "macroboard",
+        slug: "SpotifyMacroboard",
         color: "amber-400",
     },
     {
