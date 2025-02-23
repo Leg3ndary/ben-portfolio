@@ -11,8 +11,60 @@ import BennyBot from "@/../public/projects/bennybot.png";
 import bTagScriptSphinx from "@/../public/projects/btagscriptsphinx.png";
 import RapidRx from "@/../public/projects/RapidRx.png";
 import GooseOnTheLoose from "@/../public/projects/gooseontheloose.jpg";
+import LinkCom from "@/../public/projects/LinkCom.jpeg";
 
 const projectPreviews: ProjectPreviewProps[] = [
+    {
+        image: {
+            src: LinkCom,
+            alt: "LinkCom",
+            width: 900,
+            height: 100,
+        },
+        title: "LINKCOM",
+        sub: "BIDIRECTIONAL COMMUICATION DEVICE",
+        description: (
+            <>
+                In a world where staying connected is more important than ever,
+                communication barriers shouldn’t hold anyone back. For
+                hard-of-hearing individuals, everyday conversations can be
+                challenging, whether it&apos;s ordering a coffee, catching an
+                announcement, or simply chatting with a friend. That’s where
+                LinkCom comes in—a wireless messaging system designed to make
+                communication easy, intuitive, and accessible. With a sleek,
+                user-friendly interface and real-time IR-based messaging,
+                LinkCom ensures that no message gets lost in translation. Check
+                out the project on{" "}
+                <a
+                    href="https://github.com/Leg3ndary/LinkCom"
+                    target="_blank"
+                    className="font-bold text-blue-500 transition-colors duration-1000 hover:text-teal-500"
+                >
+                    GitHub
+                </a>
+                .
+            </>
+        ),
+        icons: [
+            {
+                link: "https://en.cppreference.com/w/c/language",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
+                alt: "C",
+            },
+            {
+                link: "https://git-scm.com/",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+                alt: "Git",
+            },
+            {
+                link: "https://gitlab.com/",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg",
+                alt: "GitLab",
+            },
+        ],
+        projectLink: "https://github.com/Leg3ndary/LinkCom",
+        color: "teal-500",
+    },
     {
         image: {
             src: GooseOnTheLoose,
@@ -35,7 +87,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 built an app to integrate our feather friends into our academic
                 lives. Our app, Goose on the Loose allows you to take pictures
                 of geese around the campus and turn them into your study
-                buddies! Instead of being intimidated by the fowl fowl, we can
+                buddies! Instead of being intimidated by the foul fowl, we can
                 now all be friends!
             </>
         ),
