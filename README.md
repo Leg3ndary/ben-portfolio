@@ -1,4 +1,4 @@
-# Leg3ndary's Portfolio
+# Ben's Portfolio
 
 This is my official website and portfolio, it's built with TypeScript, Next.JS, and TailwindCSS.
 
