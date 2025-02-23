@@ -12,8 +12,63 @@ import bTagScriptSphinx from "@/../public/projects/btagscriptsphinx.png";
 import RapidRx from "@/../public/projects/RapidRx.png";
 import GooseOnTheLoose from "@/../public/projects/gooseontheloose.jpg";
 import LinkCom from "@/../public/projects/LinkCom.jpeg";
+import StyleIt from "@/../public/projects/styleit.jpg";
 
 const projectPreviews: ProjectPreviewProps[] = [
+    {
+        image: {
+            src: StyleIt,
+            alt: "StyleIT",
+            width: 900,
+            height: 100,
+        },
+        title: "STYLEIT",
+        sub: "REALTIME DRESSING ROOM",
+        description: (
+            <>
+                Shopping for clothes online shouldn’t be a gamble. With StyleIt,
+                you can instantly try on outfits from anywhere on the web,
+                giving you a real-time preview before you buy. Using smart image
+                processing we first process any image of clothing to add to your
+                wardrobe. Then using Mediapipe, our tool overlays clothing on
+                your body, live on your laptop/phone, letting you mix, match,
+                and explore global fashion trends—all from your screen. No more
+                second-guessing your style choices! See StyleIt in action here:{" "}
+                <a
+                    href="https://www.youtube.com/watch?v=gZGXC4O2ZOE"
+                    target="_blank"
+                    className="font-bold text-blue-500 transition-colors duration-1000 hover:text-indigo-400"
+                >
+                    Watch the project in action!
+                </a>
+                .
+            </>
+        ),
+        icons: [
+            {
+                link: "https://nextjs.org",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+                alt: "NextJS",
+            },
+            {
+                link: "https://typescriptlang.org",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+                alt: "TypeScript",
+            },
+            {
+                link: "https://www.mongodb.com/",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg",
+                alt: "MongoDB",
+            },
+            {
+                link: "https://tailwindcss.com",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+                alt: "TailwindCSS",
+            },
+        ],
+        projectLink: "https://github.com/Leg3ndary/StyleIt",
+        color: "indigo-500",
+    },
     {
         image: {
             src: LinkCom,

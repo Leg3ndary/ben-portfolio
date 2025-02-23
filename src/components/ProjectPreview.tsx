@@ -8,6 +8,13 @@ import { MdOpenInNew } from "react-icons/md";
 import Link from "next/link";
 
 const colorVariants: { [key: string]: string[] } = {
+    "indigo-500": [
+        "hover:shadow-indigo-500",
+        "group-hover:text-indigo-500",
+        "hover:text-indigo-500",
+        "group-hover:bg-indigo-500",
+        "bg-indigo-500",
+    ],
     "teal-500": [
         "hover:shadow-teal-500",
         "group-hover:text-teal-500",
