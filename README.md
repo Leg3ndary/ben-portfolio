@@ -5,8 +5,8 @@ This is my official website and portfolio, it's built with TypeScript, Next.JS, 
 You can run this project as you would with every other Nextjs project or view the project [here](https://bzhou.ca).
 
 ```bash
-$ git clone https://github.com/Leg3ndary/leg3ndary-portfolio.git
-$ cd leg3ndary-portfolio
+$ git clone https://github.com/Leg3ndary/ben-portfolio.git
+$ cd ben-portfolio
 $ npm install
 $ npm run dev
 ```

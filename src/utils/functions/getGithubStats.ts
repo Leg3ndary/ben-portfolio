@@ -1,7 +1,7 @@
 const USER_URL = "https://api.github.com/users/Leg3ndary";
 const REPO_URL = "https://api.github.com/users/Leg3ndary/repos";
 const LANGUAGES_URL =
-    "https://api.github.com/repos/Leg3ndary/leg3ndary-portfolio/languages";
+    "https://api.github.com/repos/Leg3ndary/ben-portfolio/languages";
 
 function formatBytes(bytes: number, decimals: number = 2) {
     if (bytes === 0) return "0 Bytes";

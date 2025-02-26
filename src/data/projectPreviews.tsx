@@ -13,8 +13,63 @@ import RapidRx from "@/../public/projects/RapidRx.png";
 import GooseOnTheLoose from "@/../public/projects/gooseontheloose.jpg";
 import LinkCom from "@/../public/projects/LinkCom.jpeg";
 import StyleIt from "@/../public/projects/styleit.jpg";
+import Event from "@/../public/projects/event.png";
 
 const projectPreviews: ProjectPreviewProps[] = [
+    {
+        image: {
+            src: Event,
+            alt: "Event Viewer",
+            width: 900,
+            height: 100,
+        },
+        title: "EVENT VIEWER",
+        sub: "MULTI-FUNCTIONAL EVENT VIEWER",
+        description: (
+            <>
+                For my Hack the North 2025 Frontend Application I was tasked
+                with creating an event viewing app with a multitude of features
+                and a clean UI. I used NextJS and TailwindCSS to create a
+                responsive and fast website that would allow users to view
+                events, sort them, and even share them with friends. To view
+                private events you can use the hardcoded username and password,
+                user: hacker, password: htn2025. You can check out the source
+                code on{" "}
+                <a
+                    href="https://github.com/Leg3ndary/htn2025-challenge"
+                    target="_blank"
+                    className="font-bold text-blue-500 transition-colors duration-1000 hover:text-amber-500"
+                >
+                    GitHub
+                </a>
+                .
+            </>
+        ),
+        icons: [
+            {
+                link: "https://nextjs.org",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+                alt: "NextJS",
+            },
+            {
+                link: "https://typescriptlang.org",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+                alt: "TypeScript",
+            },
+            {
+                link: "https://graphql.org/",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg",
+                alt: "GraphQL",
+            },
+            {
+                link: "https://tailwindcss.com",
+                image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+                alt: "TailwindCSS",
+            },
+        ],
+        projectLink: "https://ben-htn.netlify.app",
+        color: "amber-500",
+    },
     {
         image: {
             src: StyleIt,
@@ -37,7 +92,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 <a
                     href="https://www.youtube.com/watch?v=gZGXC4O2ZOE"
                     target="_blank"
-                    className="font-bold text-blue-500 transition-colors duration-1000 hover:text-indigo-400"
+                    className="font-bold text-blue-500 transition-colors duration-1000 hover:text-indigo-500"
                 >
                     Watch the project in action!
                 </a>
@@ -734,7 +789,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 alt: "React",
             },
         ],
-        projectLink: "https://github.com/Leg3ndary/leg3ndary-portfolio",
+        projectLink: "https://github.com/Leg3ndary/ben-portfolio",
         color: "cyan-300",
     },
 ];
