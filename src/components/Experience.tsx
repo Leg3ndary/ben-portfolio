@@ -3,7 +3,8 @@ import { StaticImageData } from "next/image";
 import fuego from "@/../public/experience/fuego.webp";
 import SAP from "@/../public/experience/SAP.png";
 import Eureka from "@/../public/experience/Eureka.png";
-import Triway from "@/../public/experience/triway.png";
+import Averroes from "@/../public/experience/averroes.png";
+// import Triway from "@/../public/experience/triway.png";
 import Image from "next/image";
 import MidnightSun from "@/../public/experience/midnightsun.png";
 
@@ -120,7 +121,7 @@ const jobs: Job[] = [
             "Developed 12 firmware prototypes in C++ for iterative product validation. Created an MQTT client-server broker in Python for API request handling and SQLite data storage.",
         date: "Jul 2024 - Aug 2024",
         image: {
-            src: SAP, // TODO: Replace with Averroes logo
+            src: Averroes,
             alt: "Averroes Technologies Logo",
             width: 150,
             height: 150,
