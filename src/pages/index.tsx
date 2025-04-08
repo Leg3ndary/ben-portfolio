@@ -55,11 +55,9 @@ export default function Home() {
                             UNIVERSITY OF WATERLOO COMPUTER ENGINEERING
                         </h2>
                         <p className="p-2 font-light">
-                            I completely designed this website without any
-                            previously built themes or components!
-                        </p>
-                        <p className="p-2 font-light">
-                            This site uses NextJs, TypeScript, and TailwindCSS!
+                            I built and designed this website without any ai or
+                            previously built components using Next.js,
+                            TypeScript, and Tailwind!
                         </p>
                         <p className="p-2 font-light">
                             Feel free to contact me at{" "}
@@ -80,12 +78,21 @@ export default function Home() {
                             </a>
                             !
                         </p>
-                        <div className="flex mt-12 place-content-evenly">
+                        <div className="flex mt-8 place-content-evenly">
+                            <a href="https://www.uwaterloo.ca/" target="_blank">
+                                <Image
+                                    className="transition-transform duration-200 ease-in-out animate-fade-in hover:scale-125"
+                                    width={65}
+                                    height={65}
+                                    src="https://i.imgur.com/qtXlwL6.png"
+                                    alt="UofW"
+                                />
+                            </a>
                             <a href="https://nextjs.org/" target="_blank">
                                 <Image
                                     className="transition-transform duration-200 ease-in-out animate-fade-in hover:scale-125"
-                                    width={75}
-                                    height={75}
+                                    width={65}
+                                    height={65}
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
                                     alt="NextJS"
                                 />
@@ -96,8 +103,8 @@ export default function Home() {
                             >
                                 <Image
                                     className="transition-transform duration-200 ease-in-out animate-fade-in hover:scale-125"
-                                    width={75}
-                                    height={75}
+                                    width={65}
+                                    height={65}
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
                                     alt="TypeScript"
                                 />
@@ -105,8 +112,8 @@ export default function Home() {
                             <a href="https://tailwindcss.com/" target="_blank">
                                 <Image
                                     className="transition-transform duration-200 ease-in-out animate-fade-in hover:scale-125"
-                                    width={75}
-                                    height={75}
+                                    width={65}
+                                    height={65}
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
                                     alt="TailwindCSS"
                                 />
@@ -124,36 +131,26 @@ export default function Home() {
             >
                 <div className="flex w-11/12 lg:w-[1170px] md:flex-row flex-col">
                     <div className="flex flex-col items-start justify-center w-full h-full px-12 md:p-12 md:w-1/2">
-                        <h2 className="p-2 text-3xl font-black md:text-5xl">
-                            PROJECTS
-                        </h2>
-                        <h4 className="p-2 font-medium text-md">
-                            SOME OF MY WORK
+                        <h4 className="p-2 font-medium uppercase text-md">
+                            1B Computer Engineering Student
                         </h4>
+                        <h2 className="p-2 text-3xl font-black md:text-5xl">
+                            ABOUT ME
+                        </h2>
                         <p className="p-2 pt-4 pb-4 font-light">
-                            Since I find computer engineering extremely
-                            interesting I learned and taught myself how to
-                            design and solder PCBs.
+                            Hi! I&apos;m Ben, a 1B Computer Engineering student
+                            at the University of Waterloo. I&apos;m passionate
+                            about creating and designing both software and
+                            hardware solutions to real-world problems.
                         </p>
-
-                        <motion.div
-                            className={`flex items-center gap-2 p-2 px-4 text-sm lg:text-xl text-black dark:text-[#ececec] rounded-lg cursor-pointer`}
-                            whileHover={{ x: 10 }}
-                            whileTap={{ x: -5 }}
-                            transition={{
-                                type: "spring",
-                                stiffness: 100,
-                                damping: 8,
-                            }}
-                        >
-                            <Link
-                                className="text-sm font-medium lg:text-lg"
-                                href="/projects"
-                            >
-                                View Projects
-                            </Link>
-                            <FaArrowRight className="text-2xl" />
-                        </motion.div>
+                        <p className="p-2 pb-4 font-light">
+                            With a strong foundation in languages like
+                            TypeScript, JavaScript, C++, and Python, I have
+                            developed and deployed full-stack applications using
+                            frameworks such as Next.js and Flask. My experience
+                            and many hackathons showcases my ability to deliver
+                            innovative solutions under pressure.
+                        </p>
                     </div>
                     <div className="flex flex-col justify-center w-full h-full p-12 lg:p-12 md:w-1/2 lg:mb-0">
                         <Image
@@ -161,11 +158,11 @@ export default function Home() {
                             width={489}
                             height={367}
                             src={CompEng}
-                            alt="Comp Eng"
+                            alt="PCB Design Project"
                             loading="lazy"
                         />
                         <p className="p-2 font-light text-center">
-                            One of my recent projects
+                            A recent PCB design project
                         </p>
                     </div>
                 </div>
@@ -181,7 +178,7 @@ export default function Home() {
             <div className="flex justify-center w-full">
                 <div className="w-10/12 lg:w-[1170px] h-[1px] bg-[#dddddd] dark:bg-[#121212]" />
             </div>
-            <motion.div
+            {/* <motion.div
                 className="flex justify-center w-full py-2 pb-8 dark:text-[#ececec]"
                 initial={{ x: -20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -219,7 +216,7 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
-            </motion.div>
+            </motion.div> */}
             {/* <Golden /> */}
         </>
     );
