@@ -11,6 +11,7 @@ type Job = {
     title: string;
     company: string;
     description: string;
+    date: string;
     image: {
         src: StaticImageData;
         alt: string;
@@ -22,18 +23,42 @@ type Job = {
 
 type JobProps = {
     job: Job;
+    index: number;
 };
 
-function Job({ job }: JobProps) {
+const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            delayChildren: 0.3,
+            staggerChildren: 0.2,
+        },
+    },
+};
+
+const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.8,
+            ease: "easeOut",
+        },
+    },
+};
+
+function Job({ job, index }: JobProps) {
     return (
         <motion.li
-            initial={{ x: 0, opacity: 0 }}
-            whileInView={{ x: -20, opacity: 1 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true, amount: 0.8 }}
-            className="grid grid-cols-[4rem_auto] md:grid-cols-[10rem_auto] py-4 list-none bg-clip-text bg-rainbow-gradient animate-breathing-gradient"
+            variants={item}
+            className="relative grid grid-cols-[4rem_auto] md:grid-cols-[10rem_auto] py-8 list-none group"
+            key={index}
         >
-            <div className="flex items-center justify-center w-12 h-12 m-1 mt-4 overflow-hidden rounded-md lg:my-auto md:m-2 lg:m-5 md:h-24 md:w-24">
+            <div className="absolute left-0 w-2 h-full -ml-6 transition-opacity duration-300 rounded-full opacity-0 bg-rainbow-gradient animate-breathing-gradient group-hover:opacity-100" />
+            <div className="flex items-center justify-center w-12 h-12 m-1 mt-4 overflow-hidden transition-transform duration-300 rounded-xl lg:my-auto md:m-2 lg:m-5 md:h-24 md:w-24 group-hover:scale-110">
                 <Image
                     src={job.image.src}
                     alt={job.image.alt}
@@ -44,11 +69,18 @@ function Job({ job }: JobProps) {
                 />
             </div>
             <div className="flex flex-col justify-center">
-                <h3 className="pt-3 text-xl font-black text-transparent lg:text-4xl">
+                <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                    {job.date}
+                </span>
+                <h3 className="pt-2 text-xl font-black transition-colors duration-300 lg:text-3xl group-hover:text-transparent bg-clip-text bg-rainbow-gradient animate-breathing-gradient">
                     {job.title}
                 </h3>
-                <h4 className="py-2 text-lg font-bold">{job.company}</h4>
-                <p>{job.description}</p>
+                <h4 className="py-2 text-lg font-bold transition-colors duration-300 group-hover:text-gray-700 dark:group-hover:text-gray-300">
+                    {job.company}
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400">
+                    {job.description}
+                </p>
             </div>
         </motion.li>
     );
@@ -58,7 +90,9 @@ const jobs: Job[] = [
     {
         title: "Software Engineering Intern",
         company: "Fuego.io - San Francisco, California",
-        description: "I will be joining Fuego for the January 2025 term.",
+        description:
+            "Developing GraphQL queries for Shopify metafield management and building API routes for targeted notifications. Creating tailored solutions enabling real-time data analysis for 40+ brands.",
+        date: "Jan 2025 - Present",
         image: {
             src: fuego,
             alt: "Fuego.io Logo",
@@ -70,7 +104,8 @@ const jobs: Job[] = [
         title: "Firmware Team Member",
         company: "Midnight Sun - Waterloo, Ontario",
         description:
-            "Developed ping testing functions in Python and C to verify connectivity across all devices on a CAN network.",
+            "Developing ping testing functions in Python and C to verify connectivity across CAN networks. Writing driver functions to process temperature readings from raw voltage values.",
+        date: "Sep 2024 - Present",
         image: {
             src: MidnightSun,
             alt: "Midnight Sun Logo",
@@ -78,18 +113,25 @@ const jobs: Job[] = [
             height: 150,
         },
     },
-    // {
-    //     title: "Prototype Engineering Intern",
-    //     company: "Averroes Technologies Toronto, Ontario",
-    //     description:
-    //         "Developed 12 diverse firmware and hardware prototypes, utilizing C++ and Python to iteratively test, validate, and optimize core product functionalities.",
-
-    // },
     {
-        title: "Software Developer Coop Student",
+        title: "Prototype Engineering Intern",
+        company: "Averroes Technologies - Toronto, Ontario",
+        description:
+            "Developed 12 firmware prototypes in C++ for iterative product validation. Created an MQTT client-server broker in Python for API request handling and SQLite data storage.",
+        date: "Jul 2024 - Aug 2024",
+        image: {
+            src: SAP, // TODO: Replace with Averroes logo
+            alt: "Averroes Technologies Logo",
+            width: 150,
+            height: 150,
+        },
+    },
+    {
+        title: "Software Developer Co-op Student",
         company: "SAP - Toronto, Ontario",
         description:
-            "Developed a Cloudflare worker to handle and sanitize GPT-4 requests using TypeScript, and implemented comprehensive tests to achieve 100% coverage.",
+            "Created a TypeScript worker for GPT-4 request handling, reducing errors by 23%. Implemented comprehensive Vitest testing with 100% coverage. Developed Python and Node scripts to clean 248,000 records, improving processing speed by 26%.",
+        date: "Feb 2024 - Jul 2024",
         image: {
             src: SAP,
             alt: "SAP Logo",
@@ -98,25 +140,14 @@ const jobs: Job[] = [
         },
     },
     {
-        title: "Eureka Hacks Website Lead",
-        company: "Eureka Hacks 2024 - Oakville, Ontario",
+        title: "FullStack Developer Lead",
+        company: "EurekaHacks 2024 - Oakville, Ontario",
         description:
-            "Led a team of three to build a modern, responsive website using Next.js that managed registrations, securing a max event capacity of 300 sign-ups a month before the event.",
+            "Enhanced SEO strategies, improving page load times by 160% and achieving 3,800+ increase in impressions. Led development of a Next.js website that secured 300+ event registrations.",
+        date: "Nov 2023 - May 2024",
         image: {
             src: Eureka,
             alt: "Eureka Hacks Logo",
-            width: 150,
-            height: 150,
-        },
-    },
-    {
-        title: "Programming Instructor",
-        company: "Triway Education - Stouffville, Ontario",
-        description:
-            "Taught a comprehensive curriculum of 18 lessons to enhance programming skills in Java and Python.",
-        image: {
-            src: Triway,
-            alt: "Triway Education Logo",
             width: 150,
             height: 150,
         },
@@ -125,13 +156,19 @@ const jobs: Job[] = [
 
 export default function Experience() {
     return (
-        <div className="flex w-11/12 mx-auto">
-            <div className="w-2 h-full m-2 mx-4 mr-4 md:mr-12 bg-rainbow-gradient animate-breathing-gradient rounded-xl" />
-            <ol className="relative flex flex-col justify-center p-2">
-                {jobs.map((job, index) => (
-                    <Job key={index} job={job} />
-                ))}
-            </ol>
+        <div className="flex justify-center w-full">
+            <motion.div
+                className="w-11/12 max-w-[1170px] relative"
+                initial="hidden"
+                animate="visible"
+                variants={container}
+            >
+                <ol className="relative flex flex-col justify-center">
+                    {jobs.map((job, index) => (
+                        <Job key={index} job={job} index={index} />
+                    ))}
+                </ol>
+            </motion.div>
         </div>
     );
 }
