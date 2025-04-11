@@ -7,6 +7,7 @@ import Head from "next/head";
 import { FaArrowRight } from "react-icons/fa6";
 import Link from "next/link";
 import Experience from "@/components/Experience";
+import TechIcon from "@/components/TechIcon";
 // import Golden from "@/components/Golden";
 
 export default function Home() {
@@ -79,45 +80,30 @@ export default function Home() {
                             !
                         </p>
                         <div className="flex mt-8 place-content-evenly">
-                            <a href="https://www.uwaterloo.ca/" target="_blank">
-                                <Image
-                                    className="transition-transform duration-200 ease-in-out animate-fade-in hover:scale-125"
-                                    width={65}
-                                    height={65}
-                                    src="https://i.imgur.com/qtXlwL6.png"
-                                    alt="UofW"
-                                />
-                            </a>
-                            <a href="https://nextjs.org/" target="_blank">
-                                <Image
-                                    className="transition-transform duration-200 ease-in-out animate-fade-in hover:scale-125"
-                                    width={65}
-                                    height={65}
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-                                    alt="NextJS"
-                                />
-                            </a>
-                            <a
-                                href="https://www.typescriptlang.org/"
-                                target="_blank"
-                            >
-                                <Image
-                                    className="transition-transform duration-200 ease-in-out animate-fade-in hover:scale-125"
-                                    width={65}
-                                    height={65}
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                                    alt="TypeScript"
-                                />
-                            </a>
-                            <a href="https://tailwindcss.com/" target="_blank">
-                                <Image
-                                    className="transition-transform duration-200 ease-in-out animate-fade-in hover:scale-125"
-                                    width={65}
-                                    height={65}
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-                                    alt="TailwindCSS"
-                                />
-                            </a>
+                            <TechIcon
+                                name="UofW"
+                                image="https://i.imgur.com/qtXlwL6.png"
+                                link="https://www.uwaterloo.ca/"
+                                size="xl"
+                            />
+                            <TechIcon
+                                name="NextJS"
+                                image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                                link="https://nextjs.org/"
+                                size="xl"
+                            />
+                            <TechIcon
+                                name="TypeScript"
+                                image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                                link="https://www.typescriptlang.org/"
+                                size="xl"
+                            />
+                            <TechIcon
+                                name="TailwindCSS"
+                                image="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                                link="https://tailwindcss.com/"
+                                size="xl"
+                            />
                         </div>
                     </div>
                 </motion.div>

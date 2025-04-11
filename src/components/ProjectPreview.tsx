@@ -3,9 +3,9 @@ import { ProjectPreviewProps } from "@/types";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
-
 import { MdOpenInNew } from "react-icons/md";
 import Link from "next/link";
+import TechIcon from "./TechIcon";
 
 const colorVariants: { [key: string]: string[] } = {
     "amber-500": [
@@ -189,13 +189,12 @@ export default function ProjectPreview({
                     animate="visible"
                 >
                     {icons.map((icon, index) => (
-                        <ProjectHoverable
+                        <TechIcon
                             key={index}
+                            name={icon.alt}
                             image={icon.image}
-                            alt={icon.alt}
                             link={icon.link}
-                            height={icon.height}
-                            width={icon.width}
+                            size="lg"
                         />
                     ))}
                 </motion.div>
