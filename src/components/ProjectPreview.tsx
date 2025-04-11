@@ -1,4 +1,3 @@
-import ProjectHoverable from "@/components/ProjectHoverable";
 import { ProjectPreviewProps } from "@/types";
 import Image from "next/image";
 import { motion } from "framer-motion";
