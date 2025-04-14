@@ -1,0 +1,3 @@
+.mdxParagraph {
+    @apply my-3 text-xs font-light leading-5 lg:text-base;
+}

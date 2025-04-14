@@ -2,6 +2,45 @@ import type { MDXComponents } from "mdx/types";
 import Image, { ImageProps } from "next/image";
 import YouTubeEmbed from "./components/mdx/YoutubeEmbed";
 import GenericCodeBlock from "./components/CodeBlocks/GenericCodeBlock";
+import styles from "@/styles/mdx.module.css";
+import { getImageDimensions } from "./utils/getImageDimensions";
+import { useEffect, useState } from "react";
+
+const MDXImage = ({
+    src,
+    alt,
+    ...props
+}: { src: string; alt?: string } & Omit<ImageProps, "src" | "alt">) => {
+    const [dimensions, setDimensions] = useState<{
+        width: number;
+        height: number;
+    } | null>(null);
+
+    useEffect(() => {
+        getImageDimensions(src)
+            .then((dims) => {
+                const scaleFactor = 600 / dims.height;
+                setDimensions({
+                    width: Math.round(dims.width * scaleFactor),
+                    height: 600,
+                });
+            })
+            .catch(console.error);
+    }, [src]);
+
+    return (
+        <div className="relative w-full h-[400px]">
+            <Image
+                className="object-cover mx-auto my-4 rounded-lg shadow-lg"
+                src={src}
+                alt={alt || "Image"}
+                width={dimensions?.width || 400}
+                height={400}
+                {...props}
+            />
+        </div>
+    );
+};
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
     return {
@@ -18,7 +57,11 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             <h4 className="py-2 text-sm font-black lg:text-lg">{children}</h4>
         ),
         p: ({ children }) => (
-            <p className="my-3 text-sm font-light lg:text-lg">{children}</p>
+            <p
+                className={`my-5 text-xs font-light leading-5 ${styles.mdxParagraph} lg:text-base`}
+            >
+                {children}
+            </p>
         ),
         a: ({ children, href }) => (
             <a
@@ -35,15 +78,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
                 {children}
             </strong>
         ),
-        img: (props) => (
-            <Image
-                className="w-full h-auto my-4 rounded-lg shadow-lg"
-                {...(props as ImageProps)}
-                width={2500}
-                height={2500}
-                alt={({ ...props }.alt as string) || "Image"}
-            />
-        ),
+        img: (props) => {
+            if (!props.src || typeof props.src !== "string") return null;
+            return <MDXImage src={props.src} alt={props.alt} />;
+        },
         ol: ({ children }) => <ol className="list-decimal">{children}</ol>,
         ul: ({ children }) => <ul className="list-disc">{children}</ul>,
         li: ({ children }) => (
@@ -62,7 +100,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             }
             return <code className={className}>{children}</code>;
         },
-        hr: () => <div className="my-6 max-w-[1170px] h-[1px] bg-[#dddddd] dark:bg-[#383838] transition-colors duration-1000" />,
+        hr: () => (
+            <div className="my-6 max-w-[1170px] h-[1px] bg-[#dddddd] dark:bg-[#383838] transition-colors duration-1000" />
+        ),
         Youtube: ({ src }: { src: string }) => <YouTubeEmbed src={src} />,
         ...components,
     };

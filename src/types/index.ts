@@ -14,4 +14,4 @@ export interface ProjectPreviewProps {
     color: string;
     projectLink: string;
     slug?: string;
-} 
+}
