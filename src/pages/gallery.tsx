@@ -44,6 +44,24 @@ cloudinary.config({
 
 export default function Projects({ images }: ProjectsProps) {
     const [selectedImage, setSelectedImage] = useState<Image | null>(null);
+    const [currentIndex, setCurrentIndex] = useState<number>(0);
+    const [direction, setDirection] = useState<number>(0);
+
+    const handleNext = () => {
+        setDirection(1);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setSelectedImage(images[(currentIndex + 1) % images.length]);
+    };
+
+    const handlePrevious = () => {
+        setDirection(-1);
+        setCurrentIndex(
+            (prevIndex) => (prevIndex - 1 + images.length) % images.length
+        );
+        setSelectedImage(
+            images[(currentIndex - 1 + images.length) % images.length]
+        );
+    };
 
     return (
         <>
@@ -130,25 +148,84 @@ export default function Projects({ images }: ProjectsProps) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    onClick={() => setSelectedImage(null)}
+                    onClick={(e) => {
+                        if (e.target === e.currentTarget) {
+                            setSelectedImage(null);
+                        }
+                    }}
                 >
                     <motion.div
-                        className="relative"
+                        className="relative flex items-center"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.7 }}
                     >
-                        <CldImage
-                            className="rounded-lg max-w-[75vw] max-h-[75vh] object-contain"
-                            width={selectedImage.width}
-                            height={selectedImage.height}
-                            src={selectedImage.public_id}
-                            alt={selectedImage.public_id}
-                            crop="fill"
-                            quality="auto"
-                            dpr="auto"
-                            format="webp"
-                        />
+                        <button
+                            className="absolute left-0 z-10 p-2 text-white transition-transform transform -translate-x-full hover:scale-110"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                handlePrevious();
+                            }}
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="w-8 h-8"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M15 19l-7-7 7-7"
+                                />
+                            </svg>
+                        </button>
+                        <motion.div
+                            key={selectedImage.public_id}
+                            initial={{
+                                x: direction > 0 ? 100 : -100,
+                                opacity: 0,
+                            }}
+                            animate={{ x: 0, opacity: 1 }}
+                            exit={{ x: direction > 0 ? -100 : 100, opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <CldImage
+                                className="rounded-lg max-w-[75vw] max-h-[75vh] object-contain"
+                                width={selectedImage.width}
+                                height={selectedImage.height}
+                                src={selectedImage.public_id}
+                                alt={selectedImage.public_id}
+                                crop="fill"
+                                quality="auto"
+                                dpr="auto"
+                                format="webp"
+                            />
+                        </motion.div>
+                        <button
+                            className="absolute right-0 z-10 p-2 text-white transition-transform transform translate-x-full hover:scale-110"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                handleNext();
+                            }}
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="w-8 h-8"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M9 5l7 7-7 7"
+                                />
+                            </svg>
+                        </button>
                     </motion.div>
                 </motion.div>
             )}
