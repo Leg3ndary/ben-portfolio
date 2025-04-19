@@ -1,34 +1,37 @@
-# Ben's Portfolio
+# 🚀 Ben's Portfolio
 
-This is my official website and portfolio, it's built with TypeScript, Next.JS, and TailwindCSS.
+Hey! This is my official website and portfolio — built with **TypeScript**, **Next.js**, and **TailwindCSS** ⚡
 
-You can run this project as you would with every other Nextjs project or view the project [here](https://bzhou.ca).
+Check it out live 👉 [bzhou.ca](https://bzhou.ca)
+
+If you want to run it locally, you can clone the repo and run it with npm.
 
 ```bash
-$ git clone https://github.com/Leg3ndary/ben-portfolio.git
-$ cd ben-portfolio
-$ npm install
-$ npm run dev
+git clone https://github.com/Leg3ndary/ben-portfolio.git
+cd ben-portfolio
+npm install
+npm run dev
 ```
 
-## FAQ
+---
 
-1. Why aren't you using the app router?
+## 💬 FAQ
 
-I started learning Next.js using the pages router, and by the time I started learning about the app router, I was already to deep in here with the pages router. I could migrate this project but I really don't see why instead of just creating another project using the app router to learn and practice.
+**1. Why aren’t you using the App Router?**  
+I started with the Pages Router when learning Next.js, and by the time the App Router came around, I was already too deep into this version. Rather than migrating everything, I’d rather try it out properly in a new project 💡
 
-2. Can I contribute?
+**2. Can I contribute?**  
+Thanks for the interest! But this project is mainly open-source so others can explore the code. Check out the [🚫 Contributions](#-contributions) section below for more info.
 
-Read the `Contributions` section below, this is open source purely so people can view the code behind my portfolio.
+**3. Can I reference your design?**  
+Totally! Feel free to use it for inspo 💅 Just drop a little attribution when you can — much appreciated!
 
-3. Can I reference your design?
+**4. How do I contact you?**  
+I’ve got my [LinkedIn](https://www.linkedin.com/in/ben-zhou06) linked in the footer of the site
 
-Sure, please give attribution whenever you can though, thanks.
+---
 
-4. How do I contact you?
+## 🚫 Contributions
 
-I linked my LinkedIn profile in the footer of my website.
-
-## Contributions
-
-Please do not contribute to this project as it's meant to be solely my own.
+This portfolio is a personal project, so I’m not accepting contributions right now.  
+You're more than welcome to fork it, explore it, or learn from it though!
