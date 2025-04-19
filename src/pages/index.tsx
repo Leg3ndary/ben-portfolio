@@ -124,23 +124,22 @@ export default function Home() {
                             ABOUT ME
                         </h2>
                         <p className="p-2 pt-4 pb-4 font-light">
-                            Hi! I&apos;m Ben, a 1B Computer Engineering student
-                            at the University of Waterloo. I&apos;m passionate
-                            about creating and designing both software and
-                            hardware solutions to real-world problems.
+                            Hey&nbsp;—&nbsp;I&apos;m Ben, a first‑year Computer
+                            Engineering student at the University of Waterloo. I
+                            love turning ideas into practical software and
+                            hardware that make everyday life a little easier.
                         </p>
                         <p className="p-2 pb-4 font-light">
-                            With a strong foundation in languages like
-                            TypeScript, JavaScript, C++, and Python, I have
-                            developed and deployed full-stack applications using
-                            frameworks such as Next.js and Flask. My experience
-                            and many hackathons showcases my ability to deliver
-                            innovative solutions under pressure.
+                            I work mostly in TypeScript, JavaScript, C++, and
+                            Python, and I&apos;ve shipped full‑stack projects
+                            with frameworks like Next.js and Flask. Hackathons
+                            have taught me to build, break, and ship fast&nbsp;—
+                            skills I bring to every project.
                         </p>
                     </div>
                     <div className="flex flex-col justify-center w-full h-full p-12 lg:p-12 md:w-1/2 lg:mb-0">
                         <Image
-                            className="object-contain rounded-md animate-fade-in"
+                            className="object-contain rounded-md shadow-md animate-fade-in"
                             width={489}
                             height={367}
                             src={CompEng}
