@@ -56,7 +56,7 @@ export default function Home() {
                             UNIVERSITY OF WATERLOO COMPUTER ENGINEERING
                         </h2>
                         <p className="p-2 font-light">
-                            I built and designed this website without any ai or
+                            I built and designed this website without GPT or any
                             previously built components using Next.js,
                             TypeScript, and Tailwind!
                         </p>
@@ -147,7 +147,7 @@ export default function Home() {
                             loading="lazy"
                         />
                         <p className="p-2 font-light text-center">
-                            A recent PCB design project
+                            The inside of a macroboard I completely designed and built
                         </p>
                     </div>
                 </div>

@@ -70,16 +70,16 @@ function Job({ job, index }: JobProps) {
                 />
             </div>
             <div className="flex flex-col justify-center">
-                <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                <span className="text-sm dark:text-[#ececec]">
                     {job.date}
                 </span>
                 <h3 className="pt-2 text-xl font-black transition-colors duration-300 lg:text-3xl group-hover:text-transparent bg-clip-text bg-rainbow-gradient animate-breathing-gradient">
                     {job.title}
                 </h3>
-                <h4 className="py-2 text-lg font-bold transition-colors duration-300 group-hover:text-gray-700 dark:group-hover:text-gray-300">
+                <h4 className="py-2 text-lg font-medium transition-colors duration-300 group-hover:text-gray-700 dark:group-hover:text-gray-300">
                     {job.company}
                 </h4>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="dark:text-[#ececec] font-light">
                     {job.description}
                 </p>
             </div>
