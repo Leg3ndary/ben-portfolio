@@ -83,10 +83,37 @@ export default function Projects() {
     const [isLoading, setLoading] = useState(true);
     const [dropdown, setDropdown] = useState(Dropdown.Grid);
 
+    const fetchWithCache = async (url: string, cacheKey: string) => {
+        const cachedData = localStorage.getItem(cacheKey);
+        if (cachedData) {
+            const { data, timestamp } = JSON.parse(cachedData);
+            const now = new Date().getTime();
+            if (now - timestamp < 24 * 60 * 60 * 1000) {
+                return data;
+            }
+        }
+
+        const response = await fetch(url);
+        const data = await response.json();
+
+        localStorage.setItem(
+            cacheKey,
+            JSON.stringify({
+                data,
+                timestamp: new Date().getTime(),
+            })
+        );
+
+        return data;
+    };
+
     useEffect(() => {
-        fetch("https://api.github.com/users/leg3ndary/repos")
-            .then((response) => response.json())
-            .then((repoData) => {
+        const fetchData = async () => {
+            try {
+                const repoData = await fetchWithCache(
+                    "https://api.github.com/users/leg3ndary/repos",
+                    "github_repos"
+                );
                 const filteredData = repoData.filter(
                     (repo: GitHubRepo) =>
                         repo.name != "Leg3ndary" &&
@@ -95,7 +122,13 @@ export default function Projects() {
                 );
                 setRepoData(filteredData);
                 setLoading(false);
-            });
+            } catch (error) {
+                console.error("Error fetching repository data:", error);
+                setLoading(false);
+            }
+        };
+
+        fetchData();
     }, []);
 
     return (
@@ -206,6 +239,9 @@ export default function Projects() {
                                     <div className="ml-auto">
                                         <Tags rawTags={[repo.language]} />
                                     </div>
+                                </div>
+                                <div className="mt-2">
+                                    <LanguageBar repo={repo.name} />
                                 </div>
                             </motion.div>
                         ))}

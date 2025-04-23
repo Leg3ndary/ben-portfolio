@@ -32,19 +32,53 @@ const tags = [
 export default function LanguageBar({ repo }: { repo: string }) {
     const [languages, setLanguages] = useState<Language>({});
 
+    const fetchWithCache = async (
+        url: string,
+        cacheKey: string
+    ): Promise<Language> => {
+        const cachedData = localStorage.getItem(cacheKey);
+        if (cachedData) {
+            const { data, timestamp } = JSON.parse(cachedData);
+            const now = new Date().getTime();
+            if (now - timestamp < 24 * 60 * 60 * 1000) {
+                return data;
+            }
+        }
+
+        const response = await fetch(url);
+        const data = await response.json();
+
+        localStorage.setItem(
+            cacheKey,
+            JSON.stringify({
+                data,
+                timestamp: new Date().getTime(),
+            })
+        );
+
+        return data;
+    };
+
     useEffect(() => {
-        fetch(`https://api.github.com/repos/Leg3ndary/${repo}/languages`)
-            .then((response) => response.json())
-            .then((data) => setLanguages(data))
-            .catch((error) =>
-                console.error("Error fetching language data:", error)
-            );
-    });
+        const fetchLanguages = async () => {
+            try {
+                const data = await fetchWithCache(
+                    `https://api.github.com/repos/Leg3ndary/${repo}/languages`,
+                    `github_languages_${repo}`
+                );
+                setLanguages(data);
+            } catch (error) {
+                console.error("Error fetching language data:", error);
+            }
+        };
+
+        fetchLanguages();
+    }, [repo]);
 
     const total = Object.values(languages).reduce((acc, curr) => acc + curr, 0);
 
     return (
-        <div className="flex w-full h-5 overflow-hidden rounded-lg">
+        <div className="flex w-full h-2 overflow-hidden rounded-lg">
             {Object.entries(languages).map(([language, count]) => {
                 const tag = tags.find((tag) => tag.name === language);
                 const percentage = (count / total) * 100;
@@ -52,7 +86,7 @@ export default function LanguageBar({ repo }: { repo: string }) {
                 return (
                     <div
                         key={language}
-                        className={`${tag?.colour} h-5`}
+                        className={`${tag?.colour} h-2`}
                         style={{
                             width: `${percentage}%`,
                         }}
