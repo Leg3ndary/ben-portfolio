@@ -93,7 +93,7 @@ const jobs: Job[] = [
         company: "Fuego.io - San Francisco, California",
         description:
             "Developing GraphQL queries for Shopify metafield management and building API routes for targeted notifications. Creating tailored solutions enabling real-time data analysis for 40+ brands.",
-        date: "Jan 2025 - Present",
+        date: "Jan 2025 - Apr 2025",
         image: {
             src: fuego,
             alt: "Fuego.io Logo",
