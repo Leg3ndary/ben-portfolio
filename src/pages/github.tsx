@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect } from "react";
 import { AiOutlineLoading } from "react-icons/ai";
 import { GitHubRepo } from "@/types";
@@ -82,6 +82,12 @@ export default function Projects() {
     const [repoData, setRepoData] = useState<GitHubRepo[]>([]);
     const [isLoading, setLoading] = useState(true);
     const [dropdown, setDropdown] = useState(Dropdown.Grid);
+    const { scrollYProgress } = useScroll();
+
+    const headerOpacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+    const headerY = useTransform(scrollYProgress, [0, 0.1], [50, 0]);
+    const contentOpacity = useTransform(scrollYProgress, [0.1, 0.2], [0, 1]);
+    const contentY = useTransform(scrollYProgress, [0.1, 0.2], [50, 0]);
 
     const fetchWithCache = async (url: string, cacheKey: string) => {
         const cachedData = localStorage.getItem(cacheKey);
@@ -156,9 +162,10 @@ export default function Projects() {
             <div className="relative top-0 flex justify-center w-full h-[550px] bg-rainbow-gradient animate-breathing-gradient">
                 <motion.div
                     className="relative flex h-[370px] lg:h-[300px] bg-white dark:text-[#ececec] dark:bg-[#121212] border-black w-11/12 lg:w-[1000px] drop-shadow-2xl mt-32 lg:mt-40 rounded-3xl duration-1000 ease-in-out transition-all"
-                    initial={{ y: -20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 1 }}
+                    style={{
+                        opacity: headerOpacity,
+                        y: headerY,
+                    }}
                 >
                     <div className="flex flex-col justify-center w-full h-full p-12">
                         <h2 className="p-2 text-lg text-center">
@@ -177,7 +184,13 @@ export default function Projects() {
                     </div>
                 </motion.div>
             </div>
-            <div className="flex flex-col flex-wrap content-center justify-center w-full min-h-screen pt-12 pb-16 lg:pb-20 lg:pt-24 3xl:pt-12">
+            <motion.div
+                className="flex flex-col flex-wrap content-center justify-center w-full min-h-screen pt-12 pb-16 lg:pb-20 lg:pt-24 3xl:pt-12"
+                style={{
+                    opacity: contentOpacity,
+                    y: contentY,
+                }}
+            >
                 {isLoading && (
                     <div className="flex flex-col items-center justify-center w-full h-full ">
                         <AiOutlineLoading className="w-24 h-24 text-black animate-spin" />
@@ -207,6 +220,7 @@ export default function Projects() {
                                 )}`}
                                 key={repo.id}
                                 variants={boxItem}
+                                custom={index}
                             >
                                 <h1 className="text-2xl font-bold">
                                     {repo.name}
@@ -246,7 +260,7 @@ export default function Projects() {
                             </motion.div>
                         ))}
                 </motion.div>
-            </div>
+            </motion.div>
         </>
     );
 }
