@@ -147,7 +147,8 @@ export default function Home() {
                             loading="lazy"
                         />
                         <p className="p-2 font-light text-center">
-                            The inside of a macroboard I completely designed and built
+                            The inside of a macroboard I completely designed and
+                            built
                         </p>
                     </div>
                 </div>
