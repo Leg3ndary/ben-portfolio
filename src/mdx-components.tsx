@@ -5,6 +5,7 @@ import GenericCodeBlock from "./components/CodeBlocks/GenericCodeBlock";
 import styles from "@/styles/mdx.module.css";
 import { getImageDimensions } from "./utils/getImageDimensions";
 import { useEffect, useState } from "react";
+import Note from "./components/mdx/Note";
 
 const MDXImage = ({
     src,
@@ -73,10 +74,13 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
                 {children}
             </a>
         ),
+        // strong: ({ children }) => (
+        //     <strong className="font-bold animate-breathing-gradient bg-rainbow-gradient bg-clip-text">
+        //         {children}
+        //     </strong>
+        // ),
         strong: ({ children }) => (
-            <strong className="font-bold animate-breathing-gradient bg-rainbow-gradient bg-clip-text">
-                {children}
-            </strong>
+            <strong className="font-bold">{children}</strong>
         ),
         img: (props) => {
             if (!props.src || typeof props.src !== "string") return null;
@@ -104,6 +108,21 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             <div className="my-6 max-w-[1170px] h-[1px] bg-[#dddddd] dark:bg-[#383838] transition-colors duration-1000" />
         ),
         Youtube: ({ src }: { src: string }) => <YouTubeEmbed src={src} />,
+        blockquote: ({ children }) => {
+            if (
+                Array.isArray(children) &&
+                typeof children[0] === "string" &&
+                children[0].trim().startsWith("Note:")
+            ) {
+                const content = children[0].replace(/^Note:\s*/, "");
+                return <Note>{content}</Note>;
+            }
+            return (
+                <blockquote className="pl-4 italic border-l-4">
+                    {children}
+                </blockquote>
+            );
+        },
         ...components,
     };
 }
