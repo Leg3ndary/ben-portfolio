@@ -1,6 +1,6 @@
 import Head from "next/head";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 import { AiOutlineLoading } from "react-icons/ai";
 import { GitHubRepo } from "@/types";
 import { ImGithub } from "react-icons/im";
@@ -83,11 +83,13 @@ export default function Projects() {
     const [isLoading, setLoading] = useState(true);
     const [dropdown, setDropdown] = useState(Dropdown.Grid);
     const { scrollYProgress } = useScroll();
+    const contentRef = useRef(null);
+    const heroRef = useRef(null);
+    const isInView = useInView(contentRef, { once: true });
+    const isHeroInView = useInView(heroRef, { once: true });
 
     const headerOpacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
     const headerY = useTransform(scrollYProgress, [0, 0.1], [50, 0]);
-    const contentOpacity = useTransform(scrollYProgress, [0.1, 0.2], [0, 1]);
-    const contentY = useTransform(scrollYProgress, [0.1, 0.2], [50, 0]);
 
     const fetchWithCache = async (url: string, cacheKey: string) => {
         const cachedData = localStorage.getItem(cacheKey);
@@ -161,11 +163,15 @@ export default function Projects() {
             </Head>
             <div className="relative top-0 flex justify-center w-full h-[550px] bg-rainbow-gradient animate-breathing-gradient">
                 <motion.div
+                    ref={heroRef}
                     className="relative flex h-[370px] lg:h-[300px] bg-white dark:text-[#ececec] dark:bg-[#121212] border-black w-11/12 lg:w-[1000px] drop-shadow-2xl mt-32 lg:mt-40 rounded-3xl duration-1000 ease-in-out transition-all"
-                    style={{
-                        opacity: headerOpacity,
-                        y: headerY,
-                    }}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={
+                        isHeroInView
+                            ? { opacity: 1, y: 0 }
+                            : { opacity: 0, y: 50 }
+                    }
+                    transition={{ duration: 0.5 }}
                 >
                     <div className="flex flex-col justify-center w-full h-full p-12">
                         <h2 className="p-2 text-lg text-center">
@@ -185,11 +191,13 @@ export default function Projects() {
                 </motion.div>
             </div>
             <motion.div
+                ref={contentRef}
                 className="flex flex-col flex-wrap content-center justify-center w-full min-h-screen pt-12 pb-16 lg:pb-20 lg:pt-24 3xl:pt-12"
-                style={{
-                    opacity: contentOpacity,
-                    y: contentY,
-                }}
+                initial={{ opacity: 0, y: 50 }}
+                animate={
+                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+                }
+                transition={{ duration: 0.5 }}
             >
                 {isLoading && (
                     <div className="flex flex-col items-center justify-center w-full h-full ">
