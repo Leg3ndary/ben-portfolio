@@ -5,7 +5,8 @@ import { AiOutlineLoading } from "react-icons/ai";
 import { GitHubRepo } from "@/types";
 import { ImGithub } from "react-icons/im";
 import { FaStar, FaCodeFork } from "react-icons/fa6";
-// import { IoMenu } from "react-icons/io5";
+import { IoMenu } from "react-icons/io5";
+import { IoMdGrid } from "react-icons/io";
 // import { IoMdGrid } from "react-icons/io";
 import Tags from "@/components/GitHub/Tags";
 import LanguageBar from "@/components/GitHub/LanguageBar";
@@ -81,7 +82,7 @@ function getGlowClass(language: string): string {
 export default function Projects() {
     const [repoData, setRepoData] = useState<GitHubRepo[]>([]);
     const [isLoading, setLoading] = useState(true);
-    const [dropdown, setDropdown] = useState(Dropdown.Grid);
+    const [viewMode, setViewMode] = useState(Dropdown.Grid);
     const { scrollYProgress } = useScroll();
     const contentRef = useRef(null);
     const heroRef = useRef(null);
@@ -204,18 +205,36 @@ export default function Projects() {
                         <AiOutlineLoading className="w-24 h-24 text-black animate-spin" />
                     </div>
                 )}
-                {/* <div className="flex justify-center p-6 ml-auto">
-                    <IoMdGrid
-                        className={`w-6 h-6 my-auto ${dropdown == Dropdown.Grid ? "text-gray-600 bg-gray-300 rounded-lg" : "text-gray-300"}`}
-                        title="Grid"
-                    />
-                    <IoMenu
-                        className="w-6 h-6 my-auto ml-4 text-gray-300"
-                        title="List"
-                    />  
-                </div> */}
+                <div className="flex justify-center p-6 ml-auto">
+                    <button
+                        onClick={() => setViewMode(Dropdown.Grid)}
+                        className={`p-2 rounded-lg transition-colors ${
+                            viewMode === Dropdown.Grid
+                                ? "text-gray-600 dark:text-gray-200"
+                                : "text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300"
+                        }`}
+                        title="Grid View"
+                    >
+                        <IoMdGrid className="w-6 h-6" />
+                    </button>
+                    <button
+                        onClick={() => setViewMode(Dropdown.List)}
+                        className={`p-2 ml-4 rounded-lg transition-colors ${
+                            viewMode === Dropdown.List
+                                ? "text-gray-600 dark:text-gray-200"
+                                : "text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300"
+                        }`}
+                        title="List View"
+                    >
+                        <IoMenu className="w-6 h-6" />
+                    </button>
+                </div>
                 <motion.div
-                    className="grid gap-y-12 lg:gap-y-10 w-11/12 md:w-[600px] xl:w-[1300px] 3xl:w-[1850px] py-5 pt-0 grid-flow-row grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-x-5 md:gap-x-7 lg:gap-x-16"
+                    className={`${
+                        viewMode === Dropdown.Grid
+                            ? "grid gap-y-12 lg:gap-y-10 w-11/12 md:w-[600px] xl:w-[1300px] 3xl:w-[1850px] py-5 pt-0 grid-flow-row grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-x-5 md:gap-x-7 lg:gap-x-16"
+                            : "flex flex-col w-11/12 md:w-[600px] xl:w-[1000px] divide-y divide-gray-200 dark:divide-gray-800"
+                    }`}
                     variants={boxAnim}
                     initial="hidden"
                     animate="visible"
@@ -223,20 +242,73 @@ export default function Projects() {
                     {!isLoading &&
                         repoData.map((repo, index) => (
                             <motion.div
-                                className={`flex flex-col justify-center w-full h-full px-5 py-4 bg-white dark:bg-[#121212] dark:text-[#ececec] border-black rounded-xl drop-shadow-xl ${getGlowClass(
-                                    repo.language
-                                )}`}
+                                className={`${
+                                    viewMode === Dropdown.Grid
+                                        ? "flex flex-col justify-center w-full h-full px-5 py-4 bg-white dark:bg-[#121212] dark:text-[#ececec] border-black rounded-xl drop-shadow-xl"
+                                        : "flex flex-col w-full py-6 first:pt-0 last:pb-0"
+                                } ${
+                                    viewMode === Dropdown.Grid
+                                        ? getGlowClass(repo.language)
+                                        : ""
+                                }`}
                                 key={repo.id}
                                 variants={boxItem}
                                 custom={index}
                             >
-                                <h1 className="text-2xl font-bold">
-                                    {repo.name}
-                                </h1>
-                                <p className="py-3 text-sm font-light">
+                                <div
+                                    className={`${
+                                        viewMode === Dropdown.List
+                                            ? "flex items-center gap-4"
+                                            : ""
+                                    }`}
+                                >
+                                    <h1
+                                        className={`text-2xl font-bold ${
+                                            viewMode === Dropdown.List
+                                                ? "flex-1"
+                                                : ""
+                                        }`}
+                                    >
+                                        {repo.name}
+                                    </h1>
+                                    {viewMode === Dropdown.List && (
+                                        <div className="flex items-center gap-4">
+                                            {repo.stargazers_count > 0 && (
+                                                <p className="flex items-center text-sm font-base">
+                                                    <FaStar className="w-4 h-4 mx-1 my-auto text-yellow-300" />
+                                                    {repo.stargazers_count}
+                                                </p>
+                                            )}
+                                            {repo.forks > 0 && (
+                                                <p className="flex items-center justify-center text-sm font-base">
+                                                    <FaCodeFork className="w-4 h-4 mx-1 my-auto" />
+                                                    {repo.forks_count}
+                                                </p>
+                                            )}
+                                            <div>
+                                                <Tags
+                                                    rawTags={[repo.language]}
+                                                />
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                                <p
+                                    className={`py-3 text-sm font-light ${
+                                        viewMode === Dropdown.List
+                                            ? "flex-1"
+                                            : ""
+                                    }`}
+                                >
                                     {repo.description}
                                 </p>
-                                <div className="flex items-center py-1 mt-auto">
+                                <div
+                                    className={`flex items-center py-1 ${
+                                        viewMode === Dropdown.Grid
+                                            ? "mt-auto"
+                                            : ""
+                                    }`}
+                                >
                                     <a
                                         className="flex justify-center items-center px-2.5 py-1.5 text-sm font-normal text-white transition-all duration-200 ease-in-out bg-black rounded-lg hover:bg-[#6e5494] hover:text-white"
                                         href={repo.html_url}
@@ -246,25 +318,33 @@ export default function Projects() {
                                         <ImGithub className="w-5 h-5 my-auto mr-1.5" />
                                         GitHub
                                     </a>
-                                    {repo.stargazers_count > 0 && (
-                                        <p className="flex items-center mx-1.5 text-sm font-base">
-                                            <FaStar className="w-4 h-4 mx-1 my-auto text-yellow-300" />
-                                            {repo.stargazers_count}
-                                        </p>
+                                    {viewMode === Dropdown.Grid && (
+                                        <>
+                                            {repo.stargazers_count > 0 && (
+                                                <p className="flex items-center mx-1.5 text-sm font-base">
+                                                    <FaStar className="w-4 h-4 mx-1 my-auto text-yellow-300" />
+                                                    {repo.stargazers_count}
+                                                </p>
+                                            )}
+                                            {repo.forks > 0 && (
+                                                <p className="flex items-center justify-center mx-1.5 mr-auto text-sm font-base">
+                                                    <FaCodeFork className="w-4 h-4 mx-1 my-auto" />
+                                                    {repo.forks_count}
+                                                </p>
+                                            )}
+                                            <div className="ml-auto">
+                                                <Tags
+                                                    rawTags={[repo.language]}
+                                                />
+                                            </div>
+                                        </>
                                     )}
-                                    {repo.forks > 0 && (
-                                        <p className="flex items-center justify-center mx-1.5 mr-auto text-sm font-base">
-                                            <FaCodeFork className="w-4 h-4 mx-1 my-auto" />
-                                            {repo.forks_count}
-                                        </p>
-                                    )}
-                                    <div className="ml-auto">
-                                        <Tags rawTags={[repo.language]} />
+                                </div>
+                                {viewMode === Dropdown.Grid && (
+                                    <div className="mt-2">
+                                        <LanguageBar repo={repo.name} />
                                     </div>
-                                </div>
-                                <div className="mt-2">
-                                    <LanguageBar repo={repo.name} />
-                                </div>
+                                )}
                             </motion.div>
                         ))}
                 </motion.div>
