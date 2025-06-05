@@ -1,7 +1,7 @@
 import { ProjectPreviewProps } from "@/types";
 
 import bTagScript from "@/../public/projects/bTagScript.png";
-import PortfolioImage from "@/../public/projects/benz206Portfolio.png";
+import PortfolioImage from "@/../public/projects/Leg3ndaryPortfolio.png";
 import APMC from "@/../public/projects/APMC.png";
 import Announcements from "@/../public/projects/Announcements.png";
 import FlashNotes from "@/../public/projects/FlashNotes.png";
