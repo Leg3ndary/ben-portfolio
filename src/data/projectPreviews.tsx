@@ -1,7 +1,7 @@
 import { ProjectPreviewProps } from "@/types";
 
 import bTagScript from "@/../public/projects/bTagScript.png";
-import PortfolioImage from "@/../public/projects/Leg3ndaryPortfolio.png";
+import PortfolioImage from "@/../public/projects/benz206Portfolio.png";
 import APMC from "@/../public/projects/APMC.png";
 import Announcements from "@/../public/projects/Announcements.png";
 import FlashNotes from "@/../public/projects/FlashNotes.png";
@@ -36,7 +36,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 user: hacker, password: htn2025. You can check out the source
                 code on{" "}
                 <a
-                    href="https://github.com/Leg3ndary/htn2025-challenge"
+                    href="https://github.com/benz206/htn2025-challenge"
                     target="_blank"
                     className="font-bold text-blue-500 transition-colors duration-1000 hover:text-amber-500"
                 >
@@ -121,7 +121,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 alt: "TailwindCSS",
             },
         ],
-        projectLink: "https://github.com/Leg3ndary/StyleIt",
+        projectLink: "https://github.com/benz206/StyleIt",
         color: "indigo-500",
     },
     {
@@ -146,7 +146,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 LinkCom ensures that no message gets lost in translation. Check
                 out the project on{" "}
                 <a
-                    href="https://github.com/Leg3ndary/LinkCom"
+                    href="https://github.com/benz206/LinkCom"
                     target="_blank"
                     className="font-bold text-blue-500 transition-colors duration-1000 hover:text-teal-500"
                 >
@@ -172,7 +172,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 alt: "GitLab",
             },
         ],
-        projectLink: "https://github.com/Leg3ndary/LinkCom",
+        projectLink: "https://github.com/benz206/LinkCom",
         color: "teal-500",
     },
     {
@@ -249,7 +249,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 manage health concerns, saving time and providing peace of mind.
                 You can view the project on{" "}
                 <a
-                    href="https://github.com/Leg3ndary/RapidRx"
+                    href="https://github.com/benz206/RapidRx"
                     target="_blank"
                     className="font-bold text-blue-500 transition-colors duration-1000 hover:text-fuchsia-400"
                 >
@@ -284,7 +284,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 height: 50,
             },
         ],
-        projectLink: "https://github.com/Leg3ndary/RapidRx",
+        projectLink: "https://github.com/benz206/RapidRx",
         color: "emerald-600",
     },
     {
@@ -310,7 +310,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 make an aesthetically pleasing experience. You can view the
                 project on{" "}
                 <a
-                    href="https://github.com/Leg3ndary/SpotifyMacroboard"
+                    href="https://github.com/benz206/SpotifyMacroboard"
                     target="_blank"
                     className="font-bold text-blue-500 transition-colors duration-1000 hover:text-fuchsia-400"
                 >
@@ -341,7 +341,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 alt: "NextJS",
             },
         ],
-        projectLink: "https://github.com/Leg3ndary/SpotifyMacroboard",
+        projectLink: "https://github.com/benz206/SpotifyMacroboard",
         slug: "SpotifyMacroboard",
         color: "amber-400",
     },
@@ -461,7 +461,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 alt: "OpenAI",
             },
         ],
-        projectLink: "https://github.com/Leg3ndary/flashnotes",
+        projectLink: "https://github.com/benz206/flashnotes",
         color: "orange-500",
     },
     {
@@ -532,7 +532,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 I made an{" "}
                 <a
                     className="font-bold text-blue-500 transition-colors hover:text-red-500"
-                    href="https://github.com/Leg3ndary/bTagScript"
+                    href="https://github.com/benz206/bTagScript"
                     target="_blank"
                 >
                     interpreter
@@ -540,7 +540,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 and{" "}
                 <a
                     className="font-bold text-blue-500 transition-colors hover:text-red-500"
-                    href="https://leg3ndary.github.io/bTagScriptPlayground/"
+                    href="https://benz206.github.io/bTagScriptPlayground/"
                     target="_blank"
                 >
                     website
@@ -583,7 +583,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 alt: "CSS",
             },
         ],
-        projectLink: "https://leg3ndary.github.io/bTagScriptPlayground/",
+        projectLink: "https://benz206.github.io/bTagScriptPlayground/",
         color: "red-500",
     },
     {
@@ -605,7 +605,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 out how to add custom highlighting for my language and ended up
                 creating a fun{" "}
                 <a
-                    href="https://github.com/Leg3ndary/tagscript-ansi"
+                    href="https://github.com/benz206/tagscript-ansi"
                     target="_blank"
                     className="font-bold text-blue-500 transition-colors hover:text-yellow-400"
                 >
@@ -691,7 +691,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 alt: "Oracle",
             },
         ],
-        projectLink: "https://github.com/Leg3ndary/Benny",
+        projectLink: "https://github.com/benz206/Benny",
         color: "sky-600",
     },
     {
@@ -746,7 +746,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 alt: "Sheets",
             },
         ],
-        projectLink: "https://github.com/Leg3ndary/SchoolAnnouncements",
+        projectLink: "https://github.com/benz206/SchoolAnnouncements",
         color: "green-400",
     },
     {
@@ -789,7 +789,7 @@ const projectPreviews: ProjectPreviewProps[] = [
                 alt: "React",
             },
         ],
-        projectLink: "https://github.com/Leg3ndary/ben-portfolio",
+        projectLink: "https://github.com/benz206/ben-portfolio",
         color: "cyan-300",
     },
 ];

@@ -56,7 +56,7 @@ export default function Footer() {
                                 <motion.div {...motionProps}>
                                     <div className="p-1 transition border border-transparent rounded-md group hover:border-transparent">
                                         <a
-                                            href="https://github.com/Leg3ndary"
+                                            href="https://github.com/benz206"
                                             target="_blank"
                                         >
                                             <ImGithub className="w-6 h-6 lg:w-8 lg:h-8 transition hover:text-[#9f7be1] text-[#AAAAAA]" />
@@ -86,7 +86,7 @@ export default function Footer() {
                                 <motion.div {...motionProps}>
                                     <div className="p-1 transition border border-transparent rounded-md group hover:border-transparent">
                                         <a
-                                            href="https://monkeytype.com/profile/_Leg3ndary"
+                                            href="https://monkeytype.com/profile/_benz206"
                                             target="_blank"
                                         >
                                             <SiMonkeytype className="w-6 h-6 lg:w-8 lg:h-8 text-[#AAAAAA] transition hover:text-[#e2b714]" />

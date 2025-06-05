@@ -120,12 +120,12 @@ export default function Projects() {
         const fetchData = async () => {
             try {
                 const repoData = await fetchWithCache(
-                    "https://api.github.com/users/leg3ndary/repos",
+                    "https://api.github.com/users/benz206/repos",
                     "github_repos"
                 );
                 const filteredData = repoData.filter(
                     (repo: GitHubRepo) =>
-                        repo.name != "Leg3ndary" &&
+                        repo.name != "benz206" &&
                         repo.name.indexOf("experiments") == -1 &&
                         repo.name.indexOf("learning") == -1
                 );

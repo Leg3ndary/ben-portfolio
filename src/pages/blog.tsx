@@ -8,7 +8,7 @@ import matter from "gray-matter";
 
 export async function getStaticProps() {
     const octokit = new Octokit({ auth: process.env.BLOG_PAT });
-    const owner = "Leg3ndary";
+    const owner = "benz206";
     const repo = "blog";
     const directoryPath = "posts";
 

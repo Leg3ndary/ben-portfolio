@@ -7,7 +7,7 @@ Check it out live 👉 [bzhou.ca](https://bzhou.ca)
 If you want to run it locally, you can clone the repo and run it with npm.
 
 ```bash
-git clone https://github.com/Leg3ndary/ben-portfolio.git
+git clone https://github.com/benz206/ben-portfolio.git
 cd ben-portfolio
 npm install
 npm run dev

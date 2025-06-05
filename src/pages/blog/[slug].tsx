@@ -34,7 +34,7 @@ export default function RemoteMdxPage({
 }
 export async function getStaticPaths() {
     const octokit = new Octokit({ auth: process.env.BLOG_PAT });
-    const owner = "Leg3ndary";
+    const owner = "benz206";
     const repo = "blog";
     const directoryPath = "posts";
 
@@ -64,7 +64,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }: { params: { slug: string } }) {
     const { slug } = params;
     const octokit = new Octokit({ auth: process.env.BLOG_PAT });
-    const owner = "Leg3ndary";
+    const owner = "benz206";
     const repo = "blog";
     const filePath = `posts/${slug}.mdx`;
 

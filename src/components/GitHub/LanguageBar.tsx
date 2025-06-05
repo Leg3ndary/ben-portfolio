@@ -63,7 +63,7 @@ export default function LanguageBar({ repo }: { repo: string }) {
         const fetchLanguages = async () => {
             try {
                 const data = await fetchWithCache(
-                    `https://api.github.com/repos/Leg3ndary/${repo}/languages`,
+                    `https://api.github.com/repos/benz206/${repo}/languages`,
                     `github_languages_${repo}`
                 );
                 setLanguages(data);
