@@ -165,7 +165,7 @@ export default function Projects() {
             <div className="relative top-0 flex justify-center w-full h-[550px] bg-rainbow-gradient animate-breathing-gradient">
                 <motion.div
                     ref={heroRef}
-                    className="relative flex h-[370px] lg:h-[300px] bg-white dark:text-[#ececec] dark:bg-[#121212] border-black w-11/12 lg:w-[1000px] drop-shadow-2xl mt-32 lg:mt-40 rounded-3xl duration-1000 ease-in-out transition-all"
+                    className="relative flex h-[370px] lg:h-[300px] bg-white/80 dark:bg-[#121212]/30 backdrop-blur-md dark:text-[#ececec] border border-white/10 w-11/12 lg:w-[1000px] drop-shadow-xl mt-32 lg:mt-40 rounded-3xl hover:drop-shadow-2xl transition-all duration-1000 ease-in-out"
                     initial={{ opacity: 0, y: 50 }}
                     animate={
                         isHeroInView
