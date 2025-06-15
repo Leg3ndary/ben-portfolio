@@ -28,7 +28,9 @@ export default function Footer() {
                                 Thanks for visiting my website!
                             </p>
                             <p className="text-[#777777] py-2">
-                                If you have any further questions or just want to contact me, please reach out to me through LinkedIn or Email.
+                                If you have any further questions or just want
+                                to contact me, please reach out to me through
+                                LinkedIn or Email.
                             </p>
                             <p className="text-[#777777] py-2">
                                 Copyright © 2023-2024 Ben Zhou All rights

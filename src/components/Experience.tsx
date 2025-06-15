@@ -28,29 +28,29 @@ type JobProps = {
     index: number;
 };
 
-const container = {
-    hidden: { opacity: 1, scale: 0 },
-    visible: {
-        opacity: 1,
-        scale: 1,
-        transition: {
-            delayChildren: 0.3,
-            staggerChildren: 0.2,
-        },
-    },
-};
+// const container = {
+//     hidden: { opacity: 1, scale: 0 },
+//     visible: {
+//         opacity: 1,
+//         scale: 1,
+//         transition: {
+//             delayChildren: 0.3,
+//             staggerChildren: 0.2,
+//         },
+//     },
+// };
 
-const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-        y: 0,
-        opacity: 1,
-        transition: {
-            duration: 0.8,
-            ease: "easeOut",
-        },
-    },
-};
+// const item = {
+//     hidden: { y: 20, opacity: 0 },
+//     visible: {
+//         y: 0,
+//         opacity: 1,
+//         transition: {
+//             duration: 0.8,
+//             ease: "easeOut",
+//         },
+//     },
+// };
 
 function Job({ job, index }: JobProps) {
     const ref = useRef(null);

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Mocha from "@/../public/home/mocha.png";
-import Hockey from "@/../public/home/hockey.jpg";
+// import Hockey from "@/../public/home/hockey.jpg";
 import CompEng from "@/../public/home/compeng.jpg";
 import { motion } from "framer-motion";
 import Head from "next/head";
-import { FaArrowRight } from "react-icons/fa6";
-import Link from "next/link";
+// import { FaArrowRight } from "react-icons/fa6";
+// import Link from "next/link";
 import Experience from "@/components/Experience";
 import TechIcon from "@/components/TechIcon";
 // import Golden from "@/components/Golden";
