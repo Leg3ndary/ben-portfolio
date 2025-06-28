@@ -5,6 +5,7 @@ import SAP from "@/../public/experience/SAP.png";
 import Eureka from "@/../public/experience/Eureka.png";
 import Averroes from "@/../public/experience/averroes.png";
 // import Triway from "@/../public/experience/triway.png";
+import WAT from "@/../public/experience/wat_ai_logo.jpeg";
 import Image from "next/image";
 import MidnightSun from "@/../public/experience/midnightsun.png";
 import { useRef } from "react";
@@ -68,8 +69,8 @@ function Job({ job, index }: JobProps) {
             className="relative grid grid-cols-[4rem_auto] md:grid-cols-[10rem_auto] py-8 list-none group"
             key={index}
         >
-            <div className="absolute left-0 w-2 h-full -ml-6 transition-opacity duration-300 rounded-full opacity-0 bg-rainbow-gradient animate-breathing-gradient group-hover:opacity-100" />
-            <div className="flex items-center justify-center w-12 h-12 m-1 mt-4 overflow-hidden transition-transform duration-300 rounded-xl lg:my-auto md:m-2 lg:m-5 md:h-24 md:w-24 group-hover:scale-110">
+            <div className="absolute left-0 -ml-6 w-2 h-full rounded-full opacity-0 transition-opacity duration-300 bg-rainbow-gradient animate-breathing-gradient group-hover:opacity-100" />
+            <div className="flex overflow-hidden justify-center items-center m-1 mt-4 w-12 h-12 rounded-xl transition-transform duration-300 lg:my-auto md:m-2 lg:m-5 md:h-24 md:w-24 group-hover:scale-110">
                 <Image
                     src={job.image.src}
                     alt={job.image.alt}
@@ -81,7 +82,7 @@ function Job({ job, index }: JobProps) {
             </div>
             <div className="flex flex-col justify-center">
                 <span className="text-sm dark:text-[#ececec]">{job.date}</span>
-                <h3 className="pt-2 text-xl font-black transition-colors duration-300 lg:text-3xl group-hover:text-transparent bg-clip-text bg-rainbow-gradient animate-breathing-gradient">
+                <h3 className="pt-2 text-xl font-black bg-clip-text transition-colors duration-300 lg:text-3xl group-hover:text-transparent bg-rainbow-gradient animate-breathing-gradient">
                     {job.title}
                 </h3>
                 <h4 className="py-2 text-lg font-medium transition-colors duration-300 group-hover:text-gray-700 dark:group-hover:text-gray-300">
@@ -100,7 +101,7 @@ const jobs: Job[] = [
         title: "Software Engineering Intern",
         company: "Fuego.io - San Francisco, California",
         description:
-            "Developing GraphQL queries for Shopify metafield management and building API routes for targeted notifications. Creating tailored solutions enabling real-time data analysis for 40+ brands.",
+            "• Optimized core AI generation features by developing custom architecture, accelerating response times to be 17.7x faster (15.4s → 0.87s avg), reducing token usage and slashing costs by similar margins",
         date: "Jan 2025 - Apr 2025",
         image: {
             src: fuego,
@@ -110,10 +111,23 @@ const jobs: Job[] = [
         },
     },
     {
+        title: "Software Developer",
+        company: "WAT.ai - AI Sentiment Pulse - Waterloo, Ontario",
+        description:
+            "• Created a webscraper using Python to extract and score 100+ articles on Yahoo News for overall sentiments",
+        date: "May 2025 - Present",
+        image: {
+            src: WAT,
+            alt: "WAT.ai Logo",
+            width: 150,
+            height: 150,
+        },
+    },
+    {
         title: "Firmware Team Member",
         company: "Midnight Sun - Waterloo, Ontario",
         description:
-            "Developing ping testing functions in Python and C to verify connectivity across CAN networks. Writing driver functions to process temperature readings from raw voltage values.",
+            "• Developing ping testing functions in Python and C to verify connectivity across CAN networks",
         date: "Sep 2024 - Present",
         image: {
             src: MidnightSun,
@@ -126,7 +140,7 @@ const jobs: Job[] = [
         title: "Prototype Engineering Intern",
         company: "Averroes Technologies - Toronto, Ontario",
         description:
-            "Developed 12 firmware prototypes in C++ for iterative product validation. Created an MQTT client-server broker in Python for API request handling and SQLite data storage.",
+            "• Developed 12 firmware prototypes in C++ for iterative product validation",
         date: "Jul 2024 - Aug 2024",
         image: {
             src: Averroes,
@@ -139,7 +153,7 @@ const jobs: Job[] = [
         title: "Software Developer Co-op Student",
         company: "SAP - Toronto, Ontario",
         description:
-            "Created a TypeScript worker for GPT-4 request handling, reducing errors by 23%. Implemented comprehensive Vitest testing with 100% coverage. Developed Python and Node scripts to clean 248,000 records, improving processing speed by 26%.",
+            "• Created a worker to handle and sanitize GPT-4o requests using TypeScript reducing request errors by 23%",
         date: "Feb 2024 - Jul 2024",
         image: {
             src: SAP,
@@ -152,7 +166,7 @@ const jobs: Job[] = [
         title: "FullStack Developer Lead",
         company: "EurekaHacks 2024 - Oakville, Ontario",
         description:
-            "Enhanced SEO strategies, improving page load times by 160% and achieving 3,800+ increase in impressions. Led development of a Next.js website that secured 300+ event registrations.",
+            "• Improved page load times by 160%, and reduced LCP, leading to 3,800+ impressions and 1,100+ clicks",
         date: "Nov 2023 - May 2024",
         image: {
             src: Eureka,
@@ -167,7 +181,7 @@ export default function Experience() {
     return (
         <div className="flex justify-center w-full">
             <div className="w-11/12 max-w-[1170px] relative">
-                <ol className="relative flex flex-col justify-center">
+                <ol className="flex relative flex-col justify-center">
                     {jobs.map((job, index) => (
                         <Job key={index} job={job} index={index} />
                     ))}
