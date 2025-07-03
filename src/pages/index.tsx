@@ -56,7 +56,7 @@ export default function Home() {
                             UNIVERSITY OF WATERLOO COMPUTER ENGINEERING
                         </h2>
                         <p className="p-2 font-light">
-                            I built and designed this website without GPT or any
+                            I built and designed this website without any
                             previously built components using Next.js,
                             TypeScript, and Tailwind!
                         </p>
