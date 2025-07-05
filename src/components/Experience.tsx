@@ -9,6 +9,7 @@ import WAT from "@/../public/experience/wat_ai_logo.jpeg";
 import Image from "next/image";
 import MidnightSun from "@/../public/experience/midnightsun.png";
 import { useRef } from "react";
+import GrandCharter from "@/../public/experience/grandcharter.jpeg";
 
 type Job = {
     title: string;
@@ -97,6 +98,18 @@ function Job({ job, index }: JobProps) {
 }
 
 const jobs: Job[] = [
+    {
+        title: "Incoming Software Engineering Intern",
+        company: "Grand Charter - New York, United States",
+        description: "• Incoming for Fall 2025",
+        date: "Sep 2025",
+        image: {
+            src: GrandCharter,
+            alt: "Grand Charter Logo",
+            width: 150,
+            height: 150,
+        },
+    },
     {
         title: "Software Engineering Intern",
         company: "Fuego.io - San Francisco, California",
